@@ -1,0 +1,8 @@
+
+State Machine - |Goertzel|reg.state
+Name reg.state.DONE reg.state.STORE reg.state.CALCULATE reg.state.FETCH reg.state.IDLE 
+reg.state.IDLE 0 0 0 0 0 
+reg.state.FETCH 0 0 0 1 1 
+reg.state.CALCULATE 0 0 1 0 1 
+reg.state.STORE 0 1 0 0 1 
+reg.state.DONE 1 0 0 0 1 

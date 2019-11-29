@@ -1,0 +1,111 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+ 
+entity sampler is
+  generic (
+    g_WIDTH : natural := 12; -- Word width
+    g_DEPTH : integer := 32 -- Register depth
+    );
+  port (
+    i_reset_sync : in std_logic; -- Synchronous reset
+    i_clk      : in std_logic; -- CLock input
+ 
+    -- FIFO Write Interface
+    i_wr_en   : in  std_logic; -- Write enable
+    i_wr_data : in  std_logic_vector(g_WIDTH-1 downto 0); -- Input data
+    o_full    : out std_logic; -- Full flag
+ 
+    -- FIFO Read Interface
+    i_rd_en   : in  std_logic; -- Read enable
+    o_rd_data : out std_logic_vector(g_WIDTH-1 downto 0); -- Output data
+    o_empty   : out std_logic -- Empty flag
+    );
+end sampler;
+ 
+architecture rtl of sampler is
+ 
+  type t_FIFO_DATA is array (0 to g_DEPTH-1) of std_logic_vector(g_WIDTH-1 downto 0); -- Data register type
+  signal r_FIFO_DATA : t_FIFO_DATA := (others => (others => '0')); -- create FIFO register
+ 
+  signal r_WR_INDEX   : integer range 0 to g_DEPTH-1 := 0; -- Write index
+  signal r_RD_INDEX   : integer range 0 to g_DEPTH-1 := 0; -- Read index
+ 
+  -- # Words in FIFO, has extra range to allow for assert conditions
+  signal r_FIFO_COUNT : integer range -1 to g_DEPTH+1 := 0; -- Word count
+ 
+  signal w_FULL  : std_logic; -- Full flag
+  signal w_EMPTY : std_logic; -- Empty flag
+   
+begin
+ 
+  p_FIFO : process (i_clk) is -- Define FIFO process
+  begin
+    if rising_edge(i_clk) then
+      if i_reset_sync = '1' then -- Reset FIFO if synchronous reset is asserted
+        r_FIFO_COUNT <= 0;
+        r_WR_INDEX   <= 0;
+        r_RD_INDEX   <= 0;
+      else
+ 
+        -- Keeping track of the total number of words in the FIFO
+        if (i_wr_en = '1' and i_rd_en = '0') then -- If write enable is asserted and read enable is not asserted
+          r_FIFO_COUNT <= r_FIFO_COUNT + 1; -- Increase FIFO count
+        elsif (i_wr_en = '0' and i_rd_en = '1') then  -- If read enable is asserted and write enable is not asserted
+          r_FIFO_COUNT <= r_FIFO_COUNT - 1; -- Decrease FIFO count
+        end if;
+ 
+        -- Keeping track of the write index (and controls roll-over)
+        if (i_wr_en = '1' and w_FULL = '0') then -- If write enable is asserted and FIFO is not full
+          if r_WR_INDEX = g_DEPTH-1 then -- if write index is the last index
+            r_WR_INDEX <= 0; -- Go to first write index
+          else
+            r_WR_INDEX <= r_WR_INDEX + 1; -- Go to next write index
+          end if;
+        end if;
+ 
+        -- Keeping track of the read index (and controls roll-over)        
+        if (i_rd_en = '1' and w_EMPTY = '0') then -- If read enable is asserted
+          if r_RD_INDEX = g_DEPTH-1 then -- If read index is last index
+            r_RD_INDEX <= 0; -- Go to first read index
+          else
+            r_RD_INDEX <= r_RD_INDEX + 1; -- Go to next read index
+          end if;
+        end if;
+ 
+        -- Register the input data when there is a write
+        if i_wr_en = '1' then -- If write enable is asserted
+          r_FIFO_DATA(r_WR_INDEX) <= i_wr_data; -- Write input to current write index
+        end if;
+         
+      end if;                           -- sync reset
+    end if;                             -- rising_edge(i_clk)
+  end process p_FIFO;
+   
+  o_rd_data <= r_FIFO_DATA(r_RD_INDEX); -- Set output to current read index
+ 
+  w_FULL  <= '1' when r_FIFO_COUNT = g_DEPTH else '0'; -- Set full flag if FIFO count has reached maximum
+  w_EMPTY <= '1' when r_FIFO_COUNT = 0       else '0'; -- Set empty flag if FIFO count is zero
+	
+	-- Connect wires to output
+  o_full  <= w_FULL;  
+  o_empty <= w_EMPTY;
+   
+  -- ASSERTION LOGIC - Not synthesized
+  -- synthesis translate_off
+ 
+  p_ASSERT : process (i_clk) is
+  begin
+    if rising_edge(i_clk) then
+      if i_wr_en = '1' and w_FULL = '1' then
+        report "ASSERT FAILURE - MODULE_REGISTER_FIFO: FIFO IS FULL AND BEING WRITTEN " severity failure;
+      end if;
+ 
+      if i_rd_en = '1' and w_EMPTY = '1' then
+        report "ASSERT FAILURE - MODULE_REGISTER_FIFO: FIFO IS EMPTY AND BEING READ " severity failure;
+      end if;
+    end if;
+  end process p_ASSERT;
+ 
+  -- synthesis translate_on
+end rtl;
