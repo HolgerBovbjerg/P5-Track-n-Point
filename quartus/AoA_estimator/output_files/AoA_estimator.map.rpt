@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AoA_estimator
-Wed Nov 27 13:07:11 2019
+Sat Nov 30 20:26:28 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -13,9 +13,15 @@ Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. State Machine - |AoA_estimator|Goertzel:INST_Goertzel|reg.state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: sampler:INST_sampler
+ 13. Port Connectivity Checks: "sampler:INST_sampler"
+ 14. Port Connectivity Checks: "Goertzel:INST_Goertzel"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -41,7 +47,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 27 13:07:11 2019      ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 30 20:26:28 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; AoA_estimator                              ;
 ; Top-level Entity Name              ; AoA_estimator                              ;
@@ -50,7 +56,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                          ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
-; Total pins                         ; 46                                         ;
+; Total pins                         ; 54                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -161,38 +167,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                         ; Library ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
+; ../../src/records.vhd            ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/records.vhd       ;         ;
+; ../../src/sampler.vhd            ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd       ;         ;
+; ../../src/Goertzel.vhd           ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/Goertzel.vhd      ;         ;
 ; ../../src/constants.vhd          ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/constants.vhd     ;         ;
 ; ../../src/AoA_estimator.vhd      ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/AoA_estimator.vhd ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 46    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; i_CLK ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 46    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+;                                             ;         ;
+; Total combinational functions               ; 0       ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 0       ;
+;     -- 3 input functions                    ; 0       ;
+;     -- <=2 input functions                  ; 0       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 0       ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 54      ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+; Maximum fan-out node                        ; i_RESET ;
+; Maximum fan-out                             ; 1       ;
+; Total fan-out                               ; 54      ;
+; Average fan-out                             ; 0.50    ;
++---------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -200,9 +209,59 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |AoA_estimator             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |AoA_estimator      ; work         ;
+; |AoA_estimator             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 54   ; 0            ; |AoA_estimator      ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------+
+; State Machine - |AoA_estimator|Goertzel:INST_Goertzel|reg.state                                                 ;
++---------------------+----------------+-----------------+---------------------+-----------------+----------------+
+; Name                ; reg.state.DONE ; reg.state.STORE ; reg.state.CALCULATE ; reg.state.FETCH ; reg.state.IDLE ;
++---------------------+----------------+-----------------+---------------------+-----------------+----------------+
+; reg.state.IDLE      ; 0              ; 0               ; 0                   ; 0               ; 0              ;
+; reg.state.FETCH     ; 0              ; 0               ; 0                   ; 1               ; 1              ;
+; reg.state.CALCULATE ; 0              ; 0               ; 1                   ; 0               ; 1              ;
+; reg.state.STORE     ; 0              ; 1               ; 0                   ; 0               ; 1              ;
+; reg.state.DONE      ; 1              ; 0               ; 0                   ; 0               ; 1              ;
++---------------------+----------------+-----------------+---------------------+-----------------+----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++------------------------------------------------+----------------------------------------+
+; Register name                                  ; Reason for Removal                     ;
++------------------------------------------------+----------------------------------------+
+; sampler:INST_sampler|r_NEW_DATA                ; Stuck at VCC due to stuck port data_in ;
+; Goertzel:INST_Goertzel|reg.state.FETCH         ; Stuck at GND due to stuck port data_in ;
+; Goertzel:INST_Goertzel|reg.sample_count[0..30] ; Lost fanout                            ;
+; Goertzel:INST_Goertzel|reg.state.IDLE          ; Lost fanout                            ;
+; Goertzel:INST_Goertzel|reg.state.CALCULATE     ; Lost fanout                            ;
+; Goertzel:INST_Goertzel|reg.state.STORE         ; Lost fanout                            ;
+; Goertzel:INST_Goertzel|reg.state.DONE          ; Lost fanout                            ;
+; Total Number of Removed Registers = 37         ;                                        ;
++------------------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                            ;
++--------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++--------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
+; Goertzel:INST_Goertzel|reg.sample_count[7] ; Lost Fanouts              ; Goertzel:INST_Goertzel|reg.sample_count[6],                                   ;
+;                                            ;                           ; Goertzel:INST_Goertzel|reg.sample_count[5],                                   ;
+;                                            ;                           ; Goertzel:INST_Goertzel|reg.sample_count[4],                                   ;
+;                                            ;                           ; Goertzel:INST_Goertzel|reg.sample_count[3],                                   ;
+;                                            ;                           ; Goertzel:INST_Goertzel|reg.sample_count[2],                                   ;
+;                                            ;                           ; Goertzel:INST_Goertzel|reg.sample_count[1],                                   ;
+;                                            ;                           ; Goertzel:INST_Goertzel|reg.sample_count[0]                                    ;
+; Goertzel:INST_Goertzel|reg.state.FETCH     ; Stuck at GND              ; Goertzel:INST_Goertzel|reg.sample_count[29],                                  ;
+;                                            ; due to stuck port data_in ; Goertzel:INST_Goertzel|reg.sample_count[28],                                  ;
+;                                            ;                           ; Goertzel:INST_Goertzel|reg.state.STORE, Goertzel:INST_Goertzel|reg.state.DONE ;
+; sampler:INST_sampler|r_NEW_DATA            ; Stuck at VCC              ; Goertzel:INST_Goertzel|reg.sample_count[30]                                   ;
+;                                            ; due to stuck port data_in ;                                                                               ;
++--------------------------------------------+---------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -220,6 +279,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sampler:INST_sampler ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; g_width        ; 12    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sampler:INST_sampler"                                                                      ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_read_data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Goertzel:INST_Goertzel"                                                                     ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_goertzel   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o_new_result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -235,9 +323,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Wed Nov 27 13:07:09 2019
+    Info: Processing started: Sat Nov 30 20:26:26 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AoA_estimator -c AoA_estimator
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 0 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/src/records.vhd
+    Info (12022): Found design unit 1: records
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/src/sampler.vhd
+    Info (12022): Found design unit 1: sampler-rtl
+    Info (12023): Found entity 1: sampler
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/src/phase_calculator.vhd
     Info (12022): Found design unit 1: phase_calculator-Behavioral
     Info (12023): Found entity 1: phase_calculator
@@ -251,20 +344,37 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: AoA_estimator-Behavioral
     Info (12023): Found entity 1: AoA_estimator
 Info (12127): Elaborating entity "AoA_estimator" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at AoA_estimator.vhd(20): used explicit default value for signal "r_ANGLE" because signal was never assigned a value
+Warning (10541): VHDL Signal Declaration warning at AoA_estimator.vhd(16): used implicit default value for signal "o_ANGLE_azimuth" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10540): VHDL Signal Declaration warning at AoA_estimator.vhd(23): used explicit default value for signal "r_ANGLE" because signal was never assigned a value
+Warning (10541): VHDL Signal Declaration warning at AoA_estimator.vhd(37): used implicit default value for signal "w_SIG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at AoA_estimator.vhd(38): used implicit default value for signal "w_COEFF" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at AoA_estimator.vhd(39): object "w_Goertzel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at AoA_estimator.vhd(40): object "w_NEW_RESULT" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at AoA_estimator.vhd(58): used implicit default value for signal "w_WRITE_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at AoA_estimator.vhd(60): object "w_READ_DATA" assigned a value but never read
+Info (12128): Elaborating entity "Goertzel" for hierarchy "Goertzel:INST_Goertzel"
+Info (12128): Elaborating entity "sampler" for hierarchy "sampler:INST_sampler"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_ANGLE[0]" is stuck at VCC
-    Warning (13410): Pin "o_ANGLE[1]" is stuck at GND
-    Warning (13410): Pin "o_ANGLE[2]" is stuck at GND
-    Warning (13410): Pin "o_ANGLE[3]" is stuck at GND
-    Warning (13410): Pin "o_ANGLE[4]" is stuck at GND
-    Warning (13410): Pin "o_ANGLE[5]" is stuck at GND
-    Warning (13410): Pin "o_ANGLE[6]" is stuck at GND
-    Warning (13410): Pin "o_ANGLE[7]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_elevation[0]" is stuck at VCC
+    Warning (13410): Pin "o_ANGLE_elevation[1]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_elevation[2]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_elevation[3]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_elevation[4]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_elevation[5]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_elevation[6]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_elevation[7]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_azimuth[0]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_azimuth[1]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_azimuth[2]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_azimuth[3]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_azimuth[4]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_azimuth[5]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_azimuth[6]" is stuck at GND
+    Warning (13410): Pin "o_ANGLE_azimuth[7]" is stuck at GND
+Info (17049): 35 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 38 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_CLK"
     Warning (15610): No output dependent on input pin "i_RESET"
     Warning (15610): No output dependent on input pin "i_SIG1[0]"
     Warning (15610): No output dependent on input pin "i_SIG1[1]"
@@ -302,13 +412,14 @@ Warning (21074): Design contains 38 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_SIG3[9]"
     Warning (15610): No output dependent on input pin "i_SIG3[10]"
     Warning (15610): No output dependent on input pin "i_SIG3[11]"
-Info (21057): Implemented 46 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "i_CLK"
+Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 38 input pins
-    Info (21059): Implemented 8 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 4668 megabytes
-    Info: Processing ended: Wed Nov 27 13:07:11 2019
+    Info (21059): Implemented 16 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4667 megabytes
+    Info: Processing ended: Sat Nov 30 20:26:28 2019
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

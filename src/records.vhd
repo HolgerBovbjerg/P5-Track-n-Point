@@ -53,6 +53,6 @@ package records is
                                           wr_data => (others => '0'),
                                           rd_en => '0');
 													
-   
+  type store_machine is (state1, state2, state3); -- State machine type
    
 end package records;

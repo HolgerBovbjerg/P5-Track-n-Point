@@ -16,12 +16,14 @@ entity sampler is
 		i_write_data : in  std_logic_vector(g_WIDTH-1 downto 0); -- Input data
  
 		-- FIFO Read Interface
-		o_read_data : out std_logic_vector(g_WIDTH-1 downto 0) -- Output data
+		o_read_data : out std_logic_vector(g_WIDTH-1 downto 0); -- Output data
+		o_NEW_DATA : out std_logic
 		);
 end sampler;
  
 architecture rtl of sampler is
 	signal r_DATA : std_logic_vector(g_WIDTH-1 downto 0); -- create sample register
+	signal r_NEW_DATA : std_logic; -- create sample register
 begin
  
   p_SAMPLE : process (i_clk) is -- Define FIFO process
@@ -30,10 +32,12 @@ begin
         -- Register the input data when there is a write
         if i_write_en = '1' then -- If write enable is asserted
           r_DATA<= i_write_data; -- Write input to current write index
-        end if;
+				r_NEW_DATA <= '1';
+			end if;
     end if;                             -- rising_edge(i_clk)
   end process p_SAMPLE;
    
   o_read_data <= r_DATA; -- Set output to current read index
+  o_NEW_DATA <= r_NEW_DATA; -- Set output to current read index
   
 end rtl;

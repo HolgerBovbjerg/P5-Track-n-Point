@@ -72,6 +72,9 @@
 # 
 # No such file or directory. (errno = ENOENT)
 #    Time: 0 ps  Iteration: 0  Instance: /goertzel_tb
+# ** Warning: Design size of 6 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
 # 
 # add wave *
 # view structure
@@ -88,11 +91,6 @@ run
 run
 run
 run
-add wave -position insertpoint  \
-sim:/goertzel_tb/uut/reg
-restart
-# ** Error: (vsim-7) Failed to open VHDL file "sine.dat" in rb mode.
-# 
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /goertzel_tb
+run
+run
 run

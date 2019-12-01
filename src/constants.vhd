@@ -33,8 +33,6 @@ subtype goertzel_coef_type is signed(CALC_WIDTH-1 downto 0);
 -- The input for different frequencies
 type    goertzel_coefs_type is array (natural range <>) of goertzel_coef_type;
 
--- Fixed point data format
-constant Q : natural := 13;
 
 -- Number of samples used to calculate DFT
 -- After SAMPLES samples new a new DFT value is available. 
@@ -43,10 +41,11 @@ constant SAMPLE_SIZE : natural := 200;
 -- Goertzel constants
 constant N : INTEGER := 200;
 constant omega : INTEGER := 3;
-constant k : INTEGER := 99;
---constant c_coeff : signed(CALC_WIDTH-1 downto 0) := -2;
+constant k : INTEGER := 10;
+constant Q : natural := 13; -- Fixed point data format
+constant c_coeff : UNSIGNED(CALC_WIDTH-1 downto 0) := "000011110011011110"; -- 2*cos(2*pi*k/N) in Q5,13 format
 constant coeff2Real : INTEGER := -1;
---constant coeff2Imag : INTEGER := -0.031;
+-- constant coeff2Imag : INTEGER := -0.031;
 constant coeff3Real : INTEGER := 0;
 constant coeff3Imag : INTEGER := 1;
 

@@ -1,5 +1,5 @@
 Assembler report for AoA_estimator
-Wed Nov 27 13:07:21 2019
+Sat Nov 30 20:26:37 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Nov 27 13:07:21 2019 ;
+; Assembler Status      ; Successful - Sat Nov 30 20:26:37 2019 ;
 ; Revision Name         ; AoA_estimator                         ;
 ; Top-level Entity Name ; AoA_estimator                         ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                                                      ;
 +----------------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                                                                 ;
-; JTAG usercode  ; 0x000C7AE5                                                                                                                                   ;
-; Checksum       ; 0x000C7AE5                                                                                                                                   ;
+; JTAG usercode  ; 0x000C808F                                                                                                                                   ;
+; Checksum       ; 0x000C808F                                                                                                                                   ;
 +----------------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Wed Nov 27 13:07:20 2019
+    Info: Processing started: Sat Nov 30 20:26:36 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off AoA_estimator -c AoA_estimator
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4592 megabytes
-    Info: Processing ended: Wed Nov 27 13:07:21 2019
+    Info: Processing ended: Sat Nov 30 20:26:37 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
