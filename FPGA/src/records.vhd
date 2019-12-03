@@ -9,7 +9,7 @@ use work.constants.all;
 package records is
   
   type goertzel_machine is (IDLE, CALCULATE, STORE, OUTPUT, DONE); -- State machine type
-  type goertzel_result_type is array (1 downto 0) of std_logic_vector(CALC_WIDTH-1 downto 0); -- The result of the Goertzel Algorithm are always a pair of two values
+  type goertzel_result_type is array (1 downto 0) of std_logic_vector(2*CALC_WIDTH-1 downto 0); -- The result of the Goertzel Algorithm are always a pair of two values
 	
 	type goertzel_type is record
       state        : goertzel_machine;

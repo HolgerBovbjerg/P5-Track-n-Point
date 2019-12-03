@@ -41,7 +41,7 @@ begin
   return temp;
 end quantization_uns;
 
-  constant nsamples  : integer:=200;   -- 200 samples
+  constant nsamples  : integer:=20;   -- 200 samples
   constant nbit      : integer:=12;
   constant step      : real := 1.00/20; -- 20 samples per period f_sample = 10e6 and f_sig = 500e3 -- real(nsamples);
   signal clk         : std_logic:='0';  

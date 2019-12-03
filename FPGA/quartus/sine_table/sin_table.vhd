@@ -1,6 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+
+library work;
+use work.constants.all;
+
 entity sin_table is
 port (
   i_clk          : in  std_logic;
@@ -8,8 +12,32 @@ port (
   o_data         : out std_logic_vector(11 downto 0));
 end sin_table;
 architecture rtl of sin_table is
-type t_sin_table is array(0 to 199) of integer range -2048 to 2047;--range 0 to 4095;
+type t_sin_table is array(0 to SAMPLE_SIZE-1) of integer range -2048 to 2047;--range 0 to 4095;
 constant C_SIN_TABLE  : t_sin_table := (
+---- Signed values N = 20
+--    0,
+--  633,
+-- 1204,
+-- 1657,
+-- 1948,
+-- 2047,
+-- 1948,
+-- 1657,
+-- 1204,
+--  633,
+--    0,
+-- -633,
+---1204,
+---1657,
+---1948,
+---2048,
+---1948,
+---1657,
+---1204,
+-- -633
+--
+
+ -- Signed values N = 200
 		 0,
 	  633,
 	 1204,
@@ -211,7 +239,8 @@ constant C_SIN_TABLE  : t_sin_table := (
 	-1204,
 	 -633
 
---     2048,
+	 -- Unsigned values N = 200
+-- 2048,
 -- 2681,
 -- 3252,
 -- 3705,

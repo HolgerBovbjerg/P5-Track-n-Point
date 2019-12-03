@@ -33,14 +33,6 @@ ARCHITECTURE behavior OF Goertzel_sine_test IS
 				o_NEW_RESULT : out  STD_LOGIC -- New result flag
 			 );
 	end COMPONENT;
-		-- Inputs
-	signal w_CLK :  STD_LOGIC := '0'; -- Clock input
-	signal w_NEW_VALUE :  STD_LOGIC := '0'; -- NEW_VALUE input
-
-	-- Outputs
-	signal w_Real :  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- DFT output
-	signal w_Imag :  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- DFT output
-	signal w_NEW_RESULT : STD_LOGIC; -- New result flag
 	
 	-- Sine table
 	COMPONENT sin_table is

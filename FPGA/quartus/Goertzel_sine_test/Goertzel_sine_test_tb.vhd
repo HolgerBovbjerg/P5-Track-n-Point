@@ -32,7 +32,7 @@ ARCHITECTURE behavior OF Goertzel_sine_test_tb IS
 	-- Inputs
 	signal i_CLK :  STD_LOGIC := '0'; -- Clock input
 	signal i_NEW_VALUE :  STD_LOGIC := '0'; -- NEW_VALUE input
-	signal i_addr :  STD_LOGIC_VECTOR(7 downto 0) := (others => '0'); -- Signal 1
+	signal i_addr :  STD_LOGIC_VECTOR(7 downto 0) := std_logic_vector(to_unsigned(100,8));--(others => '0'); -- Signal 1
 	signal i_CLK_sin :  STD_LOGIC := '0'; -- SIN input
 	
 	
@@ -72,7 +72,7 @@ begin
    begin		
       -- hold reset state for 100 ns.
       wait for 100 ns;	
-		for i in 0 to 255 loop
+		for i in 0 to 10000 loop
 			i_NEW_VALUE <= '0'; 
 			i_CLK_sin <= '0';
 			wait for c_sample_period/2;
@@ -81,7 +81,7 @@ begin
 			wait for c_clk_period;
 			i_NEW_VALUE <= '0'; 
 			wait for c_sample_period/2 - c_clk_period;
-			if unsigned(i_addr) = 199 then
+			if unsigned(i_addr) = SAMPLE_SIZE-1 then
 				i_addr <= (others => '0');
 			else
 				i_addr <= std_logic_vector(signed(i_addr) + 1);

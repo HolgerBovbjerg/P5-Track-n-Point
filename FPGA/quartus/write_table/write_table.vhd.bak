@@ -67,7 +67,7 @@ begin
       v_qsine_uns := quantization_uns(nbit, 1.0,v_sine);
       v_qsine_sgn := quantization_sgn(nbit, 1.0,v_sine);
       v_tstep := v_tstep + step;
-      write(row,to_integer(unsigned(v_qsine_sgn)), right, 5);
+      write(row,to_integer(signed(v_qsine_sgn)), right, 5);
       write(row,',');
       count := count + 1;
       if((count mod 1)=0) then  
