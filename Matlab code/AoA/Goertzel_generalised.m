@@ -27,7 +27,7 @@ phase_plot = zeros(1, N/2);
 for k = 0:N/2-1
 
 %% Goertzel constants
-omega = (2*pi/N) * k; % Frequency of interest
+omega = 2*pi * k/N; % Frequency of interest
 %omega = 2 * pi * f_norm;
 coeff = 2 * cos(omega);
 cos_coeff = cos(omega);
@@ -68,6 +68,7 @@ end
 figure(1)
 stem((0:N/2-1), magnitude_plot)
 
+% filter out zero phase values
 for n=1:N/2
     if(magnitude_plot(n) < 0.1)
         phase_plot(n) = 0;

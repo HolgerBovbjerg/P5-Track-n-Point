@@ -62,10 +62,10 @@ begin
 					reg.VA_prev <= reg.VA;
 					if reg.sample_count = SAMPLE_SIZE then
 						-- Reset counter
-						reg.sample_count <= 0;
+						reg.sample_count <= 1;
 						-- Store results
-						reg.result(0) <= reg.VA_prev; 
-						reg.result(1) <= reg.VA_prev2; 
+						reg.result(0) <= std_logic_vector(shift_right(to_signed(c_coeff,18) * signed(reg.VA_prev), fp_scale) - signed(reg.VA_prev2)); 
+						reg.result(1) <= "000000000000000000" & reg.VA_prev; 
 						-- Goto uotput state
 						reg.state <= OUTPUT;
 					else
@@ -75,8 +75,8 @@ begin
 					end if;
 				when OUTPUT =>
 					-- Calculate real and imaginary DFT
-					r_Real <= std_logic_vector( signed(reg.result(0)) - shift_right(to_signed(c_coeff_cos,18) * signed(reg.result(1)),fp_scale) );
-					r_Imag <= std_logic_vector( shift_right(to_signed(c_coeff_sine,18)*signed(reg.result(1)),fp_scale) );
+					r_Real <= std_logic_vector( signed(reg.result(0)(CALC_WIDTH-1 downto 0)) - shift_right(to_signed(c_coeff_cos,18) * signed(reg.result(1)(CALC_WIDTH-1 downto 0)),fp_scale) );
+					r_Imag <= std_logic_vector( shift_right(to_signed(c_coeff_sine,18)*signed(reg.result(1)(CALC_WIDTH-1 downto 0)),fp_scale) );
 					reg.state <= DONE;
 				when DONE => 
 					-- Update new result flag

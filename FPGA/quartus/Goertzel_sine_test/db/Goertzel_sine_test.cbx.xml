@@ -2,7 +2,8 @@
 <LOG_ROOT>
 	<PROJECT NAME="Goertzel_sine_test">
 		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel_sine_test|Goertzel:uut|lpm_mult:Mult0" CBX_FILE_NAME="mult_b8t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel_sine_test|Goertzel:uut|lpm_mult:Mult1" CBX_FILE_NAME="mult_i8t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel_sine_test|Goertzel:uut|lpm_mult:Mult2" CBX_FILE_NAME="mult_g8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel_sine_test|Goertzel:uut|lpm_mult:Mult1" CBX_FILE_NAME="mult_c8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel_sine_test|Goertzel:uut|lpm_mult:Mult2" CBX_FILE_NAME="mult_i8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel_sine_test|Goertzel:uut|lpm_mult:Mult3" CBX_FILE_NAME="mult_g8t.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
