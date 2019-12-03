@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Goertzel">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel|lpm_mult:Mult0" CBX_FILE_NAME="mult_35t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel|lpm_mult:Mult0" CBX_FILE_NAME="mult_h8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel|lpm_mult:Mult1" CBX_FILE_NAME="mult_d8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Goertzel|lpm_mult:Mult2" CBX_FILE_NAME="mult_f8t.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

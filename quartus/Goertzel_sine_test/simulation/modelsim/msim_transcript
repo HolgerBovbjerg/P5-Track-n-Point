@@ -1,0 +1,323 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Goertzel_sine_test_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sin_table
+# -- Compiling architecture rtl of sin_table
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/constants.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling package constants
+# -- Compiling package body constants
+# -- Loading package constants
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/records.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package constants
+# -- Compiling package records
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/Goertzel.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package constants
+# -- Loading package records
+# -- Compiling entity Goertzel
+# -- Compiling architecture Behavioral of Goertzel
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel_sine_test/Goertzel_sine_test.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package std_logic_textio
+# -- Loading package constants
+# -- Loading package records
+# -- Compiling entity Goertzel_sine_test
+# -- Compiling architecture behavior of Goertzel_sine_test
+# 
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel_sine_test/Goertzel_sine_test_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package std_logic_textio
+# -- Loading package constants
+# -- Loading package records
+# -- Compiling entity Goertzel_sine_test_tb
+# -- Compiling architecture behavior of Goertzel_sine_test_tb
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  Goertzel_sine_test_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Goertzel_sine_test_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.constants(body)
+# Loading work.records
+# Loading work.goertzel_sine_test_tb(behavior)
+# Loading work.goertzel_sine_test(behavior)
+# Loading work.goertzel(behavioral)
+# Loading work.sin_table(rtl)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 50 us
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 1250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 1350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 1450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 1550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 1650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 1750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 1850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 1950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 2050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 3250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 3350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 3450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 3550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 3650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 3750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 3850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 3950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 4050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 5250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 5350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 5450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 5550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 5650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 5750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 5850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 5950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 6050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 7250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 7350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 7450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 7550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 7650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 7750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 7850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 7950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 8050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 9250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 9350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 9450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 9550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 9650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 9750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 9850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 9950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 10050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 11250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 11350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 11450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 11550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 11650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 11750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 11850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 11950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 12050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 13250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 13350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 13450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 13550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 13650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 13750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 13850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 13950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 14050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 15250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 15350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 15450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 15550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 15650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 15750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 15850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 15950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 16050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 17250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 17350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 17450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 17550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 17650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 17750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 17850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 17950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 18050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 19250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 19350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 19450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 19550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 19650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 19750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 19850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 19950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 20050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 21250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 21350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 21450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 21550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 21650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 21750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 21850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 21950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 22050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 23250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 23350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 23450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 23550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 23650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 23750 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 23850 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 23950 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 24050 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -633 is out of NATURAL range 0 to 2147483647.
+#    Time: 25250 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1204 is out of NATURAL range 0 to 2147483647.
+#    Time: 25350 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1657 is out of NATURAL range 0 to 2147483647.
+#    Time: 25450 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -1948 is out of NATURAL range 0 to 2147483647.
+#    Time: 25550 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data
+# ** Error: (vsim-86) Arg Value -2048 is out of NATURAL range 0 to 2147483647.
+#    Time: 25650 ns  Iteration: 1  Instance: /goertzel_sine_test_tb/uut/data

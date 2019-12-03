@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.4 Build 182 03/12/2014 SJ Web Edition"
 
--- DATE "11/29/2019 11:24:47"
+-- DATE "12/02/2019 14:17:41"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -38,37 +38,39 @@ ENTITY 	sampler IS
 	i_clk : IN std_logic;
 	i_write_en : IN std_logic;
 	i_write_data : IN std_logic_vector(11 DOWNTO 0);
-	o_read_data : OUT std_logic_vector(11 DOWNTO 0)
+	o_read_data : BUFFER std_logic_vector(11 DOWNTO 0);
+	o_NEW_DATA : BUFFER std_logic
 	);
 END sampler;
 
 -- Design Ports Information
--- o_read_data[0]	=>  Location: PIN_E9,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[1]	=>  Location: PIN_V4,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[2]	=>  Location: PIN_R9,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[3]	=>  Location: PIN_Y2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[4]	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[5]	=>  Location: PIN_T3,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[6]	=>  Location: PIN_N7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[7]	=>  Location: PIN_P5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[8]	=>  Location: PIN_W1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[9]	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[10]	=>  Location: PIN_R1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- o_read_data[11]	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[0]	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_clk	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_en	=>  Location: PIN_AA3,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[1]	=>  Location: PIN_Y3,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[2]	=>  Location: PIN_Y6,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[3]	=>  Location: PIN_U1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[4]	=>  Location: PIN_V1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[5]	=>  Location: PIN_U2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[6]	=>  Location: PIN_N6,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[7]	=>  Location: PIN_T5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[8]	=>  Location: PIN_Y1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[9]	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[10]	=>  Location: PIN_W2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- i_write_data[11]	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[0]	=>  Location: PIN_J1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[1]	=>  Location: PIN_J2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[2]	=>  Location: PIN_J3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[3]	=>  Location: PIN_H1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[4]	=>  Location: PIN_F2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[5]	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[6]	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[7]	=>  Location: PIN_C2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[8]	=>  Location: PIN_B2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[9]	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[10]	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_read_data[11]	=>  Location: PIN_L8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- o_NEW_DATA	=>  Location: PIN_B1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[0]	=>  Location: PIN_J6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_clk	=>  Location: PIN_G3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_en	=>  Location: PIN_H2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[1]	=>  Location: PIN_H5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[2]	=>  Location: PIN_H6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[3]	=>  Location: PIN_G4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[4]	=>  Location: PIN_G5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[5]	=>  Location: PIN_J7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[6]	=>  Location: PIN_H7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[7]	=>  Location: PIN_E3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[8]	=>  Location: PIN_E4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[9]	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[10]	=>  Location: PIN_K7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- i_write_data[11]	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF sampler IS
@@ -85,7 +87,7 @@ SIGNAL ww_i_clk : std_logic;
 SIGNAL ww_i_write_en : std_logic;
 SIGNAL ww_i_write_data : std_logic_vector(11 DOWNTO 0);
 SIGNAL ww_o_read_data : std_logic_vector(11 DOWNTO 0);
-SIGNAL \i_clk~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL ww_o_NEW_DATA : std_logic;
 SIGNAL \o_read_data[0]~output_o\ : std_logic;
 SIGNAL \o_read_data[1]~output_o\ : std_logic;
 SIGNAL \o_read_data[2]~output_o\ : std_logic;
@@ -98,30 +100,27 @@ SIGNAL \o_read_data[8]~output_o\ : std_logic;
 SIGNAL \o_read_data[9]~output_o\ : std_logic;
 SIGNAL \o_read_data[10]~output_o\ : std_logic;
 SIGNAL \o_read_data[11]~output_o\ : std_logic;
+SIGNAL \o_NEW_DATA~output_o\ : std_logic;
 SIGNAL \i_clk~input_o\ : std_logic;
-SIGNAL \i_clk~inputclkctrl_outclk\ : std_logic;
 SIGNAL \i_write_data[0]~input_o\ : std_logic;
-SIGNAL \r_DATA[0]~feeder_combout\ : std_logic;
 SIGNAL \i_write_en~input_o\ : std_logic;
 SIGNAL \i_write_data[1]~input_o\ : std_logic;
 SIGNAL \r_DATA[1]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[2]~input_o\ : std_logic;
-SIGNAL \r_DATA[2]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[3]~input_o\ : std_logic;
 SIGNAL \i_write_data[4]~input_o\ : std_logic;
-SIGNAL \r_DATA[4]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[5]~input_o\ : std_logic;
+SIGNAL \r_DATA[5]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[6]~input_o\ : std_logic;
-SIGNAL \r_DATA[6]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[7]~input_o\ : std_logic;
+SIGNAL \r_DATA[7]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[8]~input_o\ : std_logic;
-SIGNAL \r_DATA[8]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[9]~input_o\ : std_logic;
-SIGNAL \r_DATA[9]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[10]~input_o\ : std_logic;
 SIGNAL \r_DATA[10]~feeder_combout\ : std_logic;
 SIGNAL \i_write_data[11]~input_o\ : std_logic;
 SIGNAL \r_DATA[11]~feeder_combout\ : std_logic;
+SIGNAL \r_NEW_DATA~q\ : std_logic;
 SIGNAL r_DATA : std_logic_vector(11 DOWNTO 0);
 
 BEGIN
@@ -130,13 +129,12 @@ ww_i_clk <= i_clk;
 ww_i_write_en <= i_write_en;
 ww_i_write_data <= i_write_data;
 o_read_data <= ww_o_read_data;
+o_NEW_DATA <= ww_o_NEW_DATA;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
-\i_clk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \i_clk~input_o\);
-
--- Location: IOOBUF_X11_Y29_N30
+-- Location: IOOBUF_X0_Y20_N9
 \o_read_data[0]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -148,7 +146,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[0]~output_o\);
 
--- Location: IOOBUF_X0_Y5_N23
+-- Location: IOOBUF_X0_Y20_N2
 \o_read_data[1]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -160,7 +158,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[1]~output_o\);
 
--- Location: IOOBUF_X1_Y0_N30
+-- Location: IOOBUF_X0_Y21_N23
 \o_read_data[2]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -172,7 +170,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[2]~output_o\);
 
--- Location: IOOBUF_X0_Y6_N2
+-- Location: IOOBUF_X0_Y21_N16
 \o_read_data[3]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -184,7 +182,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[3]~output_o\);
 
--- Location: IOOBUF_X0_Y2_N23
+-- Location: IOOBUF_X0_Y24_N23
 \o_read_data[4]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -196,7 +194,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[4]~output_o\);
 
--- Location: IOOBUF_X0_Y6_N16
+-- Location: IOOBUF_X0_Y24_N16
 \o_read_data[5]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -208,7 +206,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[5]~output_o\);
 
--- Location: IOOBUF_X0_Y6_N23
+-- Location: IOOBUF_X0_Y26_N23
 \o_read_data[6]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -220,7 +218,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[6]~output_o\);
 
--- Location: IOOBUF_X0_Y8_N9
+-- Location: IOOBUF_X0_Y26_N16
 \o_read_data[7]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -232,7 +230,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[7]~output_o\);
 
--- Location: IOOBUF_X0_Y7_N23
+-- Location: IOOBUF_X0_Y27_N9
 \o_read_data[8]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -244,7 +242,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[8]~output_o\);
 
--- Location: IOOBUF_X1_Y0_N23
+-- Location: IOOBUF_X0_Y10_N16
 \o_read_data[9]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -256,7 +254,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[9]~output_o\);
 
--- Location: IOOBUF_X0_Y10_N9
+-- Location: IOOBUF_X11_Y29_N2
 \o_read_data[10]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -268,7 +266,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[10]~output_o\);
 
--- Location: IOOBUF_X0_Y13_N23
+-- Location: IOOBUF_X0_Y22_N2
 \o_read_data[11]~output\ : cycloneiii_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -280,7 +278,19 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \o_read_data[11]~output_o\);
 
--- Location: IOIBUF_X0_Y14_N1
+-- Location: IOOBUF_X0_Y27_N16
+\o_NEW_DATA~output\ : cycloneiii_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \r_NEW_DATA~q\,
+	devoe => ww_devoe,
+	o => \o_NEW_DATA~output_o\);
+
+-- Location: IOIBUF_X0_Y23_N15
 \i_clk~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -291,20 +301,7 @@ PORT MAP (
 	i => ww_i_clk,
 	o => \i_clk~input_o\);
 
--- Location: CLKCTRL_G4
-\i_clk~inputclkctrl\ : cycloneiii_clkctrl
--- pragma translate_off
-GENERIC MAP (
-	clock_type => "global clock",
-	ena_register_mode => "none")
--- pragma translate_on
-PORT MAP (
-	inclk => \i_clk~inputclkctrl_INCLK_bus\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	outclk => \i_clk~inputclkctrl_outclk\);
-
--- Location: IOIBUF_X0_Y7_N1
+-- Location: IOIBUF_X0_Y24_N1
 \i_write_data[0]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -315,21 +312,7 @@ PORT MAP (
 	i => ww_i_write_data(0),
 	o => \i_write_data[0]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N0
-\r_DATA[0]~feeder\ : cycloneiii_lcell_comb
--- Equation(s):
--- \r_DATA[0]~feeder_combout\ = \i_write_data[0]~input_o\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \i_write_data[0]~input_o\,
-	combout => \r_DATA[0]~feeder_combout\);
-
--- Location: IOIBUF_X5_Y0_N1
+-- Location: IOIBUF_X0_Y21_N8
 \i_write_en~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -340,7 +323,7 @@ PORT MAP (
 	i => ww_i_write_en,
 	o => \i_write_en~input_o\);
 
--- Location: FF_X1_Y8_N1
+-- Location: FF_X1_Y23_N25
 \r_DATA[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -348,14 +331,15 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
-	d => \r_DATA[0]~feeder_combout\,
+	clk => \i_clk~input_o\,
+	asdata => \i_write_data[0]~input_o\,
+	sload => VCC,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(0));
 
--- Location: IOIBUF_X5_Y0_N22
+-- Location: IOIBUF_X0_Y27_N1
 \i_write_data[1]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -366,7 +350,7 @@ PORT MAP (
 	i => ww_i_write_data(1),
 	o => \i_write_data[1]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N2
+-- Location: LCCOMB_X1_Y23_N26
 \r_DATA[1]~feeder\ : cycloneiii_lcell_comb
 -- Equation(s):
 -- \r_DATA[1]~feeder_combout\ = \i_write_data[1]~input_o\
@@ -380,7 +364,7 @@ PORT MAP (
 	datad => \i_write_data[1]~input_o\,
 	combout => \r_DATA[1]~feeder_combout\);
 
--- Location: FF_X1_Y8_N3
+-- Location: FF_X1_Y23_N27
 \r_DATA[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -388,14 +372,14 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
+	clk => \i_clk~input_o\,
 	d => \r_DATA[1]~feeder_combout\,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(1));
 
--- Location: IOIBUF_X5_Y0_N8
+-- Location: IOIBUF_X0_Y25_N22
 \i_write_data[2]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -406,21 +390,7 @@ PORT MAP (
 	i => ww_i_write_data(2),
 	o => \i_write_data[2]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N4
-\r_DATA[2]~feeder\ : cycloneiii_lcell_comb
--- Equation(s):
--- \r_DATA[2]~feeder_combout\ = \i_write_data[2]~input_o\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \i_write_data[2]~input_o\,
-	combout => \r_DATA[2]~feeder_combout\);
-
--- Location: FF_X1_Y8_N5
+-- Location: FF_X1_Y23_N21
 \r_DATA[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -428,14 +398,15 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
-	d => \r_DATA[2]~feeder_combout\,
+	clk => \i_clk~input_o\,
+	asdata => \i_write_data[2]~input_o\,
+	sload => VCC,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(2));
 
--- Location: IOIBUF_X0_Y9_N15
+-- Location: IOIBUF_X0_Y23_N8
 \i_write_data[3]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -446,7 +417,7 @@ PORT MAP (
 	i => ww_i_write_data(3),
 	o => \i_write_data[3]~input_o\);
 
--- Location: FF_X1_Y8_N31
+-- Location: FF_X1_Y23_N31
 \r_DATA[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -454,7 +425,7 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
+	clk => \i_clk~input_o\,
 	asdata => \i_write_data[3]~input_o\,
 	sload => VCC,
 	ena => \i_write_en~input_o\,
@@ -462,7 +433,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => r_DATA(3));
 
--- Location: IOIBUF_X0_Y8_N1
+-- Location: IOIBUF_X0_Y27_N22
 \i_write_data[4]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -473,21 +444,7 @@ PORT MAP (
 	i => ww_i_write_data(4),
 	o => \i_write_data[4]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N8
-\r_DATA[4]~feeder\ : cycloneiii_lcell_comb
--- Equation(s):
--- \r_DATA[4]~feeder_combout\ = \i_write_data[4]~input_o\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \i_write_data[4]~input_o\,
-	combout => \r_DATA[4]~feeder_combout\);
-
--- Location: FF_X1_Y8_N9
+-- Location: FF_X1_Y23_N1
 \r_DATA[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -495,14 +452,15 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
-	d => \r_DATA[4]~feeder_combout\,
+	clk => \i_clk~input_o\,
+	asdata => \i_write_data[4]~input_o\,
+	sload => VCC,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(4));
 
--- Location: IOIBUF_X0_Y9_N8
+-- Location: IOIBUF_X0_Y22_N15
 \i_write_data[5]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -513,7 +471,21 @@ PORT MAP (
 	i => ww_i_write_data(5),
 	o => \i_write_data[5]~input_o\);
 
--- Location: FF_X1_Y8_N11
+-- Location: LCCOMB_X1_Y23_N18
+\r_DATA[5]~feeder\ : cycloneiii_lcell_comb
+-- Equation(s):
+-- \r_DATA[5]~feeder_combout\ = \i_write_data[5]~input_o\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \i_write_data[5]~input_o\,
+	combout => \r_DATA[5]~feeder_combout\);
+
+-- Location: FF_X1_Y23_N19
 \r_DATA[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -521,15 +493,14 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
-	asdata => \i_write_data[5]~input_o\,
-	sload => VCC,
+	clk => \i_clk~input_o\,
+	d => \r_DATA[5]~feeder_combout\,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(5));
 
--- Location: IOIBUF_X0_Y8_N15
+-- Location: IOIBUF_X0_Y25_N15
 \i_write_data[6]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -540,21 +511,7 @@ PORT MAP (
 	i => ww_i_write_data(6),
 	o => \i_write_data[6]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N28
-\r_DATA[6]~feeder\ : cycloneiii_lcell_comb
--- Equation(s):
--- \r_DATA[6]~feeder_combout\ = \i_write_data[6]~input_o\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \i_write_data[6]~input_o\,
-	combout => \r_DATA[6]~feeder_combout\);
-
--- Location: FF_X1_Y8_N29
+-- Location: FF_X1_Y23_N13
 \r_DATA[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -562,14 +519,15 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
-	d => \r_DATA[6]~feeder_combout\,
+	clk => \i_clk~input_o\,
+	asdata => \i_write_data[6]~input_o\,
+	sload => VCC,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(6));
 
--- Location: IOIBUF_X0_Y3_N1
+-- Location: IOIBUF_X0_Y26_N8
 \i_write_data[7]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -580,7 +538,21 @@ PORT MAP (
 	i => ww_i_write_data(7),
 	o => \i_write_data[7]~input_o\);
 
--- Location: FF_X1_Y8_N15
+-- Location: LCCOMB_X1_Y23_N6
+\r_DATA[7]~feeder\ : cycloneiii_lcell_comb
+-- Equation(s):
+-- \r_DATA[7]~feeder_combout\ = \i_write_data[7]~input_o\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \i_write_data[7]~input_o\,
+	combout => \r_DATA[7]~feeder_combout\);
+
+-- Location: FF_X1_Y23_N7
 \r_DATA[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -588,15 +560,14 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
-	asdata => \i_write_data[7]~input_o\,
-	sload => VCC,
+	clk => \i_clk~input_o\,
+	d => \r_DATA[7]~feeder_combout\,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(7));
 
--- Location: IOIBUF_X0_Y6_N8
+-- Location: IOIBUF_X0_Y26_N1
 \i_write_data[8]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -607,21 +578,7 @@ PORT MAP (
 	i => ww_i_write_data(8),
 	o => \i_write_data[8]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N24
-\r_DATA[8]~feeder\ : cycloneiii_lcell_comb
--- Equation(s):
--- \r_DATA[8]~feeder_combout\ = \i_write_data[8]~input_o\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \i_write_data[8]~input_o\,
-	combout => \r_DATA[8]~feeder_combout\);
-
--- Location: FF_X1_Y8_N25
+-- Location: FF_X1_Y23_N17
 \r_DATA[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -629,14 +586,15 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
-	d => \r_DATA[8]~feeder_combout\,
+	clk => \i_clk~input_o\,
+	asdata => \i_write_data[8]~input_o\,
+	sload => VCC,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(8));
 
--- Location: IOIBUF_X0_Y8_N22
+-- Location: IOIBUF_X0_Y25_N1
 \i_write_data[9]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -647,21 +605,7 @@ PORT MAP (
 	i => ww_i_write_data(9),
 	o => \i_write_data[9]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N26
-\r_DATA[9]~feeder\ : cycloneiii_lcell_comb
--- Equation(s):
--- \r_DATA[9]~feeder_combout\ = \i_write_data[9]~input_o\
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => \i_write_data[9]~input_o\,
-	combout => \r_DATA[9]~feeder_combout\);
-
--- Location: FF_X1_Y8_N27
+-- Location: FF_X1_Y23_N11
 \r_DATA[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -669,14 +613,15 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
-	d => \r_DATA[9]~feeder_combout\,
+	clk => \i_clk~input_o\,
+	asdata => \i_write_data[9]~input_o\,
+	sload => VCC,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(9));
 
--- Location: IOIBUF_X0_Y7_N15
+-- Location: IOIBUF_X0_Y22_N22
 \i_write_data[10]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -687,7 +632,7 @@ PORT MAP (
 	i => ww_i_write_data(10),
 	o => \i_write_data[10]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N12
+-- Location: LCCOMB_X1_Y23_N4
 \r_DATA[10]~feeder\ : cycloneiii_lcell_comb
 -- Equation(s):
 -- \r_DATA[10]~feeder_combout\ = \i_write_data[10]~input_o\
@@ -701,7 +646,7 @@ PORT MAP (
 	datad => \i_write_data[10]~input_o\,
 	combout => \r_DATA[10]~feeder_combout\);
 
--- Location: FF_X1_Y8_N13
+-- Location: FF_X1_Y23_N5
 \r_DATA[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -709,14 +654,14 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
+	clk => \i_clk~input_o\,
 	d => \r_DATA[10]~feeder_combout\,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(10));
 
--- Location: IOIBUF_X0_Y10_N15
+-- Location: IOIBUF_X0_Y13_N8
 \i_write_data[11]~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -727,7 +672,7 @@ PORT MAP (
 	i => ww_i_write_data(11),
 	o => \i_write_data[11]~input_o\);
 
--- Location: LCCOMB_X1_Y8_N22
+-- Location: LCCOMB_X1_Y23_N22
 \r_DATA[11]~feeder\ : cycloneiii_lcell_comb
 -- Equation(s):
 -- \r_DATA[11]~feeder_combout\ = \i_write_data[11]~input_o\
@@ -741,7 +686,7 @@ PORT MAP (
 	datad => \i_write_data[11]~input_o\,
 	combout => \r_DATA[11]~feeder_combout\);
 
--- Location: FF_X1_Y8_N23
+-- Location: FF_X1_Y23_N23
 \r_DATA[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -749,12 +694,27 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \i_clk~inputclkctrl_outclk\,
+	clk => \i_clk~input_o\,
 	d => \r_DATA[11]~feeder_combout\,
 	ena => \i_write_en~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => r_DATA(11));
+
+-- Location: FF_X1_Y23_N9
+r_NEW_DATA : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \i_clk~input_o\,
+	asdata => \i_write_en~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \r_NEW_DATA~q\);
 
 ww_o_read_data(0) <= \o_read_data[0]~output_o\;
 
@@ -779,6 +739,8 @@ ww_o_read_data(9) <= \o_read_data[9]~output_o\;
 ww_o_read_data(10) <= \o_read_data[10]~output_o\;
 
 ww_o_read_data(11) <= \o_read_data[11]~output_o\;
+
+ww_o_NEW_DATA <= \o_NEW_DATA~output_o\;
 END structure;
 
 

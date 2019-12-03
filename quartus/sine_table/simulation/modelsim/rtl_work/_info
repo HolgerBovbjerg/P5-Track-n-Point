@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\quartus\sine_table\simulation\modelsim
+Esin_table
+Z1 w1575360933
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\quartus\sine_table\simulation\modelsim
+Z6 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table.vhd
+Z7 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table.vhd
+l0
+L4
+VR]`?TZDChJM7nLAEzT<f:1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1575363514.652000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table.vhd|
+Z11 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 @=1Mm;ElOjSNik77XU4RL0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 9 sin_table 0 22 R]`?TZDChJM7nLAEzT<f:1
+l30
+L10
+V6gFb_W63mi>4EM];7F`ZT1
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 cP9c:B;bkcORRiJKzLMUl3
+!i10b 1
+Esin_table_tb
+Z14 w1575363415
+R2
+R3
+R4
+R5
+Z15 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table_tb.vhd
+Z16 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table_tb.vhd
+l0
+L4
+VD0Kd<;W]^]NJ]T^XBlJ5T3
+!s100 YW^In2@l1OQ5ERTl:MzlZ0
+R8
+31
+!i10b 1
+Z17 !s108 1575363514.793000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table_tb.vhd|
+Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sine_table/sin_table_tb.vhd|
+R12
+R13
+Abehavior
+R2
+R3
+R4
+DEx4 work 12 sin_table_tb 0 22 D0Kd<;W]^]NJ]T^XBlJ5T3
+l24
+L8
+VC9R`cLDO5NH_ZNFoZoB<h3
+!s100 <R7F3a<KVnNFMANHcYBU?3
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

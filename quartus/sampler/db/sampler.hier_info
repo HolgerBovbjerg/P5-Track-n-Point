@@ -1,4 +1,5 @@
 |sampler
+i_clk => r_NEW_DATA.CLK
 i_clk => r_DATA[0].CLK
 i_clk => r_DATA[1].CLK
 i_clk => r_DATA[2].CLK
@@ -11,6 +12,7 @@ i_clk => r_DATA[8].CLK
 i_clk => r_DATA[9].CLK
 i_clk => r_DATA[10].CLK
 i_clk => r_DATA[11].CLK
+i_write_en => r_NEW_DATA.DATAIN
 i_write_en => r_DATA[0].ENA
 i_write_en => r_DATA[1].ENA
 i_write_en => r_DATA[2].ENA
@@ -35,17 +37,18 @@ i_write_data[8] => r_DATA[8].DATAIN
 i_write_data[9] => r_DATA[9].DATAIN
 i_write_data[10] => r_DATA[10].DATAIN
 i_write_data[11] => r_DATA[11].DATAIN
-o_read_data[0] <= r_DATA[0].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[1] <= r_DATA[1].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[2] <= r_DATA[2].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[3] <= r_DATA[3].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[4] <= r_DATA[4].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[5] <= r_DATA[5].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[6] <= r_DATA[6].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[7] <= r_DATA[7].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[8] <= r_DATA[8].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[9] <= r_DATA[9].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[10] <= r_DATA[10].DB_MAX_OUTPUT_PORT_TYPE
-o_read_data[11] <= r_DATA[11].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[0] << r_DATA[0].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[1] << r_DATA[1].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[2] << r_DATA[2].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[3] << r_DATA[3].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[4] << r_DATA[4].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[5] << r_DATA[5].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[6] << r_DATA[6].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[7] << r_DATA[7].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[8] << r_DATA[8].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[9] << r_DATA[9].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[10] << r_DATA[10].DB_MAX_OUTPUT_PORT_TYPE
+o_read_data[11] << r_DATA[11].DB_MAX_OUTPUT_PORT_TYPE
+o_NEW_DATA << r_NEW_DATA.DB_MAX_OUTPUT_PORT_TYPE
 
 

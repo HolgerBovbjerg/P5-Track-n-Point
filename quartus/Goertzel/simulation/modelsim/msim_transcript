@@ -10,7 +10,7 @@
 # ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/constants.vhd}
+# vcom -2008 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/constants.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,7 +20,7 @@
 # -- Compiling package constants
 # -- Compiling package body constants
 # -- Loading package constants
-# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/records.vhd}
+# vcom -2008 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/records.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -29,7 +29,7 @@
 # -- Loading package MATH_REAL
 # -- Loading package constants
 # -- Compiling package records
-# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/Goertzel.vhd}
+# vcom -2008 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/Goertzel.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -41,7 +41,7 @@
 # -- Compiling entity Goertzel
 # -- Compiling architecture Behavioral of Goertzel
 # 
-# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/../../test_benches/Goertzel_tb.vhd}
+# vcom -2008 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/../../test_benches/Goertzel_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -53,8 +53,6 @@
 # -- Loading package records
 # -- Compiling entity Goertzel_tb
 # -- Compiling architecture behavior of Goertzel_tb
-# ** Warning: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/../../test_benches/Goertzel_tb.vhd(71): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# 
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  Goertzel_tb
 # vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps Goertzel_tb 
@@ -68,13 +66,6 @@
 # Loading work.records
 # Loading work.goertzel_tb(behavior)
 # Loading work.goertzel(behavioral)
-# ** Error: (vsim-7) Failed to open VHDL file "sine.dat" in rb mode.
-# 
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /goertzel_tb
-# ** Warning: Design size of 6 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
 # 
 # add wave *
 # view structure
@@ -82,15 +73,3 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 50 us
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run

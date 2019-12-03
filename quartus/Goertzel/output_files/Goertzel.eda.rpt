@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Goertzel
-Sun Dec 01 14:40:22 2019
+Tue Dec 03 10:16:02 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Dec 01 14:40:22 2019 ;
+; EDA Netlist Writer Status ; Successful - Tue Dec 03 10:16:02 2019 ;
 ; Revision Name             ; Goertzel                              ;
 ; Top-level Entity Name     ; Goertzel                              ;
 ; Family                    ; Cyclone III                           ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Sun Dec 01 14:40:21 2019
+    Info: Processing started: Tue Dec 03 10:16:00 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Goertzel -c Goertzel
 Info (204019): Generated file Goertzel_6_1200mv_85c_slow.vho in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file Goertzel_6_1200mv_0c_slow.vho in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/simulation/modelsim/" for EDA simulation tool
@@ -99,9 +99,9 @@ Info (204019): Generated file Goertzel_6_1200mv_0c_vhd_slow.sdo in folder "C:/Us
 Info (204019): Generated file Goertzel_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file Goertzel_vhd.sdo in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4553 megabytes
-    Info: Processing ended: Sun Dec 01 14:40:22 2019
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4559 megabytes
+    Info: Processing ended: Tue Dec 03 10:16:02 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sin_table">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sin_table|altsyncram:Mux11_rtl_0" CBX_FILE_NAME="altsyncram_rvv.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
