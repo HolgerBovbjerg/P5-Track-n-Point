@@ -1,0 +1,90 @@
+{
+    "parameters": [
+        {
+            "expr": "150",
+            "name": "GND_plane_length",
+            "value": "150"
+        },
+        {
+            "expr": "150",
+            "name": "GND_plane_width",
+            "value": "150"
+        },
+        {
+            "expr": "1.5",
+            "name": "isolator_height",
+            "value": "1.5"
+        },
+        {
+            "expr": "99",
+            "name": "patch_width",
+            "value": "99"
+        },
+        {
+            "expr": "79",
+            "name": "patch_length",
+            "value": "79"
+        },
+        {
+            "expr": "20",
+            "name": "feed_inset",
+            "value": "20"
+        },
+        {
+            "expr": "2.6",
+            "name": "feed_width",
+            "value": "2.6"
+        },
+        {
+            "expr": "0.5",
+            "name": "feed_gap",
+            "value": "0.5"
+        },
+        {
+            "expr": "0.035",
+            "name": "metal_thickness",
+            "value": "0.035"
+        },
+        {
+            "expr": "6.81",
+            "name": "k",
+            "value": "6.81"
+        },
+        {
+            "expr": "4.3",
+            "name": "Epsilon_r",
+            "value": "4.3"
+        },
+        {
+            "expr": "70",
+            "name": "Length",
+            "value": "70"
+        },
+        {
+            "expr": "1.5",
+            "name": "SubstrateHeight",
+            "value": "1.5"
+        },
+        {
+            "expr": "2.94",
+            "name": "TraceWidth",
+            "value": "2.94"
+        },
+        {
+            "expr": "0",
+            "name": "TraceThickness",
+            "value": "0"
+        },
+        {
+            "expr": "0",
+            "name": "GroundThickness",
+            "value": "0"
+        },
+        {
+            "expr": "17.76",
+            "name": "SubstrateWidth",
+            "value": "17.76"
+        }
+    ],
+    "version": 1
+}

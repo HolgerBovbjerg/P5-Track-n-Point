@@ -1,0 +1,19 @@
+%TF.GenerationSoftware,Altium Limited,Altium Designer,19.0.15 (446)*%
+G04 Layer_Physical_Order=2*
+G04 Layer_Color=16711680*
+%FSLAX45Y45*%
+%MOMM*%
+%TF.FileFunction,Copper,L2,Bot,Signal*%
+%TF.Part,Single*%
+G01*
+G75*
+G36*
+X15000000Y0D02*
+X0D01*
+Y15000000D01*
+X15000000D01*
+Y0D01*
+D02*
+G37*
+%TF.MD5,6e6eb653d6abc967d604609b0bdf6c96*%
+M02*
