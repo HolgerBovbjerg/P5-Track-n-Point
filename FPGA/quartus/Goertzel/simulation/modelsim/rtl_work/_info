@@ -1,0 +1,155 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\quartus\Goertzel\simulation\modelsim
+Pconstants
+Z1 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 w1575305732
+Z6 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\quartus\Goertzel\simulation\modelsim
+Z7 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/constants.vhd
+Z8 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/constants.vhd
+l0
+L11
+VoW<^O;<=PkcTB?FUkRb2T0
+Z9 OV;C;10.1d;51
+33
+Z10 !s108 1575364584.874000
+Z11 !s90 -reportprogress|300|-2008|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/constants.vhd|
+Z12 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/constants.vhd|
+Z13 o-2008 -work work -O0
+Z14 tExplicit 1
+!s100 _5e7`DAY9DJBMN?f0[[`A2
+!i10b 1
+Bbody
+Z15 DPx4 work 9 constants 0 22 oW<^O;<=PkcTB?FUkRb2T0
+R1
+R2
+R3
+R4
+l0
+L34
+V9hk9^Ljj^aJ5^@kjm7>Ao0
+R9
+33
+R10
+R11
+R12
+R13
+R14
+nbody
+!s100 1z8lI4`I[ABI?a<ScRYZe2
+!i10b 1
+Egoertzel
+Z16 w1575306620
+Z17 DPx4 work 7 records 0 22 3ATCWb8BZ[VNf^Xzf?ooM0
+R15
+R1
+R2
+R3
+R4
+R6
+Z18 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/Goertzel.vhd
+Z19 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/Goertzel.vhd
+l0
+L9
+VFTma?BXJJ>?MPEoQT>d]A3
+R9
+33
+Z20 !s108 1575364585.315000
+Z21 !s90 -reportprogress|300|-2008|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/Goertzel.vhd|
+Z22 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/Goertzel.vhd|
+R13
+R14
+!s100 IInoh`CUHj^zd7DPj2ZUF0
+!i10b 1
+Abehavioral
+R17
+R15
+R1
+R2
+R3
+R4
+DEx4 work 8 goertzel 0 22 FTma?BXJJ>?MPEoQT>d]A3
+l34
+L19
+VFbiRVSLm_]UK6AEBceLih3
+R9
+33
+R20
+R21
+R22
+R13
+R14
+!s100 Z6m1SPgU[e<LY;a@V`43?2
+!i10b 1
+Egoertzel_tb
+Z23 w1575364539
+R17
+R15
+Z24 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R1
+R2
+R3
+R4
+R6
+Z25 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/../../test_benches/Goertzel_tb.vhd
+Z26 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/../../test_benches/Goertzel_tb.vhd
+l0
+L12
+V>=oK81g?H]2O22IcJl2Fn2
+!s100 HI;8=Imjd3j:RLO5:Hfbj3
+R9
+33
+!i10b 1
+Z27 !s108 1575364585.538000
+Z28 !s90 -reportprogress|300|-2008|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/../../test_benches/Goertzel_tb.vhd|
+Z29 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/Goertzel/../../test_benches/Goertzel_tb.vhd|
+R13
+R14
+Abehavior
+R17
+R15
+R24
+R1
+R2
+R3
+R4
+DEx4 work 11 goertzel_tb 0 22 >=oK81g?H]2O22IcJl2Fn2
+l42
+L15
+V^5]eZe5NiJ5I5f6L?ZY9k1
+!s100 SKN<Z]ENc<_e=c?TIXiFE0
+R9
+33
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Precords
+R15
+R1
+R2
+R3
+R4
+w1575305558
+R6
+8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/records.vhd
+FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/records.vhd
+l0
+L9
+V3ATCWb8BZ[VNf^Xzf?ooM0
+R9
+33
+R13
+R14
+!s100 iG:1VU3WgFM?8_Z`2Q;Dg1
+!i10b 1
+!s108 1575364585.127000
+!s90 -reportprogress|300|-2008|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/records.vhd|
+!s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/records.vhd|

@@ -1,0 +1,19 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 14:19:22 On 18-11-2019
+
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : PCB Document [patch_864MHz.PcbDoc]
+   Generated File[patch_864MHz_Copper_Signal_Top.gbr]
+   Generated File[patch_864MHz_Copper_Signal_Bot.gbr]
+   Generated File[patch_864MHz_Profile.gbr]
+   Generated File[patch_864MHz_PTH_Drill.gbr]
+   Generated File[patch_864MHz.EXTREP]
+   Generated File[patch_864MHz.REP]
+
+
+Files Generated   : 6
+Documents Printed : 0
+
+Finished Output Generation At 14:19:23 On 18-11-2019

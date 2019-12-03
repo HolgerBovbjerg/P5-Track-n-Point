@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\quartus\sampler\simulation\modelsim
+Esampler
+Z1 w1575022634
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\quartus\sampler\simulation\modelsim
+Z6 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd
+Z7 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd
+l0
+L7
+VKFE_VUi@45^NJ25;UATVc0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1575022762.354000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd|
+Z11 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 >2@3k^QZeGHCDWmVZV1zH3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 7 sampler 0 22 KFE_VUi@45^NJ25;UATVc0
+l26
+L24
+V2]H?hUz^:naQX<@99W[623
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 g0eUn0WjCgVi3cDoz]SQV0
+!i10b 1
+Esampler_tb
+Z14 w1575022707
+R2
+R3
+R4
+R5
+Z15 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sampler/../../test_benches/sampler_tb.vhd
+Z16 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sampler/../../test_benches/sampler_tb.vhd
+l0
+L5
+V2WbX>=_WZodKOo014Kj<V1
+!s100 Hb^UYKSPEJBQf;]::RTCf1
+R8
+31
+!i10b 1
+Z17 !s108 1575022762.596000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sampler/../../test_benches/sampler_tb.vhd|
+Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sampler/../../test_benches/sampler_tb.vhd|
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+DEx4 work 10 sampler_tb 0 22 2WbX>=_WZodKOo014Kj<V1
+l38
+L8
+Ve5Az`3<_A<A`4`aYDdFSn3
+!s100 OeZ@l=B=WghK1j0AaL^2`3
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

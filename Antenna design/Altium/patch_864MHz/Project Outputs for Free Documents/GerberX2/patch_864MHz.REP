@@ -1,0 +1,44 @@
+*************************************************************
+FileName = patch_864MHz.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : patch_864MHz_Copper_Signal_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : patch_864MHz_Copper_Signal_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Profile
+      File : patch_864MHz_Profile.gbr
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Plated through-hole drill file
+      File : patch_864MHz_PTH_Drill.gbr
+
+
+Used DCodes :
+*************************************************************
+

@@ -1,0 +1,21 @@
+[Version]
+2
+[ProjectVersion]
+'# MWS Version: Version 2019.5 - Apr 26 2019 - ACIS 28.0.2 - Student Edition
+[Author]
+holge
+[Mesh Cells]
+41,184
+[Mesh Type]
+Hexahedral
+[Last Problem Type]
+High Frequency
+[Last Solver Type]
+HF Time Domain
+[Last Solver Type Abb]
+t
+[Results]
+Time Domain: S-Parameter
+[Modeler Unique ID]
+5:inset_patch_868mhz.cst?adc4b090a36a89dab9db4b5a0ee208c5?105485:numberofparameters=16:port=1>mode=1>zre=50>zim=0:::epsilon_r?gnd_plane_length?gnd_plane_width?length?substrateheight?substratewidth?tracethickness?tracewidth?feed_gap?feed_inset?feed_width?isolator_height?k?metal_thickness?patch_length?patch_width
+[Comment]

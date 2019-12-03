@@ -1,0 +1,25 @@
+
+
+
+
+
+
+	-- Sine table
+	COMPONENT sin_table is
+	Port (
+	  i_clk          : in  std_logic;
+	  i_addr         : in  std_logic_vector(7 downto 0);
+	  o_data         : out std_logic_vector(11 downto 0)
+	  );
+	end COMPONENT;
+	
+	signal i_CLK_sin :  STD_LOGIC := '0'; 
+	signal i_addr : std_logic_vector(7 downto 0) := (others=>'0');
+	signal o_sin_data : std_logic_vector(11 downto 0);
+	
+	data : sin_table PORT MAP(
+	  i_clk          => i_CLK_sin,
+	  i_addr         => i_addr,
+	  o_data         => o_sin_data
+	);
+	

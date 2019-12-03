@@ -1,0 +1,14 @@
+matrixcalc_AMD64 @ HSB-XPS15:  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                               Matrix calculation could not be started due to the following fatal exeception:
+                               Could not initialize mesher specific data from database
+                               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+matrixcalc_AMD64 @ HSB-XPS15:  Error while running matrix calculator: ExH: CST exception, Msg: Could not initialize mesher specific data from database, Hint:  n/a
+matrixcalc_AMD64 @ HSB-XPS15:  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                               Could not initialize mesher specific data from database
+                               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+matrixcalc_AMD64 @ HSB-XPS15:  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                               Error in calculating solver matrix
+                               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+

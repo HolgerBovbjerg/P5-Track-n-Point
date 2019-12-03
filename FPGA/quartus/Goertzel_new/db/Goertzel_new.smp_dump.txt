@@ -1,0 +1,28 @@
+
+State Machine - |Goertzel_new|store_state
+Name store_state.store_stage3 store_state.store_stage2 store_state.store_stage1 
+store_state.store_stage1 0 0 0 
+store_state.store_stage2 0 1 1 
+store_state.store_stage3 1 0 1 
+
+State Machine - |Goertzel_new|calc_state
+Name calc_state.calc_stage3 calc_state.calc_stage2 calc_state.calc_stage1 
+calc_state.calc_stage1 0 0 0 
+calc_state.calc_stage2 0 1 1 
+calc_state.calc_stage3 1 0 1 
+
+State Machine - |Goertzel_new|reg.state
+Name reg.state.DONE reg.state.STORE reg.state.CALCULATE reg.state.FETCH reg.state.IDLE 
+reg.state.IDLE 0 0 0 0 0 
+reg.state.FETCH 0 0 0 1 1 
+reg.state.CALCULATE 0 0 1 0 1 
+reg.state.STORE 0 1 0 0 1 
+reg.state.DONE 1 0 0 0 1 
+
+State Machine - |Goertzel_new|\clk_process:var.state
+Name \clk_process:var.state.DONE \clk_process:var.state.STORE \clk_process:var.state.CALCULATE \clk_process:var.state.FETCH \clk_process:var.state.IDLE 
+\clk_process:var.state.IDLE 0 0 0 0 0 
+\clk_process:var.state.FETCH 0 0 0 1 1 
+\clk_process:var.state.CALCULATE 0 0 1 0 1 
+\clk_process:var.state.STORE 0 1 0 0 1 
+\clk_process:var.state.DONE 1 0 0 0 1 

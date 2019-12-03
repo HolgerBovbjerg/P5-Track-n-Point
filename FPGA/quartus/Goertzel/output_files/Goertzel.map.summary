@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Dec 03 10:15:42 2019
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
+Revision Name : Goertzel
+Top-level Entity Name : Goertzel
+Family : Cyclone III
+Total logic elements : 212
+    Total combinational functions : 156
+    Dedicated logic registers : 163
+Total registers : 163
+Total pins : 51
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 0
