@@ -1,5 +1,17 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="AoA_estimator">
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST1_Goertzel|lpm_mult:Mult2" CBX_FILE_NAME="mult_i8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST2_Goertzel|lpm_mult:Mult1" CBX_FILE_NAME="mult_b8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST3_Goertzel|lpm_mult:Mult0" CBX_FILE_NAME="mult_c8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST1_Goertzel|lpm_mult:Mult1" CBX_FILE_NAME="mult_b8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST1_Goertzel|lpm_mult:Mult3" CBX_FILE_NAME="mult_g8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST2_Goertzel|lpm_mult:Mult0" CBX_FILE_NAME="mult_c8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST2_Goertzel|lpm_mult:Mult2" CBX_FILE_NAME="mult_i8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST3_Goertzel|lpm_mult:Mult1" CBX_FILE_NAME="mult_b8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST3_Goertzel|lpm_mult:Mult3" CBX_FILE_NAME="mult_g8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST1_Goertzel|lpm_mult:Mult0" CBX_FILE_NAME="mult_c8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST2_Goertzel|lpm_mult:Mult3" CBX_FILE_NAME="mult_g8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|AoA_estimator|Goertzel:INST3_Goertzel|lpm_mult:Mult2" CBX_FILE_NAME="mult_i8t.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
