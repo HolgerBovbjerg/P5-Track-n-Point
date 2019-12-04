@@ -5,81 +5,122 @@ use ieee.math_real.all;
 
 library work;
 use work.constants.all;
+use work.records;
 
 entity AoA_estimator is
     Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
 				i_RESET : in  STD_LOGIC; -- Reset input
-				i_SIG1 : in  STD_LOGIC_VECTOR (11 downto 0); -- Signal 1
-				i_SIG2 : in STD_LOGIC_VECTOR (11 downto 0); -- Signal 2
-				i_SIG3 : in STD_LOGIC_VECTOR (11 downto 0); -- Signal 3
-				o_ANGLE_elevation : out  STD_LOGIC_VECTOR (7 downto 0); -- Angle output
-				o_ANGLE_azimuth : out  STD_LOGIC_VECTOR (7 downto 0) -- Angle output
+				i_ADC1 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 1
+				i_ADC2 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 2
+				i_ADC3 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 3
+				o_Real1 : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Real output 1
+				o_Real2 : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Real output 2
+				o_Real3 : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Real output 3
+				o_Imag1 : out STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Imag output 1
+				o_Imag2 : out STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Imag output 1
+				o_Imag3 : out STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Imag output 1
+				o_NEW_RESULT : out STD_LOGIC_VECTOR(2 downto 0)
 			 );
 end AoA_estimator;
 
 architecture Behavioral of AoA_estimator is
 
-	signal r_state: STD_LOGIC_VECTOR(7 downto 0) := "00000001"; -- Current state
+	type ADC_input_type is array (2 downto 0) of std_logic_vector(INPUT_WIDTH-1 downto 0);
+	type real_result_type is array (2 downto 0) of std_logic_vector(CALC_WIDTH-1 downto 0);
+	type imag_result_type is array (2 downto 0) of std_logic_vector(CALC_WIDTH-1 downto 0);
+
 	signal r_ANGLE: STD_LOGIC_VECTOR(7 downto 0) := "00000001"; -- Angle registry
 	
 	COMPONENT Goertzel 
 	Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
 				i_NEW_VALUE : in  STD_LOGIC; -- NEW_VALUE input
-				i_SIG : in  SIGNED(INPUT_WIDTH-1 downto 0); -- Signal 1
-				i_COEFF : in SIGNED(CALC_WIDTH-1 downto 0); -- Coefficient input
-				o_Goertzel : out  goertzel_result_type; -- DFT output
+				i_SIG : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 1
+				o_Real : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- DFT Real part output
+				o_Imag : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- DFT Imaginary part output
 				o_NEW_RESULT : out  STD_LOGIC -- New result flag
 			 );
 	end COMPONENT Goertzel;
 	
 	signal w_CLK :  STD_LOGIC; -- Clock input
-	signal w_NEW_VALUE : STD_LOGIC; -- NEW_VALUE input
-	signal w_SIG : SIGNED(INPUT_WIDTH-1 downto 0); -- Signal 1
-	signal w_COEFF : SIGNED(CALC_WIDTH-1 downto 0); -- Coefficient input
-	signal w_Goertzel :  goertzel_result_type; -- DFT output
-	signal w_NEW_RESULT : STD_LOGIC; -- New result flag
+	signal w_NEW_VALUE : STD_LOGIC_VECTOR(2 downto 0); -- NEW_VALUE input
+	signal w_SIG : ADC_input_type; -- Signal 1
+	signal w_Real :  real_result_type; -- DFT output
+	signal w_Imag :  imag_result_type; -- DFT output
+	signal w_NEW_RESULT : STD_LOGIC_VECTOR(2 downto 0); -- New result flag
 	
 	COMPONENT sampler 
-	Generic (
-			 g_WIDTH : natural := 12 -- Word width
-	);
 	Port (	i_CLK      : in std_logic; -- CLock input
 				-- Write Interface
 				i_write_en   : in  std_logic; -- Write enable
-				i_write_data : in  std_logic_vector(g_WIDTH-1 downto 0); -- Input data
+				i_write_data : in  std_logic_vector(INPUT_WIDTH-1 downto 0); -- Input data
 		 
 				-- Read Interface
-				o_read_data : out std_logic_vector(g_WIDTH-1 downto 0); -- Output data
+				o_read_data : out std_logic_vector(INPUT_WIDTH-1 downto 0); -- Output data
 				o_NEW_DATA : out std_logic
 			);
 	end COMPONENT sampler;
 	
-	constant c_WIDTH : integer := 12;
-	signal w_WRITE_EN : STD_LOGIC;
-	signal w_WRITE_DATA : std_logic_vector(c_WIDTH-1 downto 0);
-	signal w_READ_DATA : std_logic_vector(c_WIDTH-1 downto 0);
-	
-	
+	signal w_WRITE_EN : STD_LOGIC_VECTOR(2 downto 0);
+	signal w_WRITE_DATA : ADC_input_type;
+	signal w_READ_DATA : ADC_input_type;
 	
 begin
 
-	INST_Goertzel : Goertzel
+	INST1_Goertzel : Goertzel
 	Port map (
 		i_CLK => w_CLK,
-		i_NEW_VALUE => w_NEW_VALUE,
-		i_SIG => w_SIG,
-		i_COEFF => w_COEFF,
-		o_GOERTZEL => w_Goertzel,
-		o_NEW_RESULT => w_NEW_RESULT
+		i_NEW_VALUE => w_NEW_VALUE(0),
+		i_SIG => w_SIG(0),
+		o_Real => w_Real(0),
+		o_Imag => w_Imag(0),
+		o_NEW_RESULT => w_NEW_RESULT(0)
 	);
 	
-	INST_sampler : sampler
+	INST2_Goertzel : Goertzel
 	Port map (
 		i_CLK => w_CLK,
-		i_WRITE_EN => w_WRITE_EN,
-		i_WRITE_DATA => w_WRITE_DATA,
-		o_READ_DATA => w_READ_DATA,
-		o_NEW_DATA => w_NEW_VALUE
+		i_NEW_VALUE => w_NEW_VALUE(1),
+		i_SIG => w_SIG(1),
+		o_Real => w_Real(1),
+		o_Imag => w_Imag(1),
+		o_NEW_RESULT => w_NEW_RESULT(1)
+	);
+	
+	INST3_Goertzel : Goertzel
+	Port map (
+		i_CLK => w_CLK,
+		i_NEW_VALUE => w_NEW_VALUE(2),
+		i_SIG => w_SIG(2),
+		o_Real => w_Real(2),
+		o_Imag => w_Imag(2),
+		o_NEW_RESULT => w_NEW_RESULT(2)
+	);
+	
+	INST1_sampler : sampler
+	Port map (
+		i_CLK => w_CLK,
+		i_WRITE_EN => w_WRITE_EN(0),
+		i_WRITE_DATA => w_WRITE_DATA(0),
+		o_READ_DATA => w_SIG(0),
+		o_NEW_DATA => w_NEW_VALUE(0)
+	);
+	
+	INST2_sampler : sampler
+	Port map (
+		i_CLK => w_CLK,
+		i_WRITE_EN => w_WRITE_EN(1),
+		i_WRITE_DATA => w_WRITE_DATA(1),
+		o_READ_DATA => w_SIG(1),
+		o_NEW_DATA => w_NEW_VALUE(1)
+	);
+	
+	INST3_sampler : sampler
+	Port map (
+		i_CLK => w_CLK,
+		i_WRITE_EN => w_WRITE_EN(2),
+		i_WRITE_DATA => w_WRITE_DATA(2),
+		o_READ_DATA => w_SIG(2),
+		o_NEW_DATA => w_NEW_VALUE(2)
 	);
 	
 	
@@ -90,11 +131,21 @@ begin
 		end if;
 	end process;
 	
-	
+	-- Inputs 
+	w_WRITE_EN(2 downto 0) <= (others => i_RESET);
 	w_CLK <= i_CLK;
-	w_WRITE_DATA <= i_SIG1;
+	w_WRITE_DATA(0) <= i_ADC1;
+	w_WRITE_DATA(1) <= i_ADC2;
+	w_WRITE_DATA(2) <= i_ADC3;
 	
-	o_ANGLE_elevation <= r_ANGLE; -- Set state signal to output state
-
+	
+	-- Outputs
+	o_Real1 <= w_Real(0); 
+	o_Real2 <= w_Real(1);
+	o_Real3 <= w_Real(2);
+	o_Imag1 <= w_imag(0);
+	o_Imag2 <= w_imag(1);
+	o_Imag3 <= w_imag(2);
+	o_NEW_RESULT <=w_NEW_RESULT; 
 
 end Behavioral;
