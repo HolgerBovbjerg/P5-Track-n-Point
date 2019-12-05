@@ -14,20 +14,22 @@ package constants is
 constant INPUT_WIDTH : natural := 12;
 
 -- Width of internal calculations
-constant CALC_WIDTH : natural := 18;
+-- 27 is chosen for fixed point precision and due to internal multipliers of CYCLONE III being 9 bits
+constant CALC_WIDTH : natural := 27; 
 
 -- Number of samples used to calculate DFT
 -- After SAMPLE_SIZE samples new a new DFT value is available. 
-constant SAMPLE_SIZE : natural := 200;
+constant SAMPLE_SIZE : natural := 2000;
+
+-- Fixed point scaling
+-- The fixed point scaling is set such that calculation overflow is prevented
+constant fp_scale : natural := CALC_WIDTH - INPUT_WIDTH - 1; -- Fixed point data scale
 
 -- Goertzel constants
---constant N : INTEGER := 200;
-constant omega : INTEGER := 3;
-constant k : INTEGER := 10;
-constant fp_scale : natural := 13; -- Fixed point data format
-constant c_coeff : integer := 1948; -- 2*cos(2*pi*k/N) = 1.90211303 in Q5,13 format
-constant c_coeff_cos : integer := 974; -- -- 0.9510498047 in Q5,13 format
-constant c_coeff_sine : integer := 316; -- 0.3089599609 in Q5,13 format
+-- These have to be changed according to the fixed point scale and frequency of interest
+constant c_coeff : integer := 31164; -- 2*cos(2*pi*k/N) = 1.90211303 in Q36,23 format
+constant c_coeff_cos : integer := 15582; --0.9510498047 in Q36,23 format
+constant c_coeff_sine : integer := 5063; -- 0.3089599609 in Q36,23 format
 
 end constants;
 

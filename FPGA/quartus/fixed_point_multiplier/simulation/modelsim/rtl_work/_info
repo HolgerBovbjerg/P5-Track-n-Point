@@ -1,0 +1,125 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\FPGA\quartus\fixed_point_multiplier\simulation\modelsim
+Pconstants
+Z1 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 w1575499868
+Z6 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\FPGA\quartus\fixed_point_multiplier\simulation\modelsim
+Z7 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd
+Z8 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd
+l0
+L11
+Vn^2>fYPK>8K^PX>IeIinU0
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1575500012.974000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd|
+Z12 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 fOeS`0j1_Bda=P9iCi=4;3
+!i10b 1
+Bbody
+Z15 DPx4 work 9 constants 0 22 n^2>fYPK>8K^PX>IeIinU0
+R1
+R2
+R3
+R4
+l0
+L34
+V_d;4FMe?djMg5nTnmVbCk2
+R9
+31
+R10
+R11
+R12
+R13
+R14
+nbody
+!s100 1z8lI4`I[ABI?a<ScRYZe2
+!i10b 1
+Efixed_point_multiplier
+Z16 w1575499910
+R1
+R15
+R2
+R3
+R4
+R6
+Z17 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/fixed_point_multiplier.vhd
+Z18 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/fixed_point_multiplier.vhd
+l0
+L10
+VB1Pn5L9ZRcb==PG=W8<_H1
+R9
+31
+Z19 !s108 1575500013.191000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/fixed_point_multiplier.vhd|
+Z21 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/fixed_point_multiplier.vhd|
+R13
+R14
+!s100 ohhdeoVT=_noG8oL;Z`1>3
+!i10b 1
+Artl
+R1
+R15
+R2
+R3
+R4
+DEx4 work 22 fixed_point_multiplier 0 22 B1Pn5L9ZRcb==PG=W8<_H1
+l27
+L23
+VccI:T[0;jDez>J;3=DK9G2
+R9
+31
+R19
+R20
+R21
+R13
+R14
+!s100 z1a;_Ig9jgW:baQaVlL8e3
+!i10b 1
+Efixed_point_multiplier_tb
+Z22 w1575498905
+R2
+R3
+R4
+R6
+Z23 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/fixed_point_multiplier/../../test_benches/fixed_point_multiplier_tb.vhd
+Z24 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/fixed_point_multiplier/../../test_benches/fixed_point_multiplier_tb.vhd
+l0
+L5
+ViX]]HfhJVKfCXQY`C83A:2
+!s100 ilNLm7ZE`j>_9G;RflGWG1
+R9
+31
+!i10b 1
+Z25 !s108 1575500013.374000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/fixed_point_multiplier/../../test_benches/fixed_point_multiplier_tb.vhd|
+Z27 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/fixed_point_multiplier/../../test_benches/fixed_point_multiplier_tb.vhd|
+R13
+R14
+Abehavioral
+DEx4 work 25 fixed_point_multiplier_tb 0 22 iX]]HfhJVKfCXQY`C83A:2
+R1
+R2
+R3
+R4
+R15
+l35
+L11
+V7[7[mQ6BTiONnZ<T4om3f2
+!s100 C=>G9T=igET=dYJCJI`6S1
+R9
+31
+!i10b 1
+R25
+R26
+R27
+R13
+R14
