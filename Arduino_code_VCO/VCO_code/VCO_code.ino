@@ -1,9 +1,9 @@
 #define Debug Serial
 int coef = 770; //Line offset from (0,0)
-double angle = 2.1; // Line Angle 
+double angle = 1.9999999; // Line Angle 
 int ReadPin = A1; 
 int OutPin = A0;
-const int FilterSize = 10;
+const int FilterSize = 50;
 int i = 0 ;
 int total = 0 ;
 int average = 0 ;
@@ -27,7 +27,7 @@ void loop() {
   LM35_input_binary = analogRead(ReadPin); //Reads LM35 from ADC
   delay(2); 
   LM35_input_voltage = 3300*((double)LM35_input_binary)/4096; //converts 12 bit ADC input to milli volts
-  LM35_input_temperature = (LM35_input_voltage/10)-2; //converts 
+  LM35_input_temperature = (LM35_input_voltage/10); //converts 
   Output_calculation = (angle*LM35_input_temperature)+coef;
   total = total - FilterArray[i];
   Output = (int) Output_calculation;
