@@ -1,0 +1,16 @@
+*** Error ***
+
+Matrix calculation could not be started due to the following fatal exeception:
+Could not initialize mesher specific data from database
+
+--------------------------------------------------------------------------------
+*** Error ***
+
+Could not initialize mesher specific data from database
+
+--------------------------------------------------------------------------------
+*** Error ***
+
+Error in calculating solver matrix
+
+--------------------------------------------------------------------------------

@@ -57,10 +57,12 @@ begin
 					if reg.sample_count = SAMPLE_SIZE then
 						-- Reset counter
 						reg.sample_count <= 1;
-						-- Store results
-						reg.result(0) <= reg.VA; -- Store Va[n]; 
-						reg.result(1) <= reg.VA_prev; -- Store Va[n-1]
-						-- Goto uotput state
+						-- Calculate last value and store results
+						reg.result(0) <= reg.VA ; -- Store Va[n] -- std_logic_vector(shift_right(signed(reg.VA(CALC_WIDTH-1 downto 0)) * to_signed(c_coeff,CALC_WIDTH), fp_scale) - signed(reg.VA_prev) ); 
+						reg.result(1) <= reg.VA_prev; -- Store Va[n-1] 
+--						reg.result(0) <= std_logic_vector(signed(i_SIG) + shift_right(signed(reg.VA(CALC_WIDTH-1 downto 0)) * to_signed(c_coeff,CALC_WIDTH), fp_scale) - signed(reg.VA_prev) ); -- Store Va[n] --  
+--						reg.result(1) <= reg.VA; -- Store Va[n-1]
+--						-- Goto output state
 						reg.state <= OUTPUT;
 					else
 						-- Save Va in Va_prev 
@@ -79,7 +81,7 @@ begin
 					-- Update new result flag
 					reg.done <= '1';
 					-- Reset Va registers
-					reg.VA 			<= (others => '0'); 
+					--reg.VA 			<= (others => '0'); 
 					reg.VA_prev 	<= (others => '0'); 
 					reg.VA_prev2 	<= (others => '0'); 
 					-- Goto idle and wait for new ADC value
