@@ -6,7 +6,7 @@
   <SimulationProperties dB_Amplitude="20" encoded_unit="&amp;U:A^1.:m^-1" fieldname="&lt;name missing&gt;" fieldtype="H-Field" frequency="0" label="Port1 h1"/>
   <MetaGeometryFile filename="" lod="1"/>
   <ResultGroups num_steps="1">
-    <Frame index="0" characteristic="0.79999999999999971134" tfo="Port1_h1_pmm_0.8.tfo">
+    <Frame index="0" characteristic="0.80000000000000004441" tfo="Port1_h1_pmm_0.8.tfo">
       <FieldResultFile filename="Port1_h1[0.8].prt" meshname="Port1_h1_pmm.slim" type="prt"/>
     </Frame>
   </ResultGroups>

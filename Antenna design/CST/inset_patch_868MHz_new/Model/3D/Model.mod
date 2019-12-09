@@ -524,8 +524,6 @@ With FarfieldPlot
      .AddCut "lateral", "0", "1"  
      .AddCut "lateral", "90", "1"  
      .AddCut "polar", "90", "1"  
-
      .StoreSettings
 End With 
-
 

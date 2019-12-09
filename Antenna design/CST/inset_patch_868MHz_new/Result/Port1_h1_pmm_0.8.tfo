@@ -29,16 +29,16 @@
     <Text visible="true" label="Mode type" data="Quasi TEM" condition="" numberFormat="g" numberPrecision="4"/>
   </TextItem>
   <TextItem name="Line Imp">
-    <Text visible="true" label="Line Imp. [Ohm]" data="56.06629180908" condition="" numberFormat="g" numberPrecision="4"/>
+    <Text visible="true" label="Line Imp. [Ohm]" data="56.14691925049" condition="" numberFormat="g" numberPrecision="4"/>
   </TextItem>
   <TextItem name="Wave Imp">
-    <Text visible="true" label="Wave Imp. [Ohm]" data="206.0798950195" condition="" numberFormat="g" numberPrecision="4"/>
+    <Text visible="true" label="Wave Imp. [Ohm]" data="207.8829193115" condition="" numberFormat="g" numberPrecision="4"/>
   </TextItem>
   <TextItem name="Beta">
-    <Text visible="true" label="Beta [1/m]" data="30.80438995361" condition="" numberFormat="g" numberPrecision="4"/>
+    <Text visible="true" label="Beta [1/m]" data="30.62158584595" condition="" numberFormat="g" numberPrecision="4"/>
   </TextItem>
   <TextItem name="Accuracy">
-    <Text visible="true" label="Accuracy" data="7.287993819549e-11" condition="" numberFormat="g" numberPrecision="4"/>
+    <Text visible="true" label="Accuracy" data="1.374299003591e-12" condition="" numberFormat="g" numberPrecision="4"/>
   </TextItem>
   <TextItem name="MaxPortMode">
     <Text visible="true" label="Maximum" data="$ifxOpenSGContourViewer_PortMode@maxValue$" condition="" numberFormat="g" numberPrecision="4"/>

@@ -534,30 +534,6 @@ xlabel=s:Frequency / GHz
 ylabel=s:Complex impedance / Ohm/sq
 title=s:Lossy metal surface impedance (Vacuum filling): Nth Order Model, N=1 (Fit)
 
-type=s:XYSIGNAL2
-subtype=s:user
-problemclass=s:Low Frequency:4:3
-visibility=s:visible
-creation=s:internal
-lifetime=s:persistent
-result=s:0
-treepath=s:Excitation Signals\default
-files=s:signal_default_lf.sig
-xlabel=s:Time / ns
-title=s:Excitation: default
-
-type=s:XYSIGNAL2
-subtype=s:user
-problemclass=s:High Frequency:0:0
-visibility=s:visible
-creation=s:internal
-lifetime=s:persistent
-result=s:0
-treepath=s:Excitation Signals\default
-files=s:signal_default.sig
-xlabel=s:Time / ns
-title=s:Excitation: default
-
 type=s:MODEMAP
 problemclass=s::8:1000
 visibility=s:visible
@@ -956,4 +932,28 @@ lifetime=s:rebuild
 result=s:1
 treepath=s:1D Results\AutomaticRunInformation
 files=s:AutomaticRunInformation
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s:Low Frequency:4:3
+visibility=s:visible
+creation=s:internal
+lifetime=s:persistent
+result=s:0
+treepath=s:Excitation Signals\default
+files=s:signal_default_lf.sig
+xlabel=s:Time / ns
+title=s:Excitation: default
+
+type=s:XYSIGNAL2
+subtype=s:user
+problemclass=s:High Frequency:0:0
+visibility=s:visible
+creation=s:internal
+lifetime=s:persistent
+result=s:0
+treepath=s:Excitation Signals\default
+files=s:signal_default.sig
+xlabel=s:Time / ns
+title=s:Excitation: default
 

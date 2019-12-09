@@ -48,8 +48,8 @@ end
 % Final calculations
 va = coeff * va_prev - va_prev2;
 X2 = coeff3*(va - va_prev*coeff2);
-Re = va - va_prev*cos_coeff;
-Im = va_prev*sin_coeff;
+Re = coeff3*(va - va_prev*cos_coeff);
+Im = coeff3*(va_prev*sin_coeff);
 X = Re + 1i*Im;
 
 % Re = va_prev - va_prev2*cos_coeff;
@@ -80,8 +80,8 @@ stem((0:N/2-1), phase_plot/pi)
 figure(3)
 scatter(phase_shift*ones(1,N/2), phase_plot)
 
-dAnt1Ant2 = lambda*(-phase_plot)/(2*pi);
-elevation = asin(dAnt1Ant2/0.15);
+dAnt1Ant2 = lambda*(-phase_plot/(2*pi));
+elevation = asin(dAnt1Ant2/(0.5*lambda));
 
 figure(4)
 scatter(phase_shift*ones(1,N/2), elevation*180/pi)

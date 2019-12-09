@@ -2,10 +2,10 @@ clear;
 
 f_signal = 0.5e6;
 fs = 10e6;
-N = 1000;
+N = 2000;
 t = (0:N)/fs;
-phase_shift = 1/4 * pi;
-signal = cos((2*pi * f_signal * t) + phase_shift); % Signal at antenna 
+phase_shift = 2/4 * pi;
+signal = cos((2*pi * (0.5e6) * t) + phase_shift); % Signal at antenna 
 omega0 = 2*pi*f_signal/fs;
 omega_0 = (2*pi*fs/N); % fundamental frequency (frequency per sample)
 omega_signal = 2*pi*f_signal; % signal frequency in rad/s
@@ -15,7 +15,7 @@ coeff = 2*cos(omega);
 cos_coeff = cos(omega);
 sin_coeff = sin(omega);
 coeff2 = exp(-1j*omega);
-%signal = awgn(signal, 45, 'measured');
+signal = awgn(signal, 45, 'measured');
 ADC_res = 2^12; % ADC resolution
 
 x = round(signal*ADC_res/2);

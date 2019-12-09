@@ -3,7 +3,7 @@
 [Author]
 holge
 [Mesh Cells]
-80,080
+82,544
 [Mesh Type]
 Hexahedral
 [Last Problem Type]
@@ -15,5 +15,5 @@ t
 [Results]
 Time Domain: S-Parameter
 [Modeler Unique ID]
-5:inset_patch_868mhz_new2.cst?aa16b6009ade771d069a3c65d25104fe?11468:numberofparameters=10:port=1>mode=1>zre=0>zim=0:::gnd_l?gnd_w?l?w?w_0?gap?h?k?thickness?y_0
+5:inset_patch_868mhz_new2.cst?09660bc00877b774e531575ac5516143?16990:numberofparameters=10:port=1>mode=1>zre=0>zim=0:::gnd_l?gnd_w?l?w?w_0?gap?h?k?thickness?y_0
 [Comment]

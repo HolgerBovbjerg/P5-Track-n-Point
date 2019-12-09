@@ -432,5 +432,5 @@ Solver.FrequencyRange "0.7", "0.9"
      .ConsiderForStructureBoundary "False" 
      .WaveguideMonitor "False" 
      .ReferenceWCS "5.8525", "12.77", "0", "0", "0", "-1", "1", "0", "0"
-(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "-12.77", "-75", "-0.785"(ENDTRANSFORM)
+(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "-12.77", "-40.5", "-0.785"(ENDTRANSFORM)
 [ENDWAVEGUIDE]
