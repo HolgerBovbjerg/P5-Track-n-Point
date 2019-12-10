@@ -598,8 +598,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ modify port: 1
 
@@ -629,8 +628,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ modify port: 1
 
@@ -660,8 +658,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ add parsweep parameter: Sequence 1:y_0
 
@@ -669,7 +666,6 @@ End With
 With ParameterSweep
      .AddParameter_Stepwidth "Sequence 1", "y_0", "0", "20", "5.0" 
 End With
-
 
 '@ modify port: 1
 
@@ -699,8 +695,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ define port: 2
 
@@ -729,14 +724,12 @@ With Port
      .SingleEnded "False" 
      .WaveguideMonitor "False" 
      .Create 
-End With 
-
+End With
 
 '@ define time domain solver parameters
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 Mesh.SetCreator "High Frequency" 
-
 With Solver 
      .Method "Hexahedral"
      .CalculationType "TD-S"
@@ -752,12 +745,10 @@ With Solver
      .UseSensitivityAnalysis "False"
 End With
 
-
 '@ delete port: port2
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
-Port.Delete "2" 
-
+Port.Delete "2"
 
 '@ modify port: 1
 
@@ -787,14 +778,12 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ define time domain solver parameters
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 Mesh.SetCreator "High Frequency" 
-
 With Solver 
      .Method "Hexahedral"
      .CalculationType "TD-S"
@@ -810,6 +799,89 @@ With Solver
      .FullDeembedding "False"
      .SuperimposePLWExcitation "False"
      .UseSensitivityAnalysis "False"
+End With
+
+'@ modify port: 1
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With Port 
+     .Reset 
+     .LoadContentForModify "1" 
+     .Label "" 
+     .Folder "" 
+     .NumberOfModes "1" 
+     .AdjustPolarization "False" 
+     .PolarizationAngle "0.0" 
+     .ReferencePlaneDistance "0" 
+     .TextSize "50" 
+     .TextMaxLimit "1" 
+     .Coordinates "Free" 
+     .Orientation "ymin" 
+     .PortOnBound "False" 
+     .ClipPickedPortToBound "False" 
+     .Xrange "-W_0-h*k", "W_0+h*k" 
+     .Yrange "-L/2-2", "-L/2-2" 
+     .Zrange "-h/2-thickness", "h/2+h*k" 
+     .XrangeAdd "0.0", "0.0" 
+     .YrangeAdd "0.0", "0.0" 
+     .ZrangeAdd "0.0", "0.0" 
+     .SingleEnded "False" 
+     .Shield "none" 
+     .WaveguideMonitor "False" 
+     .Modify 
+End With 
+
+
+'@ define brick: component1:solid1
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With Brick
+     .Reset 
+     .Name "solid1" 
+     .Component "component1" 
+     .Material "Copper (pure)" 
+     .Xrange "-W_0/2", "W_0/2" 
+     .Yrange "-L/2-2", "-GND_L/2" 
+     .Zrange "h/2", "h/2+thickness" 
+     .Create
+End With
+
+
+'@ boolean subtract shapes: component1:patch, component1:solid1
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+Solid.Subtract "component1:patch", "component1:solid1" 
+
+'@ delete parsweep parameter: Sequence 1:y_0
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .DeleteParameter "Sequence 1", "y_0" 
+End With
+
+
+'@ add parsweep parameter: Sequence 1:gap
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .AddParameter_Linear "Sequence 1", "gap", "0", "10.17", "1" 
+End With
+
+
+'@ edit parsweep parameter: Sequence 1:gap
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .DeleteParameter "Sequence 1", "gap" 
+     .AddParameter_Stepwidth "Sequence 1", "gap", "0", "10", "2.0" 
+End With
+
+
+'@ delete parsweep parameter: Sequence 1:gap
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .DeleteParameter "Sequence 1", "gap" 
 End With
 
 

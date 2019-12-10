@@ -3,7 +3,7 @@
 [Author]
 holge
 [Mesh Cells]
-82,544
+
 [Mesh Type]
 Hexahedral
 [Last Problem Type]
@@ -13,7 +13,7 @@ HF Time Domain
 [Last Solver Type Abb]
 t
 [Results]
-Time Domain: S-Parameter
+Unknown
 [Modeler Unique ID]
-5:inset_patch_868mhz_new2.cst?09660bc00877b774e531575ac5516143?16990:numberofparameters=10:port=1>mode=1>zre=0>zim=0:::gnd_l?gnd_w?l?w?w_0?gap?h?k?thickness?y_0
+5:inset_patch_868mhz_new2.cst?e1233a84103193f898d35a8b8068b3e9?18706:numberofparameters=10:port=1>mode=1>zre=0>zim=0:::gnd_l?gnd_w?l?w?w_0?gap?h?k?thickness?y_0
 [Comment]
