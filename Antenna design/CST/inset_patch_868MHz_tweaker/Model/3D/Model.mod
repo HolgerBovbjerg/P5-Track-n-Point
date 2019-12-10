@@ -598,8 +598,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ modify port: 1
 
@@ -629,8 +628,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ modify port: 1
 
@@ -660,8 +658,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ add parsweep parameter: Sequence 1:y_0
 
@@ -669,7 +666,6 @@ End With
 With ParameterSweep
      .AddParameter_Stepwidth "Sequence 1", "y_0", "0", "20", "5.0" 
 End With
-
 
 '@ modify port: 1
 
@@ -699,8 +695,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ define port: 2
 
@@ -729,14 +724,12 @@ With Port
      .SingleEnded "False" 
      .WaveguideMonitor "False" 
      .Create 
-End With 
-
+End With
 
 '@ define time domain solver parameters
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 Mesh.SetCreator "High Frequency" 
-
 With Solver 
      .Method "Hexahedral"
      .CalculationType "TD-S"
@@ -752,12 +745,10 @@ With Solver
      .UseSensitivityAnalysis "False"
 End With
 
-
 '@ delete port: port2
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
-Port.Delete "2" 
-
+Port.Delete "2"
 
 '@ modify port: 1
 
@@ -787,14 +778,12 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ define time domain solver parameters
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 Mesh.SetCreator "High Frequency" 
-
 With Solver 
      .Method "Hexahedral"
      .CalculationType "TD-S"
@@ -811,7 +800,6 @@ With Solver
      .SuperimposePLWExcitation "False"
      .UseSensitivityAnalysis "False"
 End With
-
 
 '@ modify port: 1
 
@@ -832,7 +820,7 @@ With Port
      .PortOnBound "False" 
      .ClipPickedPortToBound "False" 
      .Xrange "-W_0-h*k", "W_0+h*k" 
-     .Yrange "-GND_L/2", "-GND_L/2" 
+     .Yrange "-L/2-2", "-L/2-2" 
      .Zrange "-h/2-thickness", "h/2+h*k" 
      .XrangeAdd "0.0", "0.0" 
      .YrangeAdd "0.0", "0.0" 
@@ -844,71 +832,6 @@ With Port
 End With 
 
 
-'@ add parsweep parameter: Sequence 1:W_0
-
-'[VERSION]2018.0|27.0.2|20171026[/VERSION]
-With ParameterSweep
-     .AddParameter_Stepwidth "Sequence 1", "W_0", "2.0", "2.6", "0.2" 
-End With
-
-
-'@ delete parsweep parameter: Sequence 1:W_0
-
-'[VERSION]2018.0|27.0.2|20171026[/VERSION]
-With ParameterSweep
-     .DeleteParameter "Sequence 1", "W_0" 
-End With
-
-
-'@ add parsweep parameter: Sequence 1:L
-
-'[VERSION]2018.0|27.0.2|20171026[/VERSION]
-With ParameterSweep
-     .AddParameter_Stepwidth "Sequence 1", "L", "78", "84", "2.0" 
-End With
-
-
-'@ delete parsweep parameter: Sequence 1:L
-
-'[VERSION]2018.0|27.0.2|20171026[/VERSION]
-With ParameterSweep
-     .DeleteParameter "Sequence 1", "L" 
-End With
-
-
-'@ add parsweep parameter: Sequence 1:W
-
-'[VERSION]2018.0|27.0.2|20171026[/VERSION]
-With ParameterSweep
-     .AddParameter_Stepwidth "Sequence 1", "W", "90", "100", "2.0" 
-End With
-
-
-'@ edit parsweep parameter: Sequence 1:W
-
-'[VERSION]2018.0|27.0.2|20171026[/VERSION]
-With ParameterSweep
-     .DeleteParameter "Sequence 1", "W" 
-     .AddParameter_Stepwidth "Sequence 1", "W", "84", "90", "2.0" 
-End With
-
-
-'@ delete parsweep parameter: Sequence 1:W
-
-'[VERSION]2018.0|27.0.2|20171026[/VERSION]
-With ParameterSweep
-     .DeleteParameter "Sequence 1", "W" 
-End With
-
-
-'@ add parsweep parameter: Sequence 1:gap
-
-'[VERSION]2018.0|27.0.2|20171026[/VERSION]
-With ParameterSweep
-     .AddParameter_Stepwidth "Sequence 1", "gap", "0.5", "2", "0.5" 
-End With
-
-
 '@ define brick: component1:solid1
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
@@ -918,7 +841,7 @@ With Brick
      .Component "component1" 
      .Material "Copper (pure)" 
      .Xrange "-W_0/2", "W_0/2" 
-     .Yrange "-GND_L/2+5", "-GND_L/2+7" 
+     .Yrange "-L/2-2", "-GND_L/2" 
      .Zrange "h/2", "h/2+thickness" 
      .Create
 End With
@@ -929,16 +852,93 @@ End With
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 Solid.Subtract "component1:patch", "component1:solid1" 
 
-'@ pick edge
+'@ delete parsweep parameter: Sequence 1:y_0
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
-Pick.PickEdgeFromId "component1:patch", "82", "59" 
+With ParameterSweep
+     .DeleteParameter "Sequence 1", "y_0" 
+End With
 
 
-'@ pick edge
+'@ add parsweep parameter: Sequence 1:gap
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
-Pick.PickEdgeFromId "component1:patch", "87", "61" 
+With ParameterSweep
+     .AddParameter_Linear "Sequence 1", "gap", "0", "10.17", "1" 
+End With
 
+
+'@ edit parsweep parameter: Sequence 1:gap
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .DeleteParameter "Sequence 1", "gap" 
+     .AddParameter_Stepwidth "Sequence 1", "gap", "0", "10", "2.0" 
+End With
+
+
+'@ delete parsweep parameter: Sequence 1:gap
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .DeleteParameter "Sequence 1", "gap" 
+End With
+
+
+'@ add parsweep parameter: Sequence 1:W
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .AddParameter_Stepwidth "Sequence 1", "W", "90", "110", "5.0" 
+End With
+
+
+'@ delete parsweep sequence: Sequence 1
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .DeleteSequence "Sequence 1" 
+End With
+
+
+'@ add parsweep sequence: Sequence 1
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .AddSequence "Sequence 1" 
+End With
+
+
+'@ add parsweep parameter: Sequence 1:y_0
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .AddParameter_Linear "Sequence 1", "y_0", "40", "70", "1" 
+End With
+
+
+'@ edit parsweep parameter: Sequence 1:y_0
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .DeleteParameter "Sequence 1", "y_0" 
+     .AddParameter_Stepwidth "Sequence 1", "y_0", "40", "70", "10.0" 
+End With
+
+
+'@ delete parsweep parameter: Sequence 1:y_0
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .DeleteParameter "Sequence 1", "y_0" 
+End With
+
+
+'@ add parsweep parameter: Sequence 1:L
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With ParameterSweep
+     .AddParameter_Stepwidth "Sequence 1", "L", "90", "110", "10.0" 
+End With
 
 
