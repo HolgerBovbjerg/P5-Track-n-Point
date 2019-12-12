@@ -71,7 +71,7 @@ begin
    begin		
       -- hold reset state for 100 ns.
       wait for 100 ns;	
-		for i in 0 to 10000 loop
+		for i in 0 to 20*SAMPLE_SIZE loop
 			i_NEW_VALUE <= '0'; 
 			i_CLK_sin <= '0';
 			wait for c_sample_period/2;

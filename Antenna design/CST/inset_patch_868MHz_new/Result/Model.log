@@ -15,7 +15,7 @@ This software is licensed for educational purposes only.
 
 --------------------------------------------------------------------------------
 
-Solver started at: 08:40 PM Saturday, 30. November 2019
+Solver started at: 11:26 AM Friday, 06. December 2019
 
   Module:  Time Domain: S-Parameter (Win 64)
   Version: 2018.0 Release from 2017-10-26 (change 556462)
@@ -69,8 +69,8 @@ Boundary conditions:
   XZsymmetry: none
   XYsymmetry: none
 
-  Xmin: expanded open, 4 Layer, depth 86.2325 mm
-  Xmax: expanded open, 4 Layer, depth 86.2325 mm
+  Xmin: expanded open, 4 Layer, depth 86.1433 mm
+  Xmax: expanded open, 4 Layer, depth 86.1433 mm
 
   Ymin: expanded open, 4 Layer, depth 75.6779 mm
   Ymax: expanded open, 4 Layer, depth 85.8829 mm
@@ -94,15 +94,15 @@ Port: 1
 
   -------------------------------- F-Calc 0.8 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  1      1      QTEM        206           0             56.1          ---
+  1      1      QTEM        208           0             56.1          ---
   ----------------------------------------------------------------------------
 
 Field update statistics:
 
-  Number of components in total: 	516133
-  Number of TST elements:		198
-  Number of lossy metal components:	10486
-  Number of disp. elements:		10665
+  Number of components in total: 	531657
+  Number of TST elements:		228
+  Number of lossy metal components:	10980
+  Number of disp. elements:		11063
 
 Subcycling state:      Automatically deactivated
 
@@ -124,8 +124,8 @@ Frequency domain results normalized to default signal.
                       Peak memory used (kB)         Free physical memory (kB) 
                                                     At begin     Minimum      
   ----------------------------------------------------------------------------
-  Matrices calc.      119576                        6969420      6859540      
-  Solver run total    64352                         6991016      6860696      
+  Matrices calc.      123360                        7149484      7050260      
+  Solver run total    66128                         7183324      7057296      
   ----------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
@@ -137,37 +137,37 @@ Solver Statistics:
      Number of CPU threads:             6
      Hardware info:                  	Hardware Accelerator Device not activated
 
-  Number of mesh cells:             	82764
+  Number of mesh cells:             	85272
   Excitation duration:              	3.55454875e+001 ns 
-  Calculation time for excitation:  	47 	s
-  Number of calculated pulse widths:	1.79473 
+  Calculation time for excitation:  	54 	s
+  Number of calculated pulse widths:	1.72825 
   Steady state accuracy limit:      	-40	dB 
-  Simulated number of time steps:   	31635 
-  Maximum number of time steps:     	352532 
+  Simulated number of time steps:   	34650 
+  Maximum number of time steps:     	400984 
   Time step width:
-     without subcycles:             	2.01657734e-003 ns
-     used:                          	2.01657734e-003 ns
+     without subcycles:             	1.77290987e-003 ns
+     used:                          	1.77290987e-003 ns
 
   Matrix calculation time:          	17 	s
-  Solver setup time:                	4 	s
-  Solver loop time:                 	83 	s
-  Solver post processing time:      	2 	s
+  Solver setup time:                	2 	s
+  Solver loop time:                 	94 	s
+  Solver post processing time:      	1 	s
                                     	------------
-  Total solver time:                	106 	s  ( = 0 h, 1 m, 46 s )
+  Total solver time:                	114 	s  ( = 0 h, 1 m, 54 s )
 
 --------------------------------------------------------------------------------
 
-  Adaptive port meshing time:       	24     	s
-  Total solver time (all cycles):   	106    	s  ( = 0 h, 1 m, 46 s )
+  Adaptive port meshing time:       	23     	s
+  Total solver time (all cycles):   	115    	s  ( = 0 h, 1 m, 55 s )
                                     	------------
-  Total simulation time:            	130    	s  ( = 0 h, 2 m, 10 s )
+  Total simulation time:            	138    	s  ( = 0 h, 2 m, 18 s )
 
 --------------------------------------------------------------------------------
-Solver finished at: 08:41 PM Saturday, 30. November 2019
+Solver finished at: 11:28 AM Friday, 06. December 2019
 
 
 
 --------------------------------------------------------------------------------
-Creating parametric 1D results for Run ID 6
+Creating parametric 1D results for Run ID 7
 
 --------------------------------------------------------------------------------
