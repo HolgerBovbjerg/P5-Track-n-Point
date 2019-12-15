@@ -829,8 +829,7 @@ With Port
      .Shield "none" 
      .WaveguideMonitor "False" 
      .Modify 
-End With 
-
+End With
 
 '@ define brick: component1:solid1
 
@@ -846,11 +845,10 @@ With Brick
      .Create
 End With
 
-
 '@ boolean subtract shapes: component1:patch, component1:solid1
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
-Solid.Subtract "component1:patch", "component1:solid1" 
+Solid.Subtract "component1:patch", "component1:solid1"
 
 '@ delete parsweep parameter: Sequence 1:y_0
 
@@ -859,14 +857,12 @@ With ParameterSweep
      .DeleteParameter "Sequence 1", "y_0" 
 End With
 
-
 '@ add parsweep parameter: Sequence 1:gap
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 With ParameterSweep
      .AddParameter_Linear "Sequence 1", "gap", "0", "10.17", "1" 
 End With
-
 
 '@ edit parsweep parameter: Sequence 1:gap
 
@@ -876,14 +872,12 @@ With ParameterSweep
      .AddParameter_Stepwidth "Sequence 1", "gap", "0", "10", "2.0" 
 End With
 
-
 '@ delete parsweep parameter: Sequence 1:gap
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 With ParameterSweep
      .DeleteParameter "Sequence 1", "gap" 
 End With
-
 
 '@ add parsweep parameter: Sequence 1:W
 
@@ -892,14 +886,12 @@ With ParameterSweep
      .AddParameter_Stepwidth "Sequence 1", "W", "90", "110", "5.0" 
 End With
 
-
 '@ delete parsweep sequence: Sequence 1
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 With ParameterSweep
      .DeleteSequence "Sequence 1" 
 End With
-
 
 '@ add parsweep sequence: Sequence 1
 
@@ -908,14 +900,12 @@ With ParameterSweep
      .AddSequence "Sequence 1" 
 End With
 
-
 '@ add parsweep parameter: Sequence 1:y_0
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 With ParameterSweep
      .AddParameter_Linear "Sequence 1", "y_0", "40", "70", "1" 
 End With
-
 
 '@ edit parsweep parameter: Sequence 1:y_0
 
@@ -925,7 +915,6 @@ With ParameterSweep
      .AddParameter_Stepwidth "Sequence 1", "y_0", "40", "70", "10.0" 
 End With
 
-
 '@ delete parsweep parameter: Sequence 1:y_0
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
@@ -933,12 +922,60 @@ With ParameterSweep
      .DeleteParameter "Sequence 1", "y_0" 
 End With
 
-
 '@ add parsweep parameter: Sequence 1:L
 
 '[VERSION]2018.0|27.0.2|20171026[/VERSION]
 With ParameterSweep
      .AddParameter_Stepwidth "Sequence 1", "L", "90", "110", "10.0" 
 End With
+
+'@ define material: PTFE (lossy)
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+With Material
+     .Reset
+     .Name "PTFE (lossy)"
+     .Folder ""
+     .FrqType "all"
+     .Type "Normal"
+     .SetMaterialUnit "GHz", "mm"
+     .Epsilon "2.1"
+     .Mu "1.0"
+     .Kappa "0.0"
+     .TanD "0.0002"
+     .TanDFreq "10.0"
+     .TanDGiven "True"
+     .TanDModel "ConstTanD"
+     .KappaM "0.0"
+     .TanDM "0.0"
+     .TanDMFreq "0.0"
+     .TanDMGiven "False"
+     .TanDMModel "ConstKappa"
+     .DispModelEps "None"
+     .DispModelMu "None"
+     .DispersiveFittingSchemeEps "General 1st"
+     .DispersiveFittingSchemeMu "General 1st"
+     .UseGeneralDispersionEps "False"
+     .UseGeneralDispersionMu "False"
+     .Rho "2200.0"
+     .ThermalType "Normal"
+     .ThermalConductivity "0.2"
+     .HeatCapacity "1.0"
+     .SetActiveMaterial "all"
+     .MechanicsType "Isotropic"
+     .YoungsModulus "0.5"
+     .PoissonsRatio "0.4"
+     .ThermalExpansionRate "140"
+     .Colour "0.94", "0.82", "0.76"
+     .Wireframe "False"
+     .Transparency "0"
+     .Create
+End With 
+
+
+'@ change material: component1:dieelectric to: PTFE (lossy)
+
+'[VERSION]2018.0|27.0.2|20171026[/VERSION]
+Solid.ChangeMaterial "component1:dieelectric", "PTFE (lossy)" 
 
 

@@ -1,0 +1,323 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\FPGA\quartus\AoA_sine_test\simulation\modelsim
+Eaoa_estimator
+Z1 w1576087923
+Z2 DPx4 work 7 records 0 22 6JDQJZhDC1PS;H^Xag]9X0
+Z3 DPx4 work 9 constants 0 22 78<d>FBVV`;oz_]_MQ`0E1
+Z4 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+Z5 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\FPGA\quartus\AoA_sine_test\simulation\modelsim
+Z9 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/AoA_estimator.vhd
+Z10 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/AoA_estimator.vhd
+l0
+L10
+Vi=4GAST8hUBe>L`k:QhOA0
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1576089564.028000
+Z13 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/AoA_estimator.vhd|
+Z14 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/AoA_estimator.vhd|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 cJdLo?_:`f9^6TMK4`CL62
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 13 aoa_estimator 0 22 i=4GAST8hUBe>L`k:QhOA0
+l71
+L26
+VFZ7h;@4UDdEI=H`jYU_b20
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 Vl8W[cWMbiDIU4@`kbPP[3
+!i10b 1
+Eaoa_sine_test
+Z17 w1576086479
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z18 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/AoA_sine_test/AoA_sine_test.vhd
+Z19 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/AoA_sine_test/AoA_sine_test.vhd
+l0
+L10
+VCD>XcS<R2KFkLFAackDQj1
+R11
+31
+Z20 !s108 1576089564.132000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/AoA_sine_test/AoA_sine_test.vhd|
+Z22 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/AoA_sine_test/AoA_sine_test.vhd|
+R15
+R16
+!s100 P4NJo=3W3zAI<5EfY1m;_1
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 13 aoa_sine_test 0 22 CD>XcS<R2KFkLFAackDQj1
+l59
+L27
+VE7B8e]OV]1:IDRgnN<V9z0
+R11
+31
+R20
+R21
+R22
+R15
+R16
+!s100 =Q<Ha;G]UmKK7HFM6ZzYg1
+!i10b 1
+Eaoa_sine_test_tb
+Z23 w1576087924
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z24 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/AoA_sine_test/AoA_sine_test_tb.vhd
+Z25 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/AoA_sine_test/AoA_sine_test_tb.vhd
+l0
+L10
+VbAfE16V7]7VVbW;^>UWU@0
+!s100 8NYlXF2Nk97l[iOHWbgZB2
+R11
+31
+!i10b 1
+Z26 !s108 1576089564.458000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/AoA_sine_test/AoA_sine_test_tb.vhd|
+Z28 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/AoA_sine_test/AoA_sine_test_tb.vhd|
+R15
+R16
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 16 aoa_sine_test_tb 0 22 bAfE16V7]7VVbW;^>UWU@0
+l52
+L14
+VbY`8WIUSzV8knJVl39XR12
+!s100 :A2KWYnoCR3k<Y^8P4mY>3
+R11
+31
+!i10b 1
+R26
+R27
+R28
+R15
+R16
+Pconstants
+R4
+R5
+R6
+R7
+Z29 w1576056126
+R8
+Z30 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd
+Z31 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd
+l0
+L11
+V78<d>FBVV`;oz_]_MQ`0E1
+R11
+31
+Z32 !s108 1576089563.708000
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd|
+Z34 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd|
+R15
+R16
+!s100 5H9OW?IjJXXh`b:RXCoG^3
+!i10b 1
+Bbody
+R3
+R4
+R5
+R6
+R7
+l0
+L36
+V_d;4FMe?djMg5nTnmVbCk2
+R11
+31
+R32
+R33
+R34
+R15
+R16
+nbody
+!s100 Wz=1V>ea7>@LjCmRdM]K[2
+!i10b 1
+Egoertzel
+Z35 w1576056122
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z36 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/Goertzel.vhd
+Z37 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/Goertzel.vhd
+l0
+L11
+VjC5_<kbjhMLBn>^NiICQ[0
+R11
+31
+Z38 !s108 1576089564.350000
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/Goertzel.vhd|
+Z40 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/Goertzel.vhd|
+R15
+R16
+!s100 >@Jj;YnU7?602KCS]JWdO3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 goertzel 0 22 jC5_<kbjhMLBn>^NiICQ[0
+l36
+L21
+V@gLeaY6IfLKO5[<oIOnE03
+R11
+31
+R38
+R39
+R40
+R15
+R16
+!s100 JSiYfj@7azdD>9nk44i3z2
+!i10b 1
+Precords
+R3
+R4
+R5
+R6
+R7
+w1575541753
+R8
+8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/records.vhd
+FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/records.vhd
+l0
+L9
+V6JDQJZhDC1PS;H^Xag]9X0
+R11
+31
+R15
+R16
+!s100 MP7[]b:>]`B<?iekA<^]e1
+!i10b 1
+!s108 1576089563.936000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/records.vhd|
+!s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/records.vhd|
+Esampler
+Z41 w1575448892
+R2
+R4
+R3
+R5
+R6
+R7
+R8
+Z42 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/sampler.vhd
+Z43 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/sampler.vhd
+l0
+L11
+V8Ma`bR>AD:?KAh3aNOggM2
+R11
+31
+Z44 !s108 1576089564.243000
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/sampler.vhd|
+Z46 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/sampler.vhd|
+R15
+R16
+!s100 WV8Z1h^;c3zPX:NRgU80l1
+!i10b 1
+Artl
+R2
+R4
+R3
+R5
+R6
+R7
+DEx4 work 7 sampler 0 22 8Ma`bR>AD:?KAh3aNOggM2
+l28
+L25
+V__YQ7Z]<3P7]JjC^XG`]l3
+R11
+31
+R44
+R45
+R46
+R15
+R16
+!s100 7^i9N?F>HSNkni74ana:R2
+!i10b 1
+Esin_table
+Z47 w1576089538
+R4
+R3
+R5
+R6
+R7
+R8
+Z48 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sine_table/sin_table.vhd
+Z49 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sine_table/sin_table.vhd
+l0
+L12
+Vnl7jFQ8IFBQI`^eHhXRAG1
+R11
+31
+Z50 !s108 1576089563.827000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sine_table/sin_table.vhd|
+Z52 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sine_table/sin_table.vhd|
+R15
+R16
+!s100 I^?4?]_TLJb=O>WMNCRj:0
+!i10b 1
+Artl
+R4
+R3
+R5
+R6
+R7
+DEx4 work 9 sin_table 0 22 nl7jFQ8IFBQI`^eHhXRAG1
+l831
+L18
+VHET<`Sil2UjXGWANbP?5L0
+R11
+31
+R50
+R51
+R52
+R15
+R16
+!s100 ^O>UB0Eh>H6cB0DW96lUk1
+!i10b 1

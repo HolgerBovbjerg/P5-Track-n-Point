@@ -1,0 +1,21 @@
+
+State Machine - |AoA_sine_test|AoA_estimator:INST_AoA_estimator|Goertzel:INST3_Goertzel|reg.state
+Name reg.state.OUTPUT reg.state.STORE reg.state.CALCULATE reg.state.IDLE 
+reg.state.IDLE 0 0 0 0 
+reg.state.CALCULATE 0 0 1 1 
+reg.state.STORE 0 1 0 1 
+reg.state.OUTPUT 1 0 0 1 
+
+State Machine - |AoA_sine_test|AoA_estimator:INST_AoA_estimator|Goertzel:INST2_Goertzel|reg.state
+Name reg.state.OUTPUT reg.state.STORE reg.state.CALCULATE reg.state.IDLE 
+reg.state.IDLE 0 0 0 0 
+reg.state.CALCULATE 0 0 1 1 
+reg.state.STORE 0 1 0 1 
+reg.state.OUTPUT 1 0 0 1 
+
+State Machine - |AoA_sine_test|AoA_estimator:INST_AoA_estimator|Goertzel:INST1_Goertzel|reg.state
+Name reg.state.OUTPUT reg.state.STORE reg.state.CALCULATE reg.state.IDLE 
+reg.state.IDLE 0 0 0 0 
+reg.state.CALCULATE 0 0 1 1 
+reg.state.STORE 0 1 0 1 
+reg.state.OUTPUT 1 0 0 1 

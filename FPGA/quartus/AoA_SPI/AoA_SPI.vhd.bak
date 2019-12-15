@@ -1,0 +1,115 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use ieee.math_real.all;
+
+library work;
+use work.constants.all;
+use work.records.all;
+
+ENTITY AoA_SPI IS
+  GENERIC(
+    cpol    : STD_LOGIC := '0';  --spi clock polarity mode
+    cpha    : STD_LOGIC := '0';  --spi clock phase mode
+    d_width : INTEGER := 18);     --data width in bits
+  PORT(
+    -- FPGA inputs
+	 i_SCLK         	: IN     STD_LOGIC;  --spi clk from master
+    i_SS         		: IN     STD_LOGIC;  --active low slave select
+    i_MOSI         	: IN     STD_LOGIC;  --master out, slave in
+	 i_RESET      		: IN     STD_LOGIC;  --active low reset
+	 --FPGA output
+	 o_MISO         	: OUT    STD_LOGIC := 'Z' --master in, slave out
+	 
+	 -- Internal inputs
+    i_NEW_DATA   	: IN     STD_LOGIC;  --asynchronous load enable
+    tx_load_data1 : IN     STD_LOGIC_VECTOR(d_width-1 downto 0);  --asynchronous tx data to load
+	 tx_load_data2 : IN     STD_LOGIC_VECTOR(d_width-1 downto 0);  --asynchronous tx data to load
+	 tx_load_data3 : IN     STD_LOGIC_VECTOR(d_width-1 downto 0);  --asynchronous tx data to load
+	 tx_load_data4 : IN     STD_LOGIC_VECTOR(d_width-1 downto 0);  --asynchronous tx data to load
+	 tx_load_data5 : IN     STD_LOGIC_VECTOR(d_width-1 downto 0);  --asynchronous tx data to load
+	 tx_load_data6 : IN     STD_LOGIC_VECTOR(d_width-1 downto 0);  --asynchronous tx data to load
+	 
+	 -- Internal buffers
+    trdy         	: BUFFER STD_LOGIC := '0';  --transmit ready bit
+    rrdy         	: BUFFER STD_LOGIC := '0';  --receive ready bit
+    roe          	: BUFFER STD_LOGIC := '0';  --receive overrun error bit
+	 
+	 -- Internal outputs
+    o_rx_data      : OUT    STD_LOGIC_VECTOR(d_width-1 downto 0) := (others => '0');  --receive register output to logic
+    o_busy         : OUT    STD_LOGIC := '0'  --busy signal to logic ('1' during transaction)
+    );
+END AoA_SPI;
+
+Architecture behavioural of AoA_SPI is
+	SIGNAL r_mode    : STD_LOGIC;  --groups modes by clock polarity relation to data
+	SIGNAL r_clk     : STD_LOGIC;  --clock
+	SIGNAL r_bit_count 	: STD_LOGIC_VECTOR(d_width+8 downto 0);  --'1' for active transaction bit
+	SIGNAL r_write_addr  : STD_LOGIC_VECTOR(3 downto 0);  --address of register to write ('0' = receive, '1' = status)
+	SIGNAL r_read_addr  	: STD_LOGIC_VECTOR(3 downto 0);  --address of register to read ('0' = transmit, '1' = status)
+	SIGNAL r_rx_buffer  	: STD_LOGIC_VECTOR(d_width-1 downto 0) := (others => '0');  --receiver buffer
+	SIGNAL r_tx_buffer  	: STD_LOGIC_VECTOR(d_width-1 downto 0) := (others => '0');  --transmit buffer
+	
+Begin
+	o_busy <= NOT i_SS; -- If slave select is low the module is selkected by a master
+	 
+	--adjust clock so writes are on rising edge and reads on falling edge
+	r_mode <= cpol XOR cpha;  -- '1' for modes that write on rising edge
+	WITH mode SELECT
+		r_clk <= i_SCLK WHEN '1',
+		NOT i_SCLK WHEN others;
+			  
+			  
+	 --Keeping track of miso/mosi bit counts for data alignmnet
+	PROCESS(i_SS, clk)
+	BEGIN
+		IF(i_SS = '1' OR i_RESET = '0') THEN                         -- If slave is not selected or being reset
+			r_bit_count <= (conv_integer(NOT cpha) => '1', others => '0'); --reset miso/mosi bit count
+		ELSE                                                         -- If slave is selected
+			IF(rising_edge(clk)) THEN                                 -- If new bit on miso/mosi
+				bit_cnt <= bit_cnt(d_width+8-1 downto 0) & '0';         --shift active bit indicator
+			END IF;
+		END IF;
+	END PROCESS;
+	
+	--write address register ('0' for receive, '1' for status)
+   IF(r_bit_count(1) = '1' AND falling_edge(clk)) THEN
+		write_addr(0) <= i_MOSI;
+	ELSIF r_bit_count(2) = '1' AND falling_edge(clk)) THEN
+		write_addr(1) <= i_MOSI;
+	ELSIF(r_bit_count(3) = '1' AND falling_edge(clk)) THEN
+		write_addr(2) <= i_MOSI;
+	ELSIF r_bit_count(4) = '1' AND falling_edge(clk)) THEN
+		write_addr(3) <= i_MOSI;
+   END IF;
+	
+	--read address register ('0' for transmit, '1' for status)
+   IF(r_bit_cnt(4) = '1' AND falling_edge(clk)) THEN
+		read_addr(0) <= i_MOSI;
+	ELSIF(r_bit_cnt(5) = '1' AND falling_edge(clk)) THEN
+		read_addr(1) <= i_MOSI;
+	ELSIF(r_bit_cnt(6) = '1' AND falling_edge(clk)) THEN
+		read_addr(2) <= i_MOSI;
+	ELSIF(r_bit_cnt(7) = '1' AND falling_edge(clk)) THEN
+		read_addr(3) <= i_MOSI;
+   END IF;
+	
+--	  --fulfill Goertzel request for receive data
+--    IF(reset_n = '0') THEN
+--      o_rx_data <= (OTHERS => '0');
+--    ELSIF(i_SS = '1' AND rx_req = '1') THEN  
+--      o_rx_data <= r_rx_buf;
+--    END IF;
+
+    --transmit registers
+    IF(i_RESET = '0') THEN
+      r_tx_buffer <= (OTHERS => '0');
+    ELSIF(ss_n = '1' AND tx_load_en = '1') THEN  --load transmit register from user logic
+      tx_buffer <= r_tx_data();
+    ELSIF(rd_add = '0' AND bit_cnt(7 DOWNTO 0) = "00000000" AND bit_cnt(d_width+8) = '0' AND rising_edge(clk)) THEN
+      tx_buf(d_width-1 DOWNTO 0) <= tx_buf(d_width-2 DOWNTO 0) & tx_buf(d_width-1);  --shift through tx data
+    END IF;
+
+	
+		
+		
