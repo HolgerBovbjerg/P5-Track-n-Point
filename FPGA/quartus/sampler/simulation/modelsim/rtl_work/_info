@@ -2,78 +2,80 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\quartus\sampler\simulation\modelsim
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\FPGA\quartus\sampler\simulation\modelsim
 Esampler
-Z1 w1575022634
-Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\quartus\sampler\simulation\modelsim
-Z6 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd
-Z7 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd
+Z1 w1575930773
+Z2 DPx6 altera 21 altera_syn_attributes 0 22 bAnSOQf:4BR[kBo^TRS1E2
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\5. semester\P5\P5-Track-n-Point\FPGA\quartus\sampler\simulation\modelsim
+Z7 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd
+Z8 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd
 l0
-L7
-VKFE_VUi@45^NJ25;UATVc0
-Z8 OV;C;10.1d;51
+L9
+VE0UlTmIXBkW7kJkciNNih1
+Z9 OV;C;10.1d;51
 31
-Z9 !s108 1575022762.354000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd|
-Z11 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/src/sampler.vhd|
-Z12 o-93 -work work -O0
-Z13 tExplicit 1
-!s100 >2@3k^QZeGHCDWmVZV1zH3
+Z10 !s108 1576241628.785000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd|
+Z12 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 g55oS^MJ;08_AQ3?@3Lm13
 !i10b 1
 Artl
 R2
 R3
 R4
-DEx4 work 7 sampler 0 22 KFE_VUi@45^NJ25;UATVc0
-l26
-L24
-V2]H?hUz^:naQX<@99W[623
-R8
-31
+R5
+DEx4 work 7 sampler 0 22 E0UlTmIXBkW7kJkciNNih1
+l31
+L27
+VjF_^^0GLoe:C241U:B[_?3
 R9
+31
 R10
 R11
 R12
 R13
-!s100 g0eUn0WjCgVi3cDoz]SQV0
+R14
+!s100 9VRe;kG08W69n:Lbf^^n[1
 !i10b 1
 Esampler_tb
-Z14 w1575022707
-R2
+Z15 w1575023069
 R3
 R4
 R5
-Z15 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sampler/../../test_benches/sampler_tb.vhd
-Z16 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sampler/../../test_benches/sampler_tb.vhd
+R6
+Z16 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/../../test_benches/sampler_tb.vhd
+Z17 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/../../test_benches/sampler_tb.vhd
 l0
 L5
 V2WbX>=_WZodKOo014Kj<V1
 !s100 Hb^UYKSPEJBQf;]::RTCf1
-R8
+R9
 31
 !i10b 1
-Z17 !s108 1575022762.596000
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sampler/../../test_benches/sampler_tb.vhd|
-Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/quartus/sampler/../../test_benches/sampler_tb.vhd|
-R12
+Z18 !s108 1576241628.938000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/../../test_benches/sampler_tb.vhd|
+Z20 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/../../test_benches/sampler_tb.vhd|
 R13
+R14
 Abehavioral
-R2
 R3
 R4
+R5
 DEx4 work 10 sampler_tb 0 22 2WbX>=_WZodKOo014Kj<V1
-l38
+l36
 L8
-Ve5Az`3<_A<A`4`aYDdFSn3
-!s100 OeZ@l=B=WghK1j0AaL^2`3
-R8
+V21VK`>IdXRjlBZUEJz7e:0
+!s100 QC?aJfE`7L4G[Q]j2bm^A2
+R9
 31
 !i10b 1
-R17
 R18
 R19
-R12
+R20
 R13
+R14

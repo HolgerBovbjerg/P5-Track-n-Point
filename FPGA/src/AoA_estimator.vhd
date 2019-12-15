@@ -9,7 +9,7 @@ use work.records;
 
 entity AoA_estimator is
     Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
-				i_RESET : in  STD_LOGIC; -- Reset input
+				-- i_RESET : in  STD_LOGIC; -- Reset input
 				i_ADC1 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 1
 				i_ADC2 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 2
 				i_ADC3 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 3
@@ -30,6 +30,10 @@ architecture Behavioral of AoA_estimator is
 	type imag_result_type is array (2 downto 0) of std_logic_vector(CALC_WIDTH-1 downto 0);
 
 	signal r_ANGLE: STD_LOGIC_VECTOR(7 downto 0) := "00000001"; -- Angle registry
+	
+	signal r_count : integer := 1;
+	signal r_enable : STD_LOGIC := '0';
+	
 	
 	COMPONENT Goertzel 
 	Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
@@ -127,12 +131,18 @@ begin
 	process(i_CLK)
 	begin
 		if rising_edge(i_CLK) then
-			
+			r_count <= r_count +1;
+			if (r_count = 5) then
+				r_enable <= '1';
+				r_count <= 1;
+			else
+				r_enable <= '0';
+			end if;
 		end if;
 	end process;
 	
 	-- Inputs 
-	w_WRITE_EN(2 downto 0) <= (others => i_RESET);
+	w_WRITE_EN(2 downto 0) <= (others => (r_enable));
 	w_CLK <= i_CLK;
 	w_WRITE_DATA(0) <= i_ADC1;
 	w_WRITE_DATA(1) <= i_ADC2;

@@ -27,16 +27,18 @@ end sampler;
 architecture rtl of sampler is
 	signal r_DATA : std_logic_vector(g_WIDTH-1 downto 0) := (others => '0'); -- create sample register
 	signal r_NEW_DATA : std_logic := '0'; -- create sample register
-
+	signal r_COUNT : integer := 1; -- create sample register
 begin
 	p_SAMPLE : process (i_clk) is -- Define sampling process
 	begin
    if rising_edge(i_clk) then
         -- Register the input data when there is a write
-		if i_write_en = '1' then -- If write enable is asserted
+		if r_COUNT = 5 then -- If write enable is asserted
 			r_DATA<= i_write_data; -- Write input to current write index
 			r_NEW_DATA <= '1'; -- Set new data flag HIGH
+			r_COUNT <= 0;
 		else 
+			r_COUNT <= r_COUNT + 1;
 			r_NEW_DATA <= '0'; -- Set new data flag LOW
 		end if;
 	end if;                             

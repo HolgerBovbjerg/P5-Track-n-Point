@@ -19,7 +19,7 @@ constant CALC_WIDTH : natural := 27;
 
 -- Number of samples used to calculate DFT
 -- After SAMPLE_SIZE samples new a new DFT value is available. 
-constant SAMPLE_SIZE : natural := 2000;
+constant SAMPLE_SIZE : natural := 200;
 
 -- Fixed point scaling
 -- The fixed point scaling is set such that calculation overflow is prevented

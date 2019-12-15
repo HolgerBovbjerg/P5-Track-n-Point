@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sampler
-Mon Dec 09 23:09:52 2019
+Sat Dec 14 16:39:11 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -10,7 +10,14 @@ Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |sampler
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +43,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Dec 09 23:09:52 2019          ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 14 16:39:11 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; sampler                                    ;
 ; Top-level Entity Name              ; sampler                                    ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 58                                         ;
+;     Total combinational functions  ; 46                                         ;
+;     Dedicated logic registers      ; 45                                         ;
+; Total registers                    ; 45                                         ;
+; Total pins                         ; 27                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -151,13 +158,106 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; sampler.vhd                      ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 58          ;
+;                                             ;             ;
+; Total combinational functions               ; 46          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 10          ;
+;     -- 3 input functions                    ; 0           ;
+;     -- <=2 input functions                  ; 36          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 15          ;
+;     -- arithmetic mode                      ; 31          ;
+;                                             ;             ;
+; Total registers                             ; 45          ;
+;     -- Dedicated logic registers            ; 45          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 27          ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; i_clk~input ;
+; Maximum fan-out                             ; 45          ;
+; Total fan-out                               ; 252         ;
+; Average fan-out                             ; 1.74        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |sampler                   ; 46 (46)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |sampler            ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 45    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; r_COUNT[0]                             ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |sampler ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; g_WIDTH        ; 12    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Mon Dec 09 23:09:50 2019
+    Info: Processing started: Sat Dec 14 16:39:05 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sampler -c sampler
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/fpga/test_benches/sampler_tb.vhd
@@ -167,37 +267,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file sampler
     Info (12022): Found design unit 1: sampler-rtl
     Info (12023): Found entity 1: sampler
 Info (12127): Elaborating entity "sampler" for the top level hierarchy
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[0]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[0]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[1]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[1]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[2]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[2]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[3]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[3]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[4]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[4]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[5]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[5]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[6]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[6]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[7]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[7]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[8]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[8]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[9]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[9]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[10]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[10]" at sampler.vhd(32)
-Error (10821): HDL error at sampler.vhd(34): can't infer register for "r_DATA[11]" because its behavior does not match any supported register model File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Info (10041): Inferred latch for "r_DATA[11]" at sampler.vhd(32)
-Error (10822): HDL error at sampler.vhd(34): couldn't implement registers for assignments on this clock edge File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 34
-Error (10822): HDL error at sampler.vhd(36): couldn't implement registers for assignments on this clock edge File: C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/sampler.vhd Line: 36
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 15 errors, 1 warning
-    Error: Peak virtual memory: 4657 megabytes
-    Error: Processing ended: Mon Dec 09 23:09:52 2019
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "i_write_en"
+Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 13 output pins
+    Info (21061): Implemented 59 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4667 megabytes
+    Info: Processing ended: Sat Dec 14 16:39:11 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:03
 
 

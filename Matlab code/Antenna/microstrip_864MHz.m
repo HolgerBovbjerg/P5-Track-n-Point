@@ -3,8 +3,8 @@ clear
 %% Known parameters
 Zc = 50; %Characteristic impedance of source
 f_0 = 864e6; % Desired centerfrequency
-h = 1.5e-3; % Thickness of antenna material
-epsilon_r = 4.3; % Relative dielectric constant of material
+h = 3e-3;%1.5e-3; % Thickness of antenna material
+epsilon_r = 2.2;%4.3; % Relative dielectric constant of material
 c = physconst('lightspeed'); % Speed of light
 lambda = c/f_0;
 %% Determine width of patch

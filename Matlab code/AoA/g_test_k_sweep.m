@@ -5,7 +5,7 @@ fs = 10e6;
 N = 200;
 
 t = (0:N)/fs;
-phase_shift = 1/4 * pi;
+phase_shift = 0/4 * pi;
 signal = cos((2*pi * f_signal * t) + phase_shift); % Signal at antenna 
 omega0 = 2*pi*f_signal/fs;
 omega_0 = (2*pi*fs/N); % fundamental frequency (frequency in radians per sample)

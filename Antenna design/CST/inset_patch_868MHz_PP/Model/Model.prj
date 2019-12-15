@@ -1,0 +1,19 @@
+[Version]
+2
+[Author]
+holge
+[Mesh Cells]
+105,400
+[Mesh Type]
+Hexahedral
+[Last Problem Type]
+High Frequency
+[Last Solver Type]
+HF Time Domain
+[Last Solver Type Abb]
+t
+[Results]
+Time Domain: S-Parameter
+[Modeler Unique ID]
+5:inset_patch_868mhz_pp.cst?b029134fece23823bac7eb3ff491c2ff?22654:numberofparameters=11:port=1>mode=1>zre=0>zim=0:::lambda?gnd_l?gnd_w?l?w?w_0?gap?h?k?thickness?y_0
+[Comment]

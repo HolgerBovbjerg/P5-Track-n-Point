@@ -97,4 +97,15 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 50 us
+add wave -position insertpoint  \
+sim:/goertzel_sine_test_tb/uut/uut/i_CLK \
+sim:/goertzel_sine_test_tb/uut/uut/i_NEW_VALUE \
+sim:/goertzel_sine_test_tb/uut/uut/i_SIG \
+sim:/goertzel_sine_test_tb/uut/uut/o_Real \
+sim:/goertzel_sine_test_tb/uut/uut/o_Imag \
+sim:/goertzel_sine_test_tb/uut/uut/o_NEW_RESULT \
+sim:/goertzel_sine_test_tb/uut/uut/reg \
+sim:/goertzel_sine_test_tb/uut/uut/r_Real \
+sim:/goertzel_sine_test_tb/uut/uut/r_Imag
+restart
 run

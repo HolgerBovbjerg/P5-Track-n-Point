@@ -1,0 +1,173 @@
+Defined reference frequency for open boundary condition (0.8 GHz) is larger
+than the lowest relevant system frequency (monitor at 0.7 GHz).
+Please check open boundary settings to ensure accurate monitor results for the
+lowest frequency of interest.
+
+--------------------------------------------------------------------------------
+*** Warning ***
+
+This software is licensed for educational purposes only.
+
+--------------------------------------------------------------------------------
+*** Warning ***
+
+This software is licensed for educational purposes only.
+
+--------------------------------------------------------------------------------
+
+Solver started at: 09:02 PM Saturday, 30. November 2019
+
+  Module:  Time Domain: S-Parameter (Win 64)
+  Version: 2018.0 Release from 2017-10-26 (change 556462)
+
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+======================================================================
+ Solver cycle: 1
+======================================================================
+
+Stimulation at port 1 (mode 1) 
+
+
+
+--------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+--------------------------------------------------------------------------------
+Mesh statistics:
+
+   Hexahedral mesh type: PBA [accuracy enhancement is enabled]
+
+   Parallelization type: domain decomposition
+      Number of parallel working threads: 2
+      Number of calculation domains used: 2
+
+   PBA fill limit: 99.00% (inverse)
+
+
+
+--------------------------------------------------------------------------------
+Using generalized port mode solver.
+
+--------------------------------------------------------------------------------
+Port mode solver: Detected dispersive material(s) at port 1. 
+Using a constant approximation of dispersive material(s) at 0.8 GHz and 
+neglecting loss terms.  More...
+
+--------------------------------------------------------------------------------
+Boundary conditions: 
+
+  YZsymmetry: none
+  XZsymmetry: none
+  XYsymmetry: none
+
+  Xmin: expanded open, 4 Layer, depth 86.2325 mm
+  Xmax: expanded open, 4 Layer, depth 86.2325 mm
+
+  Ymin: expanded open, 4 Layer, depth 75.6779 mm
+  Ymax: expanded open, 4 Layer, depth 85.8829 mm
+
+  Zmin: expanded open, 4 Layer, depth 85.8829 mm
+  Zmax: expanded open, 4 Layer, depth 75.6779 mm
+
+  PML-Type: Convolution PML
+
+--------------------------------------------------------------------------------
+Frequency settings: 
+
+  Fmin:         0.7
+  Fmax:         0.9
+  Nfsteps(lin): 1001
+
+--------------------------------------------------------------------------------
+Waveguide boundaries:
+
+Port: 1
+
+  -------------------------------- F-Calc 0.8 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  1      1      QTEM        206           0             56.1          ---
+  ----------------------------------------------------------------------------
+
+Field update statistics:
+
+  Number of components in total: 	491902
+  Number of TST elements:		198
+  Number of lossy metal components:	9694
+  Number of disp. elements:		10032
+
+Subcycling state:      Automatically deactivated
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Steady state energy criterion met, solver finished successfully.
+
+--------------------------------------------------------------------------------
+Frequency domain results normalized to default signal.
+
+
+--------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------
+                      Peak memory used (kB)         Free physical memory (kB) 
+                                                    At begin     Minimum      
+  ----------------------------------------------------------------------------
+  Matrices calc.      115916                        7677392      7604132      
+  Solver run total    62472                         7727452      7606092      
+  ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Solver Statistics:
+
+  Hardware:
+     Computer name:                 	HSB-XPS15 
+
+     Number of CPU threads:             6
+     Hardware info:                  	Hardware Accelerator Device not activated
+
+  Number of mesh cells:             	78848
+  Excitation duration:              	3.55454875e+001 ns 
+  Calculation time for excitation:  	42 	s
+  Number of calculated pulse widths:	1.32244 
+  Steady state accuracy limit:      	-40	dB 
+  Simulated number of time steps:   	23310 
+  Maximum number of time steps:     	352530 
+  Time step width:
+     without subcycles:             	2.01659242e-003 ns
+     used:                          	2.01659242e-003 ns
+
+  Matrix calculation time:          	13 	s
+  Solver setup time:                	2 	s
+  Solver loop time:                 	55 	s
+  Solver post processing time:      	1 	s
+                                    	------------
+  Total solver time:                	71 	s  ( = 0 h, 1 m, 11 s )
+
+--------------------------------------------------------------------------------
+
+  Adaptive port meshing time:       	19     	s
+  Total solver time (all cycles):   	71     	s  ( = 0 h, 1 m, 11 s )
+                                    	------------
+  Total simulation time:            	90     	s  ( = 0 h, 1 m, 30 s )
+
+--------------------------------------------------------------------------------
+Solver finished at: 09:03 PM Saturday, 30. November 2019
+
+
+
+--------------------------------------------------------------------------------
+Creating parametric 1D results for Run ID 8
+
+--------------------------------------------------------------------------------

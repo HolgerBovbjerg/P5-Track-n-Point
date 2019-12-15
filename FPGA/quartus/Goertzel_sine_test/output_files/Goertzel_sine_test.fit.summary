@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Dec 09 16:07:00 2019
+Fitter Status : Successful - Wed Dec 11 13:22:54 2019
 Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
 Revision Name : Goertzel_sine_test
 Top-level Entity Name : Goertzel_sine_test
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 503 / 15,408 ( 3 % )
-    Total combinational functions : 481 / 15,408 ( 3 % )
+Total logic elements : 464 / 15,408 ( 3 % )
+    Total combinational functions : 424 / 15,408 ( 3 % )
     Dedicated logic registers : 210 / 15,408 ( 1 % )
 Total registers : 210
 Total pins : 66 / 347 ( 19 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )
-Embedded Multiplier 9-bit elements : 16 / 112 ( 14 % )
+Embedded Multiplier 9-bit elements : 12 / 112 ( 11 % )
 Total PLLs : 0 / 4 ( 0 % )

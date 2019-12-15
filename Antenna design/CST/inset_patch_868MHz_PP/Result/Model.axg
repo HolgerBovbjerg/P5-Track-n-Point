@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSTAuxiliaryGeometry creator="modeler" version="20160211">
+  <Objects>
+    <Object name="Ports\port1">
+      <LineSet material="$PortMaterial$" points="-33.9700012207 -60.75 27.05999946594 33.9700012207 -60.75 27.05999946594 33.9700012207 -60.75 -1.534999966621 -33.9700012207 -60.75 -1.534999966621 -33.9700012207 -60.75 27.05999946594" short="1" stripped="1" text="1"/>
+    </Object>
+  </Objects>
+  <Materials/>
+</CSTAuxiliaryGeometry>
