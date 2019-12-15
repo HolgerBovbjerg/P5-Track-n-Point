@@ -8,6 +8,6 @@ The material includes follwing
 * Matlab scripts used for calculation and simulation of various things like antenna parameters, and algorithms.
 * Arduino-C code for controlling an antenna pedestal
 * Maple files used for various calculations.
-* Antenna design files inlcuding CST simulation files and Altium files for manufacturing antenna on PCB.
+* Antenna design files including CST simulation files and Altium files for manufacturing antenna on PCB.
 * Various figures used in the report.
 * Test data and test scripts used for various tests such as test of motor parameters.
