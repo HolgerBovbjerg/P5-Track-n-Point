@@ -106,50 +106,26 @@ GenerateClassCluster=0
 DocumentUniqueId=YCSHSISU
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for Free Documents\GerberX2\patch_864MHz.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument2]
 DocumentPath=Project Outputs for patch_864MHz\GerberX2\patch_864MHz.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument3]
-DocumentPath=Project Outputs for Free Documents\GerberX2\patch_864MHz.REP
-DItemRevisionGUID=
-
-[GeneratedDocument4]
+[GeneratedDocument2]
 DocumentPath=Project Outputs for patch_864MHz\GerberX2\patch_864MHz.REP
 DItemRevisionGUID=
 
-[GeneratedDocument5]
-DocumentPath=Project Outputs for Free Documents\GerberX2\patch_864MHz_Copper_Signal_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument6]
+[GeneratedDocument3]
 DocumentPath=Project Outputs for patch_864MHz\GerberX2\patch_864MHz_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument7]
-DocumentPath=Project Outputs for Free Documents\GerberX2\patch_864MHz_Copper_Signal_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument8]
+[GeneratedDocument4]
 DocumentPath=Project Outputs for patch_864MHz\GerberX2\patch_864MHz_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument9]
-DocumentPath=Project Outputs for Free Documents\GerberX2\patch_864MHz_Profile.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument10]
+[GeneratedDocument5]
 DocumentPath=Project Outputs for patch_864MHz\GerberX2\patch_864MHz_Profile.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument11]
-DocumentPath=Project Outputs for Free Documents\GerberX2\patch_864MHz_PTH_Drill.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument12]
+[GeneratedDocument6]
 DocumentPath=Project Outputs for patch_864MHz\GerberX2\patch_864MHz_PTH_Drill.gbr
 DItemRevisionGUID=
 
