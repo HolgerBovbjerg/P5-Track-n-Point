@@ -1,0 +1,69 @@
+NEW:
+- Changed SPI pins in program
+- Made SPI function
+- 
+
+MISSING:
+
+- Calculation of angle of arrival (Get Error function)
+- Changing the program to run on received error rather than simulated error
+- Search function that rotates pedestal slowly at 45 degree incline to search for signal
+
+ISSUES:
+- New stepper not tested along with the rest of the system
+- "Init" still fails horizontal alignment roughly 1 out of 4 times by registering alignment prematurely
+- "Init" not fully tested due to stepper mechanism not working
+- Possibly issues running small motor and large motor simultaneously at less than 100% duty cycle (might work with 24 volt supply)
+- PWM adjustment only works for pins not currently wired. Doesn't make much difference anyway
+- Encoder counter not tested with stand
+- Joystick not tested
+- PWM signals physically on wrong pins
+- SPI signals physically on wrong pins
+- Optional: Inputs for joystick on A0 and A1
+
+OLD:
+-------------------------------------------------------------------
+
+NEW:
+- Implemented joystick for error (both horizontal and vertical)
+
+ISSUES:
+- New stepper not tested along with the rest of the system
+- "Init" still fails horizontal alignment roughly 1 out of 4 times by registering alignment prematurely
+- "Init" not fully tested due to stepper mechanism not working
+- Possibly issues running small motor and large motor simultaneously at less than 100% duty cycle (might work with 24 volt supply)
+- PWM adjustment only works for pins not currently wired. Doesn't make much difference anyway
+- Encoder counter not tested with stand
+- Joystick not tested
+- PWM signals on wrong pins
+- SPI signals on wrong pins
+- Optional: Inputs for joystick on A0 and A1
+
+
+--------------------------------------------------------------------
+NEW:
+- Integrated new stepper controller that was tested before assignment hand-in.
+	- Sets stepper position based on sensed hall sensors
+		- Removed counters for how many times hall sensors have been sensed (was used for testing).
+		- Changed old variable names for hall sensors and removed obsolete variables.
+		- Added initial states to hall sensor state tracker to avoid unintended effects.
+	- Updated vertical error simulation 
+		- Changed up a few variables names
+	- Inserted the stepper controller code
+
+ISSUES:
+- New stepper not tested along with the rest of the system
+- "Init" still fails horizontal alignment roughly 1 out of 4 times by registering alignment prematurely
+- "Init" not fully tested due to stepper mechanism not working
+- Possibly issues running small motor and large motor simultaneously at less than 100% duty cycle (might work with 24 volt supply)
+- PWM adjustment only works for pins not currently wired. Doesn't make much difference anyway
+- Encoder doesn't count properly
+
+--------------------------------------------------------------------
+NEW:
+- Updated "Init" with stepper function.
+- Trimmed down init to have checks in the main loop instead of in the function regarding whether or not to run "Init" 
+
+ISSUES:
+- "Init" still fails horizontal alignment roughly 1 out of 4 times by registering alignment prematurely
+- "Init" not actually tested due to stepper mechanism not working
