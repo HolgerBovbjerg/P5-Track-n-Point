@@ -1,0 +1,46 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use ieee.math_real.all;
+
+library work;
+use work.constants.all;
+use work.records;
+
+entity SPI is
+    Port ( 	
+				i_CLK : in  STD_LOGIC; -- Clock input
+				-- SPI I/O
+				i_SCLK : in  STD_LOGIC; -- SPI serial clock
+				i MOSI : in  STD_LOGIC; -- SPI master out slave in
+				i_SSEL : in  STD_LOGIC; -- SPI slave select
+				o_MISO : in  STD_LOGIC; -- SPI master in slave out
+				-- Registers
+				i_REG_DATA : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_NEW_DATA : in  STD_LOGIC
+			 );
+end SPI;
+
+architecture Behavioral of SPI is
+
+
+	
+begin
+
+
+	
+	
+	process(i_CLK)
+	begin
+		if rising_edge(i_CLK) then
+			
+		end if;
+	end process;
+	
+	-- Inputs 
+
+	
+	-- Outputs
+	
+
+end Behavioral;

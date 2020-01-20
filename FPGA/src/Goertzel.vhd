@@ -14,6 +14,7 @@ entity Goertzel is
 				i_SIG : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal input
 				o_Real : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- DFT Real part output
 				o_Imag : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- DFT Imaginary part output
+				o_Abs : out STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- DFT power output
 				o_NEW_RESULT : out  STD_LOGIC -- New result flag
 			 );
 end Goertzel;

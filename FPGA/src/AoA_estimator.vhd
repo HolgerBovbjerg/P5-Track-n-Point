@@ -13,13 +13,13 @@ entity AoA_estimator is
 				i_ADC1 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 1
 				i_ADC2 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 2
 				i_ADC3 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 3
-				o_Real1 : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Real output 1
-				o_Real2 : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Real output 2
-				o_Real3 : out  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Real output 3
-				o_Imag1 : out STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Imag output 1
-				o_Imag2 : out STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Imag output 1
-				o_Imag3 : out STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0); -- Imag output 1
-				o_NEW_RESULT : out STD_LOGIC_VECTOR(2 downto 0)
+				o_Real1 : out  STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Real output 1
+				o_Real2 : out  STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Real output 2
+				o_Real3 : out  STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Real output 3
+				o_Imag1 : out STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Imag output 1
+				o_Imag2 : out STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Imag output 1
+				o_Imag3 : out STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Imag output 1
+				o_NEW_RESULT : out STD_LOGIC
 			 );
 end AoA_estimator;
 
@@ -150,12 +150,12 @@ begin
 	
 	
 	-- Outputs
-	o_Real1 <= w_Real(0); 
-	o_Real2 <= w_Real(1);
-	o_Real3 <= w_Real(2);
-	o_Imag1 <= w_imag(0);
-	o_Imag2 <= w_imag(1);
-	o_Imag3 <= w_imag(2);
-	o_NEW_RESULT <=w_NEW_RESULT; 
+	o_Real1 <= w_Real(0)(CALC_WIDTH-1 downto CALC_WIDTH - OUT_WIDTH); 
+	o_Real2 <= w_Real(1)(CALC_WIDTH-1 downto CALC_WIDTH - OUT_WIDTH);
+	o_Real3 <= w_Real(2)(CALC_WIDTH-1 downto CALC_WIDTH - OUT_WIDTH);
+	o_Imag1 <= w_imag(0)(CALC_WIDTH-1 downto CALC_WIDTH - OUT_WIDTH);
+	o_Imag2 <= w_imag(1)(CALC_WIDTH-1 downto CALC_WIDTH - OUT_WIDTH);
+	o_Imag3 <= w_imag(2)(CALC_WIDTH-1 downto CALC_WIDTH - OUT_WIDTH);
+	o_NEW_RESULT <= w_NEW_RESULT(0) and w_NEW_RESULT(1) and w_NEW_RESULT(2); 
 
 end Behavioral;
