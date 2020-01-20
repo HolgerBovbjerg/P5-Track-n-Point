@@ -31,6 +31,10 @@ constant c_coeff : integer := 31164; -- 2*cos(2*pi*k/N) = 1.90211303 in Q36,23 f
 constant c_coeff_cos : integer := 15582; --0.9510498047 in Q36,23 format
 constant c_coeff_sine : integer := 5063; -- 0.3089599609 in Q36,23 format
 
+-- Output width
+constant OUT_WIDTH : natural := 27; 
+
+
 end constants;
 
 package body constants is

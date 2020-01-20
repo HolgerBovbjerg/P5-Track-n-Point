@@ -1,5 +1,5 @@
 Flow report for AoA_estimator
-Fri Dec 13 12:37:30 2019
+Fri Jan 17 14:12:55 2020
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec 13 12:37:30 2019      ;
+; Flow Status                        ; Successful - Fri Jan 17 14:12:55 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; AoA_estimator                              ;
 ; Top-level Entity Name              ; AoA_estimator                              ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 944 / 15,408 ( 6 % )                       ;
+; Total logic elements               ; 949 / 15,408 ( 6 % )                       ;
 ;     Total combinational functions  ; 822 / 15,408 ( 5 % )                       ;
 ;     Dedicated logic registers      ; 592 / 15,408 ( 4 % )                       ;
 ; Total registers                    ; 592                                        ;
-; Total pins                         ; 202 / 347 ( 58 % )                         ;
+; Total pins                         ; 200 / 347 ( 58 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 36 / 112 ( 32 % )                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/13/2019 12:36:08 ;
+; Start date & time ; 01/17/2020 14:12:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AoA_estimator       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 172309000256012.157623696803256       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 74889883303248.157926673614848        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -95,12 +95,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 4706 MB             ; 00:00:09                           ;
-; Fitter                    ; 00:00:37     ; 1.0                     ; 4978 MB             ; 00:00:31                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4590 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 4637 MB             ; 00:00:08                           ;
-; EDA Netlist Writer        ; 00:00:07     ; 1.0                     ; 4557 MB             ; 00:00:04                           ;
-; Total                     ; 00:01:09     ; --                      ; --                  ; 00:00:55                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4712 MB             ; 00:00:05                           ;
+; Fitter                    ; 00:00:18     ; 1.0                     ; 4980 MB             ; 00:00:18                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4589 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4635 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4555 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,11 +109,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
