@@ -1,5 +1,5 @@
 Fitter report for sampler
-Sun Jan 19 11:55:02 2020
+Mon Jan 20 15:15:41 2020
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jan 19 11:55:02 2020      ;
+; Fitter Status                      ; Successful - Mon Jan 20 15:15:41 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; sampler                                    ;
 ; Top-level Entity Name              ; sampler                                    ;
@@ -1505,7 +1505,7 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/sampler/output_files/sampler.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4962 megabytes
-    Info: Processing ended: Sun Jan 19 11:55:03 2020
+    Info: Processing ended: Mon Jan 20 15:15:41 2020
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 
