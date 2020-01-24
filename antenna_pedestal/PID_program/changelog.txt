@@ -1,10 +1,27 @@
 NEW:
-- Changed SPI pins in program
-- Made SPI function
-- 
+- Changed PID controllers to P controllers and lowered variables
 
 MISSING:
+- Properly calculating AoA (Get Error function)
+- Changing the program to run on received error rather than simulated error
+- Search function that rotates pedestal slowly at 45 degree incline to search for signal
 
+ISSUES:
+- "Init" still fails horizontal alignment roughly 1 out of 4 times by registering alignment prematurely
+- PWM adjustment only works for pins not currently wired. (Doesn't make much difference anyway)
+- PWM signals physically on wrong pins
+- SPI signals physically on wrong pins
+- Optional: Inputs for potentiometers on A0 and A1
+
+OLD:
+-------------------------------------------------------------------
+
+NEW:
+- Changed SPI pins in program
+- Made Preliminary SPI function
+- Made Preliminary AoA function
+
+MISSING:
 - Calculation of angle of arrival (Get Error function)
 - Changing the program to run on received error rather than simulated error
 - Search function that rotates pedestal slowly at 45 degree incline to search for signal
@@ -21,7 +38,6 @@ ISSUES:
 - SPI signals physically on wrong pins
 - Optional: Inputs for joystick on A0 and A1
 
-OLD:
 -------------------------------------------------------------------
 
 NEW:

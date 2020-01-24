@@ -108,29 +108,31 @@ void PID_Control1() {
   double delta_error;
 
   if (delta_time >= T_cont) {
-//    if (setpoint_horz > pedPos) {
-//      error1 = setpoint_horz - pedPos;
-//      standDir = 1;
-//    }
-//    else {
-//      error1 = pedPos - setpoint_horz;
-//      standDir = 0;
-//    }
-//
-//    if (error1 > 180) {
-//      standDir = ! standDir;
-//      error1 = 360 - error1;
-//    }
-//
-//    if (prevStandDir != standDir) {
-//      hallTracking = 0;
-//      //delay(200);
-//    }
+    if (setpoint_horz > pedPos) {
+      error1 = setpoint_horz - pedPos;
+      standDir = 1;
+    }
+    else {
+      error1 = pedPos - setpoint_horz;
+      standDir = 0;
+    }
 
-  if (setpoint_horz > 0) standDir = 1;   // Turn CW
-  else if (setpoint_horz < 0) standDir = 0; // Turn CCW
+    if (error1 > 180) {
+      standDir = ! standDir;
+      error1 = 360 - error1;
+    }
 
-  error1 = setpoint_horz;
+    if (prevStandDir != standDir) {
+      hallTracking = 0;
+      //delay(200);
+    }
+
+
+
+//  if (setpoint_horz > 0) standDir = 1;   // Turn CW
+//  else if (setpoint_horz < 0) standDir = 0; // Turn CCW
+
+  //error1 = setpoint_horz;
   
     if (error1 >= MSmallInt) {
       if (standDir == 1) { // if the shortest path is clockwise, set motors to turn clockwise
@@ -163,9 +165,13 @@ void PID_Control1() {
       delta_error = error1 - last_error1; //difference of error for derivative term
 
       control_signal1 = Kp1 * error1 + (Ki1 * T_cont) * abs(total_error) + (Kd1 / T_cont) * delta_error; // Compute controller 1
-      if (control_signal1 >= max_control1) control_signal1 = max_control1;
-      else if (control_signal1 <= min_control1) control_signal1 = 0;
+      if (control_signal1 > 255) control_signal1 = 255;
+      else if (control_signal1 < 0) control_signal1 = 0;
 
+      control_signal1 = map(control_signal1, 0, 255, min_control1, max_control1);
+
+      if (control_signal1 > max_control1) control_signal1 = max_control1;
+      
       last_error1 = error1;
 
       analogWrite(C1outputPin, control_signal1);
@@ -220,7 +226,7 @@ void PID_Control2() {
 
   if (delta_time >= T_cont) {
 
-    error2 = error1 - 5;
+    error2 = error1;
     if (error2 < 0) error2 = 0;
 
     double delta_error = error2 - last_error2; //difference of error for derivative term
