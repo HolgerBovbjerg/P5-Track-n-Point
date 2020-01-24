@@ -4,73 +4,92 @@ void Initialise() {
   unsigned long lastTime = millis();
   unsigned long currentTime = millis();
 
-  while (digitalRead(HallStand) == HIGH) {
-    analogWrite(C1outputPin, 0);
-    analogWrite(C2outputPin, 100);
-    digitalWrite(MotorForSmall, LOW);
-    digitalWrite(MotorBackSmall, HIGH);
-    digitalWrite(MotorForLarge, LOW);
-    digitalWrite(MotorBackLarge, HIGH);
-    //Serial.println("Horizontal align");
-    //    Serial.print(digitalRead(MotorForSmall));
-    //    Serial.print(" ; ");
-    //    Serial.print(digitalRead(MotorBackSmall));
-    //    Serial.print(" ; ");
-    //    Serial.print(digitalRead(MotorForLarge));
-    //    Serial.print(" ; ");
-    //    Serial.print(digitalRead(MotorBackLarge));
-    //    Serial.print(" ; ");
-    //    Serial.print(analogRead(C1outputPin));
-    //    Serial.print(" ; ");
-    //    Serial.println(analogRead(C2outputPin));
+  //analogWrite(C1outputPin, 200);
+  analogWrite(C2outputPin, 70);
+
+  Serial.println("Forward");
+
+  //digitalWrite(MotorForSmall, LOW);
+  //digitalWrite(MotorBackSmall, HIGH);
+  digitalWrite(MotorForLarge, LOW);
+  digitalWrite(MotorBackLarge, HIGH);
+
+  while (digitalRead(HallStand) == HIGH){
+    
   }
 
-  //Serial.println("Horizontal zero position found");
-  encCounter = 0;
-  analogWrite(C1outputPin, 0);
-  analogWrite(C2outputPin, 60);
-  digitalWrite(MotorForSmall, HIGH);
-  digitalWrite(MotorBackSmall, LOW);
-  digitalWrite(MotorForLarge, HIGH);
+  //delay(500);
+
+  //Serial.println("Pausing");
+
+  //analogWrite(C1outputPin, 0);
+  analogWrite(C2outputPin, 0);
+  digitalWrite(MotorForLarge, LOW);
   digitalWrite(MotorBackLarge, LOW);
   delay(1000);
-  analogWrite(C2outputPin, 0);
 
+  //Serial.println("Reversing");
+  
+  digitalWrite(MotorForSmall, HIGH);
+  digitalWrite(MotorBackSmall, LOW);
+
+  analogWrite(C1outputPin, 70);
+
+
+  while (digitalRead(HallStand) == HIGH){
+      
+  }
+
+  //Serial.println("Found");
+
+  analogWrite(C1outputPin, 0);
+  analogWrite(C2outputPin, 0);
+  
+  digitalWrite(MotorForSmall, LOW);
+  digitalWrite(MotorBackSmall, LOW);
+  digitalWrite(MotorForLarge, LOW);
+  digitalWrite(MotorBackLarge, LOW);
+  
+  //Serial.println("Horizontal zero position found");
+  encCounter = 0;
+  delay(500);
+
+  //Serial.println("Stopped");
 
   lastTime = millis();
   currentTime = millis();
 
-  //  // MOVE STEPPER UP IF UPPER HALL SENSOR HAS NOT BEEN REACHED
-  //  if (digitalRead(HallStepUp) == HIGH) {
-  //    digitalWrite(StepDir, HIGH);
-  //    while (digitalRead(HallStepUp) == HIGH) {
-  //      current_time = millis();
-  //      if ((current_time - last_timestep) >= T_step) {
-  //        digitalWrite(StepClock, !digitalRead(StepClock));
-  //        last_timestep = millis();
-  //      }
-  //    }
-  //  }
-  //  // MOVE DOWN UNTIL LOWER HALL SENSOR IS REACHED
-  //  digitalWrite(StepDir, LOW);
-  //  while (digitalRead(HallStepBot) == HIGH) {
-  //    current_time = millis();
-  //    if ((current_time - last_timestep) >= T_step) {
-  //      digitalWrite(StepClock, !digitalRead(StepClock));
-  //      last_timestep = millis();
-  //    }
-  //  }
-  //  // MOVE DOWN FOR EXTRA COUNTS
-  //  int count = 0;
-  //  while (count < 240) {
-  //    current_time = millis();
-  //    if ((current_time - last_timestep) >= T_step) {
-  //      digitalWrite(StepClock, !digitalRead(StepClock));
-  //      last_timestep = millis();
-  //      if (digitalRead(StepClock) == LOW) count++;
-  //    }
-  //  }
-  //  digitalWrite(StepDir, HIGH);
+    // MOVE STEPPER UP IF UPPER HALL SENSOR HAS NOT BEEN REACHED
+    if (digitalRead(HallStepUp) == HIGH) {
+      digitalWrite(StepDir, HIGH);
+      while (digitalRead(HallStepUp) == HIGH) {
+        current_time = millis();
+        if ((current_time - last_timestep) >= T_step) {
+          digitalWrite(StepClock, !digitalRead(StepClock));
+          last_timestep = millis();
+        }
+      }
+    }
+    // MOVE DOWN UNTIL LOWER HALL SENSOR IS REACHED
+    digitalWrite(StepDir, LOW);
+    while (digitalRead(HallStepBot) == HIGH) {
+      current_time = millis();
+      if ((current_time - last_timestep) >= T_step) {
+        digitalWrite(StepClock, !digitalRead(StepClock));
+        last_timestep = millis();
+      }
+    }
+    // MOVE DOWN FOR EXTRA COUNTS
+    int count = 0;
+    while (count < 390) {
+      current_time = millis();
+      if ((current_time - last_timestep) >= T_step) {
+        digitalWrite(StepClock, !digitalRead(StepClock));
+        last_timestep = millis();
+        if (digitalRead(StepClock) == LOW) count++;
+      }
+    }
+    digitalWrite(StepDir, HIGH);
 
   stepPos = 0;
   standIsZero = 1;
@@ -113,7 +132,7 @@ void HallStepper() {
   // If upper hall sensor has changed input to LOW, set vertical position to 700.
   if (currentHallStepUp != previousHallStepUp) {
     if (currentHallStepUp == 0) {
-      stepPos = 730;
+      stepPos = 760;
     }
     previousHallStepUp = currentHallStepUp;
   }
@@ -124,7 +143,7 @@ void HallStepper() {
   // If bottom hall sensor has changed input to LOW, set vertical position to 289.
   if (currentHallStepBot != previousHallStepBot) {
     if (currentHallStepBot == 0) {
-      stepPos = 250;
+      stepPos = 390;
     }
     previousHallStepBot = currentHallStepBot;
   }
@@ -133,65 +152,85 @@ void HallStepper() {
 // =============================================== SIMULATE ERROR =============================================== //
 // Function that converts joystick input into vertical and horizontal
 void ErrorSim() {
-//  int sim_setpoint_horz = analogRead(A0);
-//  setpoint_horz = mapfloat(sim_setpoint_horz, 0, 1023, 0, 359);
-//
-//  if ((current_time - last_time_step_error) > 50) {
-//    int sim_setpoint_horz = analogRead(A1);
-//    setpoint_vert = (map(sim_setpoint_horz, 0, 1023, 0, 900));
-//    last_time_step_error = millis();
-//  }
+  int sim_setpoint_horz = analogRead(A0);
+  setpoint_horz = map(sim_setpoint_horz, 0, 1023, 0, 359);
 
-  //    Serial.print("Setpoint: ");
-  //    Serial.print(setpoint_horz);
-  //    Serial.println("  ;  ");
+  if ((current_time - last_time_step_error) > 50) {
+    int sim_setpoint_verz = analogRead(A1);
+    setpoint_vert = (map(sim_setpoint_verz, 0, 1023, 0, 900));
+    last_time_step_error = millis();
+  }
 
-  long sim_setpoint_vert = analogRead(xIn);
-  long sim_setpoint_horz = analogRead(yIn);
-  
-  if (sim_setpoint_vert < 540 && sim_setpoint_vert > 470) setpoint_vert = 0;
-  else if (sim_setpoint_vert >= 540) setpoint_vert = map(sim_setpoint_vert, 540, 1023, -1, -10);
-  else if (sim_setpoint_vert <= 470) setpoint_vert = map(sim_setpoint_vert, 470, 0, 1, 10);
-  
-  if (sim_setpoint_horz < 540 && sim_setpoint_horz > 470) setpoint_horz = 0;
-  else if (sim_setpoint_horz >= 540) setpoint_horz = map(sim_setpoint_horz, 540, 1023, -1, -170);
-  else if (sim_setpoint_horz <= 470) setpoint_horz = map(sim_setpoint_horz, 470, 0, 1, 170);
-  
+//  long sim_setpoint_vert = analogRead(xIn);
+//  long sim_setpoint_horz = analogRead(yIn);
+//  
+//  if (sim_setpoint_vert < 540 && sim_setpoint_vert > 470) setpoint_vert = 0;
+//  else if (sim_setpoint_vert >= 540) setpoint_vert = map(sim_setpoint_vert, 540, 1023, -1, -10);
+//  else if (sim_setpoint_vert <= 470) setpoint_vert = map(sim_setpoint_vert, 470, 0, 1, 10);
+//  
+//  if (sim_setpoint_horz < 540 && sim_setpoint_horz > 470) setpoint_horz = 0;
+//  else if (sim_setpoint_horz >= 540) setpoint_horz = map(sim_setpoint_horz, 540, 1023, -1, -170);
+//  else if (sim_setpoint_horz <= 470) setpoint_horz = map(sim_setpoint_horz, 470, 0, 1, 170);
+//  Serial.print("Vert: ");
+//  Serial.print(setpoint_vert);
+//  Serial.print(" || ");
+//  Serial.print("Horz: ");
+//  Serial.println(setpoint_horz);
   
 }
 
-// =============================================== ENCODER COUNT IMPROVED =============================================== //
-// Counts encoder steps
-void EncoderCount() {
-  static int8_t rot_enc_table[] = {0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0};
+// =============================================== ENCODER PULSE CHECK =============================================== //
+void EncoderPulseCheck() {
+  // Read the current state of inputCLK
+  encCurrentStateCLK = digitalRead(inputCLK);
 
-  prevNextCode <<= 2;
-  if (digitalRead(inputDT)) prevNextCode |= 0x02;
-  if (digitalRead(inputCLK)) prevNextCode |= 0x01;
-  prevNextCode &= 0x0f;
-
-  // If valid then store as 16 bit data.
-  if  (rot_enc_table[prevNextCode] ) {
-    store <<= 4;
-    store |= prevNextCode;
-    //if (store==0xd42b) return 1;
-    //if (store==0xe817) return -1;
-    if ((store & 0xff) == 0x2b) {
-      pedPos += 1;
-      if (pedPos > 359) pedPos = 0;
-      if (pedPos < 0) pedPos = 359;
-      //Serial.println(pedPos);
+  // If the previous and the current state of the inputCLK are different then a pulse has occured
+  if (encCurrentStateCLK != encPreviousStateCLK)
+  {
+    // If the inputDT state is different than the inputCLK state then
+    // the encoder is rotating counterclockwise
+    if (digitalRead(inputDT) != encCurrentStateCLK)
+    {
+      encCounter --;
+      if (encCounter < 0)
+      {
+        encCounter = 359;
+      }
     }
-    if ((store & 0xff) == 0x17) {
-      pedPos -= 1;
-      if (pedPos > 359) pedPos = 0;
-      if (pedPos < 0) pedPos = 359;
-      //Serial.println(pedPos);
+    //else
+    if (digitalRead(inputDT) == encCurrentStateCLK)
+    {
+      // Encoder is rotating clockwise
+      encCounter ++;
+      if (encCounter > 359)
+      {
+        encCounter = 0;
+      }
     }
-    
+    // Update previousStateCLK with the current state, set pedestal position equal to encoder counter, and activate hall sensor tracking
+    encPreviousStateCLK = encCurrentStateCLK;
+    pedPos = encCounter;
+    hallTracking = 1;
+    Serial.println(encCounter);
   }
-
-
+  
+  if (encCurrentStateCLK == encPreviousStateCLK)
+  {
+    //----------------------------------------------------------------------------
+    // Update previousStateCLK with the current state
+    encPreviousStateCLK = encCurrentStateCLK;
+  }
+  encCurrentCounter = encCounter;
+  
+//  if (encCurrentCounter != encPreviousCounter)
+//  {
+//    Serial.print("Encoder counter: ");
+//    Serial.println(encCounter);
+//  }
+  encPreviousCounter = encCurrentCounter;
+  //      Serial.print("Encoder: ");
+  //      Serial.print(encCounter);
+  //      Serial.print("  ;  ");
 }
 
 // =============================================== MAPFLOAT =============================================== //

@@ -33,11 +33,11 @@ void Search();
 // CONTROLLER VARIABLES
 double control_signal1, control_signal2;
 double setpoint_horz = 0; // Horizontal angular displacement that we want to achieve
-double Kp1 = 50;          // C1: proportional gain
+double Kp1 = 7;           // C1: proportional gain
 double Ki1 = 0;           // C1: integral gain
-double Kd1 = 10;          // C1: derivative gain
-double Kp2 = 3;           // C2: proportional gain
-double Kd2 = 10;           // C2: derivative gain
+double Kd1 = 0;           // C1: derivative gain
+double Kp2 = 1;           // C2: proportional gain
+double Kd2 = 0;           // C2: derivative gain
 int T_cont = 25;          // Sample time for controllers in milliseconds (ms)
 unsigned long last_time1 = millis();    // Used to calculate sampling time criteria for controller 1
 unsigned long last_time2 = millis();    // Used to calculate sampling time criteria for controller 2
@@ -45,10 +45,10 @@ unsigned long current_time;             // Returns the number of milliseconds pa
 double total_error = 0;   // For calculating integral in C1
 double last_error1 = 0;   // For calculating derivative in C1
 double last_error2 = 0;   // For calculating derivative in C2
-int max_control1 = 255;   // The maximum value that can be output by controller 1
-int min_control1 = 120;   // The minimum value that can be output by controller 1
-int max_control2 = 255;   // The maximum value that can be output by controller 2
-int min_control2 = 90;    // The minimum value that can be output by controller 2
+int max_control1 = 200;   // The maximum value that can be output by controller 1
+int min_control1 = 58;    // The minimum value that can be output by controller 1
+int max_control2 = 130;   // The maximum value that can be output by controller 2
+int min_control2 = 3;     // The minimum value that can be output by controller 2
 double error1 = 0;        // Error for controller 1 (small)
 double error2 = 0;        // Error for controller 2 (large)
 long ErrorArr[6];         // Array containing error data received from FPGA
@@ -208,14 +208,13 @@ void loop() {
   //delay(500);
   current_time = millis();  // Saves the current time for the purpose of establishing sample rate
   current_test_time = millis();
-  //if (standIsZero == 0)Initialise();
-  //ErrorSim();
-  EncoderCount();
-  //Serial.println(stepPos);
-  //EncoderPulseCheck();
-  //HallSmallCounterFunc();
-  //HallStepper();
-  //StepperControl();
-  //PID_Control1();
-  //PID_Control2();
+  if (standIsZero == 0)Initialise();
+//  ErrorSim();
+//  EncoderPulseCheck();
+//  //Serial.println(stepPos);
+//  HallSmallCounterFunc();
+//  HallStepper();
+//  StepperControl();
+//  PID_Control1();
+//  PID_Control2();
 }
