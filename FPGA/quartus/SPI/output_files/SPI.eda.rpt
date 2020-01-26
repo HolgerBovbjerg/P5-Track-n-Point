@@ -1,5 +1,5 @@
 EDA Netlist Writer report for SPI
-Mon Jan 20 15:11:47 2020
+Sat Jan 25 19:21:04 2020
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jan 20 15:11:47 2020 ;
+; EDA Netlist Writer Status ; Successful - Sat Jan 25 19:21:04 2020 ;
 ; Revision Name             ; SPI                                   ;
 ; Top-level Entity Name     ; SPI                                   ;
 ; Family                    ; Cyclone III                           ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Mon Jan 20 15:11:46 2020
+    Info: Processing started: Sat Jan 25 19:21:01 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off SPI -c SPI
 Info (204019): Generated file SPI_6_1200mv_85c_slow.vho in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/SPI/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file SPI_6_1200mv_0c_slow.vho in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/SPI/simulation/modelsim/" for EDA simulation tool
@@ -99,9 +99,9 @@ Info (204019): Generated file SPI_6_1200mv_0c_vhd_slow.sdo in folder "C:/Users/h
 Info (204019): Generated file SPI_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/SPI/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file SPI_vhd.sdo in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/quartus/SPI/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4546 megabytes
-    Info: Processing ended: Mon Jan 20 15:11:47 2020
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4551 megabytes
+    Info: Processing ended: Sat Jan 25 19:21:04 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

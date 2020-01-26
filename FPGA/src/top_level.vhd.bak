@@ -1,0 +1,74 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use ieee.math_real.all;
+
+library work;
+use work.constants.all;
+use work.records;
+
+entity top_level is
+    Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
+				-- i_RESET : in  STD_LOGIC; -- Reset input
+				
+				-- ADC inputs
+				i_ADC1 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 1
+				i_ADC2 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 2
+				i_ADC3 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 3
+				-- SPI I/O
+				i_SCLK : in  STD_LOGIC; -- SPI serial clock
+				i_MOSI : in  STD_LOGIC; -- SPI master out slave in
+				i_SSEL : in  STD_LOGIC; -- SPI slave select
+				o_MISO : out  STD_LOGIC; -- SPI master in slave out
+			 );
+end top_level;
+
+architecture Behavioral of top_level is
+
+COMPONENT AoA_estimator is
+    Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
+				-- i_RESET : in  STD_LOGIC; -- Reset input
+				i_ADC1 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 1
+				i_ADC2 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 2
+				i_ADC3 : in  STD_LOGIC_VECTOR(INPUT_WIDTH-1 downto 0); -- Signal 3
+				o_Real1 : out  STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Real output 1
+				o_Real2 : out  STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Real output 2
+				o_Real3 : out  STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Real output 3
+				o_Imag1 : out STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Imag output 1
+				o_Imag2 : out STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Imag output 1
+				o_Imag3 : out STD_LOGIC_VECTOR(OUT_WIDTH-1 downto 0); -- Imag output 1
+				o_NEW_RESULT : out STD_LOGIC
+			 );
+end COMPONENT AoA_estimator;
+
+
+COMPONENT SPI 
+    Port ( 	
+				i_CLK : in  STD_LOGIC; -- Clock input
+				-- SPI I/O
+				i_SCLK : in  STD_LOGIC; -- SPI serial clock
+				i_MOSI : in  STD_LOGIC; -- SPI master out slave in
+				i_SSEL : in  STD_LOGIC; -- SPI slave select
+				o_MISO : out  STD_LOGIC; -- SPI master in slave out
+				
+				-- Registers
+				i_DATA1 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA2 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA3 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA4 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA5 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA6 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_NEW_DATA : in  STD_LOGIC;
+				o_ADDRESS : out STD_LOGIC_VECTOR(7 downto 0);
+				
+				-- Status signals
+				o_DATA_received : out STD_LOGIC
+			 );
+end COMPONENT SPI;
+
+
+begin
+
+
+
+end Behavioral;

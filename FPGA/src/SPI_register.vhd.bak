@@ -1,0 +1,60 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use ieee.math_real.all;
+
+library work;
+use work.constants.all;
+use work.records;
+
+entity SPI_register is
+    Port ( 	
+				i_CLK : in  STD_LOGIC; -- Clock input
+				i_DATA1 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA2 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA3 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA4 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA5 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_DATA6 : in  STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				i_NEW_DATA : in  STD_LOGIC;
+				i_ADDRESS : in STD_LOGIC_VECTOR(3 downto 0);
+				o_DATA : out STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+				
+			 );
+end SPI;
+
+architecture Behavioral of SPI is
+
+	signal r_DATA1 : STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+	signal r_DATA2 : STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+	signal r_DATA3 : STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+	signal r_DATA4 : STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+	signal r_DATA5 : STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+	signal r_DATA6 : STD_LOGIC_VECTOR(CALC_WIDTH-1 downto 0);
+	
+begin
+
+	-- Update register
+	process(i_CLK)
+	begin
+		if rising_edge(i_CLK) then
+			if rising_edge(i_NEW_DATA)
+				r_DATA1 <= i_DATA1;
+				r_DATA2 <= i_DATA2;
+				r_DATA3 <= i_DATA3;
+				r_DATA4 <= i_DATA4;
+				r_DATA5 <= i_DATA5;
+				r_DATA6 <= i_DATA6;
+			end if;
+			with i_ADDRESS select
+				o_DATA <= r_DATA1 when "001";
+				o_DATA <= r_DATA2 when "010";
+				o_DATA <= r_DATA3 when "011";
+				o_DATA <= r_DATA4 when "100";
+				o_DATA <= r_DATA5 when "101";
+				o_DATA <= r_DATA6 when "110";
+				o_DATA <= (others => '0') when others;
+		end if;
+	end process;
+	
+end Behavioral;

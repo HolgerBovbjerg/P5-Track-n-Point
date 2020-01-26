@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon Jan 20 15:11:37 2020
+Fitter Status : Successful - Sat Jan 25 19:20:50 2020
 Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
 Revision Name : SPI
 Top-level Entity Name : SPI
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 39 / 15,408 ( < 1 % )
-    Total combinational functions : 26 / 15,408 ( < 1 % )
-    Dedicated logic registers : 37 / 15,408 ( < 1 % )
-Total registers : 37
-Total pins : 42 / 347 ( 12 % )
+Total logic elements : 359 / 15,408 ( 2 % )
+    Total combinational functions : 275 / 15,408 ( 2 % )
+    Dedicated logic registers : 238 / 15,408 ( 2 % )
+Total registers : 238
+Total pins : 169 / 347 ( 49 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )

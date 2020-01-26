@@ -42,17 +42,35 @@ Im = sprev*sin_coeff;
 y(m+1) = coeff3*(Re + 1j*Im);
 
 end
-figure(1)
-stem(2*abs(y)/(ADC_res*N))
 
-figure(2)
-stem(angle(y))
+freq_vector = 1e3*(0:1000);
+mag = 2*abs(y)/(ADC_res*N);
+phase = angle(y);
 
-figure(3)
-stem(real(y)/ADC_res)
+t = tiledlayout(2,1);
+ax1 = nexttile;
+stem(ax1,freq_vector,mag, 'Color','#0072BD')
+ylabel('Magnitude')
+ax1.FontSize = 14;
+grid(ax1,'on')
 
-figure(4)
-stem(imag(y)/ADC_res)
+ax2 = nexttile;
+phase = angle(y);
+for a = 1:length(phase)
+    if mag(a) < 0.2
+        phase(a) = 0;
+    end
+end
+stem(ax2,freq_vector, phase, 'Color','#D95319')
+ylabel('Phase [rad]')
+xlabel('Frequency of input signal [Hz]')
+ax2.FontSize = 14;
+grid(ax2,'on')
 
-figure(5)
-stem(t, x)
+linkaxes([ax1,ax2],'x');
+xticklabels(ax1,{})
+title(t, 'Goertzel magnitude and phase when varying input signal')
+t.TileSpacing = 'compact';
+t.Padding = 'compact';
+
+saveas(gcf,'Goertzel_signal_sweep','epsc')

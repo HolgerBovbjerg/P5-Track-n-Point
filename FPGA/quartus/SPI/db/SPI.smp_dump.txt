@@ -1,0 +1,6 @@
+
+State Machine - |SPI|state
+Name state.TRANSMIT state.COMMAND state.IDLE 
+state.IDLE 0 0 0 
+state.COMMAND 0 1 1 
+state.TRANSMIT 1 0 1 

@@ -23,7 +23,10 @@ package records is
       sample_count : natural; -- Sample counter
    end record;
 	
-	type SPI_machine is (IDLE, COMMAND, TRANSMIT); 
+	
+	
+	
+	
 	
 	
 end package records;
