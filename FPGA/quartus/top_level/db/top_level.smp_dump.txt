@@ -1,0 +1,27 @@
+
+State Machine - |top_level|SPI:INST_SPI|state
+Name state.TRANSMIT state.COMMAND state.IDLE 
+state.IDLE 0 0 0 
+state.COMMAND 0 1 1 
+state.TRANSMIT 1 0 1 
+
+State Machine - |top_level|AoA_estimator:INST_AoA_estimator|Goertzel:INST3_Goertzel|reg.state
+Name reg.state.OUTPUT reg.state.STORE reg.state.CALCULATE reg.state.IDLE 
+reg.state.IDLE 0 0 0 0 
+reg.state.CALCULATE 0 0 1 1 
+reg.state.STORE 0 1 0 1 
+reg.state.OUTPUT 1 0 0 1 
+
+State Machine - |top_level|AoA_estimator:INST_AoA_estimator|Goertzel:INST2_Goertzel|reg.state
+Name reg.state.OUTPUT reg.state.STORE reg.state.CALCULATE reg.state.IDLE 
+reg.state.IDLE 0 0 0 0 
+reg.state.CALCULATE 0 0 1 1 
+reg.state.STORE 0 1 0 1 
+reg.state.OUTPUT 1 0 0 1 
+
+State Machine - |top_level|AoA_estimator:INST_AoA_estimator|Goertzel:INST1_Goertzel|reg.state
+Name reg.state.OUTPUT reg.state.STORE reg.state.CALCULATE reg.state.IDLE 
+reg.state.IDLE 0 0 0 0 
+reg.state.CALCULATE 0 0 1 1 
+reg.state.STORE 0 1 0 1 
+reg.state.OUTPUT 1 0 0 1 

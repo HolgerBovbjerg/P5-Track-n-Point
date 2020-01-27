@@ -1,5 +1,3 @@
-clear;
-
 f_signal = 0.5e6;
 fs = 10e6;
 N = 200;
@@ -58,27 +56,34 @@ y(m) = coeff3*(Re + 1j*Im);
 
 
 end
+
 freq_vector = (0:N*5/2-1)*2*omega_0/(2*pi);
 mag = 2*abs(y)/(ADC_res*N/2);
-figure(1)
-stem(freq_vector,mag)
 
-figure(2)
-stem((0:2/5:N-2/5),mag)
+t = tiledlayout(2,1);
+ax1 = nexttile;
+stem(ax1,freq_vector,mag, 'Color','#0072BD')
+ylabel('Magnitude')
+ax1.FontSize = 14;
+grid(ax1,'on')
 
-
-figure(3)
+ax2 = nexttile;
 phase = angle(y);
 for a = 1:length(phase)
     if mag(a) < 0.2
         phase(a) = 0;
     end
 end
+stem(ax2,freq_vector, phase, 'Color','#D95319')
+ylabel('Phase [rad]')
+xlabel('Frequency [Hz]')
+ax2.FontSize = 14;
+grid(ax2,'on')
 
-stem(freq_vector, phase/pi)
+linkaxes([ax1,ax2],'x');
+xticklabels(ax1,{})
+title(t, 'Goertzel magnitude and phase when varying k')
+t.TileSpacing = 'compact';
+t.Padding = 'compact';
 
-figure(4)
-stem((0:2/5:N-2/5),phase)
-
-figure(5)
-stem(t, x)
+saveas(gcf,'Goertzel_k_sweep','epsc')

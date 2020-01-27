@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPI
-Mon Jan 20 15:11:28 2020
+Mon Jan 27 11:14:40 2020
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -13,10 +13,12 @@ Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |SPI|state
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +44,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 20 15:11:28 2020      ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 27 11:14:40 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; SPI                                        ;
 ; Top-level Entity Name              ; SPI                                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 43                                         ;
-;     Total combinational functions  ; 26                                         ;
-;     Dedicated logic registers      ; 37                                         ;
-; Total registers                    ; 37                                         ;
-; Total pins                         ; 42                                         ;
+; Total logic elements               ; 418                                        ;
+;     Total combinational functions  ; 248                                        ;
+;     Dedicated logic registers      ; 238                                        ;
+; Total registers                    ; 238                                        ;
+; Total pins                         ; 169                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -152,19 +154,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                          ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
-; ../../src/constants.vhd          ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd ;         ;
-; ../../src/SPI.vhd                ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/SPI.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+; ../../src/constants.vhd          ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/constants.vhd    ;         ;
+; ../../src/SPI.vhd                ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/SPI.vhd          ;         ;
+; ../../src/SPI_register.vhd       ; yes             ; User VHDL File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/5. semester/P5/P5-Track-n-Point/FPGA/src/SPI_register.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -172,39 +175,52 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 43          ;
+; Estimated Total logic elements              ; 418         ;
 ;                                             ;             ;
-; Total combinational functions               ; 26          ;
+; Total combinational functions               ; 248         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 13          ;
-;     -- 3 input functions                    ; 4           ;
-;     -- <=2 input functions                  ; 9           ;
+;     -- 4 input functions                    ; 157         ;
+;     -- 3 input functions                    ; 52          ;
+;     -- <=2 input functions                  ; 39          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 20          ;
-;     -- arithmetic mode                      ; 6           ;
+;     -- normal mode                          ; 217         ;
+;     -- arithmetic mode                      ; 31          ;
 ;                                             ;             ;
-; Total registers                             ; 37          ;
-;     -- Dedicated logic registers            ; 37          ;
+; Total registers                             ; 238         ;
+;     -- Dedicated logic registers            ; 238         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 42          ;
+; I/O pins                                    ; 169         ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; i_CLK~input ;
-; Maximum fan-out                             ; 37          ;
-; Total fan-out                               ; 232         ;
-; Average fan-out                             ; 1.58        ;
+; Maximum fan-out                             ; 238         ;
+; Total fan-out                               ; 1751        ;
+; Average fan-out                             ; 2.13        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |SPI                       ; 26 (26)           ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |SPI                ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; |SPI                                ; 248 (162)         ; 238 (49)     ; 0           ; 0            ; 0       ; 0         ; 169  ; 0            ; |SPI                                ; work         ;
+;    |SPI_register:INST_SPI_register| ; 86 (86)           ; 189 (189)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SPI|SPI_register:INST_SPI_register ; work         ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------+
+; State Machine - |SPI|state                                   ;
++----------------+----------------+---------------+------------+
+; Name           ; state.TRANSMIT ; state.COMMAND ; state.IDLE ;
++----------------+----------------+---------------+------------+
+; state.IDLE     ; 0              ; 0             ; 0          ;
+; state.COMMAND  ; 0              ; 1             ; 1          ;
+; state.TRANSMIT ; 1              ; 0             ; 1          ;
++----------------+----------------+---------------+------------+
 
 
 +------------------------------------------------------+
@@ -212,24 +228,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 37    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 238   ;
+; Number of registers using Synchronous Clear  ; 27    ;
+; Number of registers using Synchronous Load   ; 27    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Clock Enable       ; 162   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |SPI|r_bitcount[0]         ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |SPI|r_DATA_sent[7]        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; r_UPDATE_ENABLE                        ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 8:1                ; 27 bits   ; 135 LEs       ; 108 LEs              ; 27 LEs                 ; Yes        ; |SPI|SPI_register:INST_SPI_register|r_OUTDATA[5] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |SPI|r_ADDRESS                                   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |SPI|r_bitcount                                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |SPI|r_bitcount                                  ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |SPI|Selector37                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
 +-------------------------------+
@@ -237,7 +266,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -247,7 +276,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Mon Jan 20 15:11:26 2020
+    Info: Processing started: Mon Jan 27 11:14:37 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPI -c SPI
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 0 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/fpga/src/records.vhd
@@ -258,48 +287,26 @@ Info (12021): Found 2 design units, including 0 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/fpga/src/spi.vhd
     Info (12022): Found design unit 1: SPI-Behavioral
     Info (12023): Found entity 1: SPI
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/fpga/src/spi_register.vhd
+    Info (12022): Found design unit 1: SPI_register-Behavioral
+    Info (12023): Found entity 1: SPI_register
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/fpga/test_benches/spi_tb.vhd
+    Info (12022): Found design unit 1: SPI_tb-Behavioral
+    Info (12023): Found entity 1: SPI_tb
 Info (12127): Elaborating entity "SPI" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at SPI.vhd(38): object "w_SSEL_endmessage" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at SPI.vhd(65): object "w_SSEL_active" assigned a value but never read
+Info (12128): Elaborating entity "SPI_register" for hierarchy "SPI_register:INST_SPI_register"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 28 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_REG_DATA[0]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[1]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[2]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[3]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[4]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[5]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[6]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[7]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[8]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[9]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[10]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[11]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[12]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[13]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[14]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[15]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[16]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[17]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[18]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[19]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[20]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[21]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[22]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[23]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[24]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[25]"
-    Warning (15610): No output dependent on input pin "i_REG_DATA[26]"
-    Warning (15610): No output dependent on input pin "i_NEW_DATA"
-Info (21057): Implemented 85 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 32 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 43 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 4663 megabytes
-    Info: Processing ended: Mon Jan 20 15:11:28 2020
-    Info: Elapsed time: 00:00:02
+Info (21057): Implemented 587 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 167 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 418 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4666 megabytes
+    Info: Processing ended: Mon Jan 27 11:14:40 2020
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
