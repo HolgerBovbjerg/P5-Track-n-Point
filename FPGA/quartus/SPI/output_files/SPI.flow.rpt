@@ -1,5 +1,5 @@
 Flow report for SPI
-Sat Jan 25 19:21:04 2020
+Mon Jan 27 11:14:57 2020
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sat Jan 25 19:21:04 2020      ;
+; Flow Status                        ; Successful - Mon Jan 27 11:14:57 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; SPI                                        ;
 ; Top-level Entity Name              ; SPI                                        ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 359 / 15,408 ( 2 % )                       ;
-;     Total combinational functions  ; 275 / 15,408 ( 2 % )                       ;
+; Total logic elements               ; 367 / 15,408 ( 2 % )                       ;
+;     Total combinational functions  ; 248 / 15,408 ( 2 % )                       ;
 ;     Dedicated logic registers      ; 238 / 15,408 ( 2 % )                       ;
 ; Total registers                    ; 238                                        ;
 ; Total pins                         ; 169 / 347 ( 49 % )                         ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/25/2020 19:20:35 ;
+; Start date & time ; 01/27/2020 11:14:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SPI                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 74889883303248.157997643517224        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 172309000256011.158012007724580       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; SPI_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; SPI_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
@@ -102,12 +102,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4665 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 4969 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4590 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4631 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4539 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4666 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 4969 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4591 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4623 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4551 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,11 +116,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-JRGBP78  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; HSB-XPS15        ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

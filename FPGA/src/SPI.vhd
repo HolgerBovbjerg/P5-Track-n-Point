@@ -53,6 +53,7 @@ architecture Behavioral of SPI is
 type SPI_machine is (IDLE, COMMAND, TRANSMIT); 
 signal state : SPI_machine := IDLE;
 constant TX_LENGTH : integer := 32;
+constant pad : integer := 5;
 
 -- SCLK signals
 signal r_SCLK : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');
@@ -165,14 +166,15 @@ begin
 							r_bitcount <= r_bitcount + 1;
 						end if;
 						if (w_SCLK_falling = '1') then
-							if r_bitcount = TX_LENGTH then
+							if r_bitcount = TX_LENGTH-1 then
 								state <= COMMAND;
 								r_ADDRESS_received <= '0';
 								r_bitcount <= 0;
-							elsif r_bitcount < 5 then -- Write 0 for first 5 bits
+								r_MISO <= r_TX_data(CALC_WIDTH-1 - (r_bitcount-pad));
+							elsif r_bitcount < pad then -- Write 0 for first 5 bits
 								r_MISO <= '0';
 							else -- write data for rest 
-								r_MISO <= r_TX_data(5 + CALC_WIDTH-1 - r_bitcount); 
+								r_MISO <= r_TX_data(CALC_WIDTH-1 - (r_bitcount-pad)); 
 							end if;
 						end if;	
 					end if;

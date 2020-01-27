@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPI
-Sat Jan 25 19:20:37 2020
+Mon Jan 27 11:14:40 2020
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan 25 19:20:37 2020      ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 27 11:14:40 2020      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; SPI                                        ;
 ; Top-level Entity Name              ; SPI                                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 445                                        ;
-;     Total combinational functions  ; 275                                        ;
+; Total logic elements               ; 418                                        ;
+;     Total combinational functions  ; 248                                        ;
 ;     Dedicated logic registers      ; 238                                        ;
 ; Total registers                    ; 238                                        ;
 ; Total pins                         ; 169                                        ;
@@ -154,7 +154,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -175,16 +175,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 445         ;
+; Estimated Total logic elements              ; 418         ;
 ;                                             ;             ;
-; Total combinational functions               ; 275         ;
+; Total combinational functions               ; 248         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 156         ;
-;     -- 3 input functions                    ; 54          ;
-;     -- <=2 input functions                  ; 65          ;
+;     -- 4 input functions                    ; 157         ;
+;     -- 3 input functions                    ; 52          ;
+;     -- <=2 input functions                  ; 39          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 244         ;
+;     -- normal mode                          ; 217         ;
 ;     -- arithmetic mode                      ; 31          ;
 ;                                             ;             ;
 ; Total registers                             ; 238         ;
@@ -195,8 +195,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; i_CLK~input ;
 ; Maximum fan-out                             ; 238         ;
-; Total fan-out                               ; 1778        ;
-; Average fan-out                             ; 2.09        ;
+; Total fan-out                               ; 1751        ;
+; Average fan-out                             ; 2.13        ;
 +---------------------------------------------+-------------+
 
 
@@ -205,8 +205,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; |SPI                                ; 275 (162)         ; 238 (49)     ; 0           ; 0            ; 0       ; 0         ; 169  ; 0            ; |SPI                                ; work         ;
-;    |SPI_register:INST_SPI_register| ; 113 (113)         ; 189 (189)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SPI|SPI_register:INST_SPI_register ; work         ;
+; |SPI                                ; 248 (162)         ; 238 (49)     ; 0           ; 0            ; 0       ; 0         ; 169  ; 0            ; |SPI                                ; work         ;
+;    |SPI_register:INST_SPI_register| ; 86 (86)           ; 189 (189)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SPI|SPI_register:INST_SPI_register ; work         ;
 +-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -229,7 +229,7 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 238   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Clear  ; 27    ;
 ; Number of registers using Synchronous Load   ; 27    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -276,7 +276,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Sat Jan 25 19:20:34 2020
+    Info: Processing started: Mon Jan 27 11:14:37 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPI -c SPI
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 0 entities, in source file /users/holge/onedrive/aau - elektronik og it/5. semester/p5/p5-track-n-point/fpga/src/records.vhd
@@ -294,19 +294,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: SPI_tb-Behavioral
     Info (12023): Found entity 1: SPI_tb
 Info (12127): Elaborating entity "SPI" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at SPI.vhd(64): object "w_SSEL_active" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at SPI.vhd(65): object "w_SSEL_active" assigned a value but never read
 Info (12128): Elaborating entity "SPI_register" for hierarchy "SPI_register:INST_SPI_register"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 614 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 587 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 167 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 445 logic cells
+    Info (21061): Implemented 418 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4669 megabytes
-    Info: Processing ended: Sat Jan 25 19:20:38 2020
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4666 megabytes
+    Info: Processing ended: Mon Jan 27 11:14:40 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

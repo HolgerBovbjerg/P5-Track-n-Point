@@ -50,7 +50,7 @@ i_CLK => state~4.DATAIN
 i_SCLK => r_SCLK[0].DATAIN
 i_MOSI => r_MOSI[0].DATAIN
 i_SSEL => r_SSEL[0].DATAIN
-o_MISO << r_MISO.DB_MAX_OUTPUT_PORT_TYPE
+o_MISO <= r_MISO.DB_MAX_OUTPUT_PORT_TYPE
 i_DATA1[0] => SPI_register:INST_SPI_register.i_DATA1[0]
 i_DATA1[1] => SPI_register:INST_SPI_register.i_DATA1[1]
 i_DATA1[2] => SPI_register:INST_SPI_register.i_DATA1[2]
@@ -214,7 +214,7 @@ i_DATA6[24] => SPI_register:INST_SPI_register.i_DATA6[24]
 i_DATA6[25] => SPI_register:INST_SPI_register.i_DATA6[25]
 i_DATA6[26] => SPI_register:INST_SPI_register.i_DATA6[26]
 i_NEW_DATA => SPI_register:INST_SPI_register.i_NEW_DATA
-o_ADDRESS_received << r_ADDRESS_received.DB_MAX_OUTPUT_PORT_TYPE
+o_ADDRESS_received <= r_ADDRESS_received.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SPI|SPI_register:INST_SPI_register

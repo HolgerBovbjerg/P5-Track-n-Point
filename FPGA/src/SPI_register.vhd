@@ -50,7 +50,7 @@ begin
 				when "100" => r_OUTDATA <= r_SPI_REG(3);
 				when "101" => r_OUTDATA <= r_SPI_REG(4);
 				when "110" => r_OUTDATA <= r_SPI_REG(5);
-				when others => r_OUTDATA <= (others => '1');
+				when others => r_OUTDATA <= (others => '0');
 			end case;
 		end if;
 	end process;
