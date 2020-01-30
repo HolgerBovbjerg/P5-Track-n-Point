@@ -33,7 +33,7 @@
 // CONTROLLER VARIABLES
 double control_signal1, control_signal2;
 double setpoint_horz = 0; // Horizontal angular displacement that we want to achieve
-double Kp1 = 7;           // C1: proportional gain
+double Kp1 = 10;           // C1: proportional gain
 double Ki1 = 0;           // C1: integral gain
 double Kd1 = 0;           // C1: derivative gain
 double Kp2 = 1;           // C2: proportional gain
@@ -47,7 +47,7 @@ double last_error1 = 0;   // For calculating derivative in C1
 double last_error2 = 0;   // For calculating derivative in C2
 int max_control1 = 200;   // The maximum value that can be output by controller 1
 int min_control1 = 58;    // The minimum value that can be output by controller 1
-int max_control2 = 130;   // The maximum value that can be output by controller 2
+int max_control2 = 100;   // The maximum value that can be output by controller 2
 int min_control2 = 3;     // The minimum value that can be output by controller 2
 double error1 = 0;        // Error for controller 1 (small)
 double error2 = 0;        // Error for controller 2 (large)
@@ -125,7 +125,7 @@ int StepClock = 31;         // Stepper motor clock
 int StepDir = 32;           // Stepper direction
 
 int C1outputPin = 11;       // The PWM pin used by controller 1 (small)
-int C2outputPin = 12;       // The PWM pim used by controller 2 (large)
+int C2outputPin = 10;       // The PWM pim used by controller 2 (large)
 
 int MISO_PIN = 50;          // SPI Master-In Slave-Out
 int MOSI_PIN = 51;          // SPI Master-Out Slave-In
@@ -141,11 +141,11 @@ int MotorBackLarge = 29;    // Backward direction for large motor
 
 void setup() {
   Serial.begin(250000);
-  // Change PWM frequency to 3.9266 kHz
-  //  int myEraser = 7;
-  //  TCCR2B &= ~myEraser;
-  //  int myPrescaler = 1;
-  //  TCCR2B |= myPrescaler;
+   //Change PWM frequency to 3.9266 kHz
+    //int myEraser = 7;
+    //TCCR2B &= ~myEraser;
+    //int myPrescaler = 2;
+    //TCCR2B |= myPrescaler;
 
   // Controller output (limited to 0-255)
   pinMode(C1outputPin, OUTPUT);
