@@ -112,7 +112,7 @@ void PID_Control2() {
 
     control_signal2 = Kp2 * error2 + (Kd2 / T_cont) * delta_error; // Compute controller 2
     if (control_signal2 >= max_control2) control_signal2 = max_control2;
-    else if (control_signal2 <= min_control2) control_signal2 = 0;
+    else if (control_signal2 <= 0) control_signal2 = 0;
 
     last_error2 = error2;
 
